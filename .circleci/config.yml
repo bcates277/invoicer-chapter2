@@ -31,7 +31,7 @@ jobs:
       name: Testing application
       command: |
           go test \
-          github.com/github.com/bcates277/invoicer-chapter2;
+          github.com/bcates277/invoicer-chapter2
 
    - deploy:
        command: |
