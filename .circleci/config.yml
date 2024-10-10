@@ -13,8 +13,8 @@ jobs:
    - run: 
       name: Setup environment
       command: |
-       gb="/src/github.com/${CIRCLE_PROJECT_USERNAME}";
-       if [ ${CIRCLE_PROJECT_USERNAME} == 'Securing-DevOps' ]; then
+       gb="/src/github.com/bcates277";
+       if [ bcates277 == 'Securing-DevOps' ]; then
          dr="securingdevops"
        else
          dr=$DOCKER_USER
@@ -31,7 +31,7 @@ jobs:
       name: Testing application
       command: |
           go test \
-          github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}
+          github.com/github.com/bcates277/invoicer-chapter2;
 
    - deploy:
        command: |
