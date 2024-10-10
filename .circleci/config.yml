@@ -13,8 +13,8 @@ jobs:
    - run: 
       name: Setup environment
       command: |
-       gb="/src/github.com/${CIRCLE_PROJECT_USERNAME}";
-       if [ ${CIRCLE_PROJECT_USERNAME} == 'Securing-DevOps' ]; then
+       gb="/src/github.com/bcates277";
+       if [ bcates277 == 'Securing-DevOps' ]; then
          dr="securingdevops"
        else
          dr=$DOCKER_USER
@@ -31,14 +31,14 @@ jobs:
       name: Testing application
       command: |
           go test \
-          github.com/${CIRCLE_PROJECT_USERNAME}/invoicer-chapter2
+          github.com/bcates277/invoicer-chapter2
 
    - deploy:
        command: |
          if [ "${CIRCLE_BRANCH}" == "master" ]; then
            docker login -u ${DOCKER_USER} -p ${DOCKER_PASS};
            go install --ldflags '-extldflags "-static"' \
-           github.com/${CIRCLE_PROJECT_USERNAME}/invoicer-chapter2;
+           github.com/bcates277/invoicer-chapter2;
            mkdir bin;
            cp "$GOPATH_HEAD/bin/invoicer-chapter2" bin/invoicer;
            docker build -t ${DOCKER_REPO}/invoicer-chapter2 .;
