@@ -31,18 +31,18 @@ jobs:
       name: Testing application
       command: |
           go test \
-          github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}
+          github.com/${CIRCLE_PROJECT_USERNAME}/invoicer-chapter2
 
    - deploy:
        command: |
          if [ "${CIRCLE_BRANCH}" == "master" ]; then
            docker login -u ${DOCKER_USER} -p ${DOCKER_PASS};
            go install --ldflags '-extldflags "-static"' \
-           github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME};
+           github.com/${CIRCLE_PROJECT_USERNAME}/invoicer-chapter2;
            mkdir bin;
-           cp "$GOPATH_HEAD/bin/${CIRCLE_PROJECT_REPONAME}" bin/invoicer;
-           docker build -t ${DOCKER_REPO}/${CIRCLE_PROJECT_REPONAME} .;
+           cp "$GOPATH_HEAD/bin/invoicer-chapter2" bin/invoicer;
+           docker build -t ${DOCKER_REPO}/invoicer-chapter2 .;
            docker images --no-trunc | awk '/^app/ {print $3}' | \
              sudo tee $CIRCLE_ARTIFACTS/docker-image-shasum256.txt;
-           docker push ${DOCKER_REPO}/${CIRCLE_PROJECT_REPONAME};
+           docker push ${DOCKER_REPO}/invoicer-chapter2;
          fi
