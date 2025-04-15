@@ -11,4 +11,4 @@ COPY bin/invoicer /app/invoicer
 USER app
 EXPOSE 8080
 WORKDIR /app
-ENTRYPOINT /app/invoicer
+ENTRYPOINT ["/app/invoicer"]
