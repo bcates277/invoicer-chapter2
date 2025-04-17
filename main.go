@@ -25,8 +25,6 @@ import (
 	"go.mozilla.org/mozlog"
 )
 
-
-
 func init() {
 	// initialize the logger
 	mozlog.Logger.LoggerName = "invoicer"
@@ -80,12 +78,13 @@ func main() {
 		http.StripPrefix("/statics/", http.FileServer(http.Dir("./statics"))),
 	).Methods("GET")
 
-	log.Fatal(http.ListenAndServe(":8080",
-		HandleMiddlewares(
-			r,
-			addRequestID(),
-			logRequest(),
-			setResponseHeaders(),
+    // Start the server with middleware
+    log.Fatal(http.ListenAndServe(":8080",
+        HandleMiddlewares(
+            r,
+            addRequestID(),
+            logRequest(),
+            setResponseHeaders, // Pass the middleware function directly
 		),
 	))
 }
@@ -245,24 +244,31 @@ func getVersion(w http.ResponseWriter, r *http.Request) {
 }`, version, commit)))
 
 }
-const cspPolicy = "default-src 'self'; " +
-    "script-src 'self' 'unsafe-inline'; " +
-    "style-src 'self' 'unsafe-inline'; " +
-    "img-src 'self' data:; " +
-    "object-src 'none'; " +
-    "base-uri 'self'; " +
-    "form-action 'self'; " +
-    "frame-ancestors 'self';"
 
-func setResponseHeaders() mux.MiddlewareFunc {
-	return func(next http.Handler) http.Handler {
-		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			w.Header().Set("Content-Security-Policy", cspPolicy)
-			w.Header().Set("X-Content-Type-Options", "nosniff")
-			w.Header().Set("X-XSS-Protection", "1; mode=block")
-			w.Header().Set("X-Frame-Options", "DENY")
-			w.Header().Set("Referrer-Policy", "no-referrer")
-			next.ServeHTTP(w, r)
-		})
-	}
+const cspPolicy = "default-src 'self'; " +
+	"script-src 'self' 'unsafe-inline'; " +
+	"style-src 'self' 'unsafe-inline'; " +
+	"img-src 'self' data:; " +
+	"object-src 'none'; " +
+	"base-uri 'self'; " +
+	"form-action 'self'; " +
+	"frame-ancestors 'self';"
+
+func setResponseHeaders(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Security-Policy", cspPolicy)
+		w.Header().Set("X-Content-Type-Options", "nosniff")
+		w.Header().Set("X-XSS-Protection", "1; mode=block")
+		w.Header().Set("X-Frame-Options", "DENY")
+		w.Header().Set("Referrer-Policy", "no-referrer")
+		next.ServeHTTP(w, r)
+	})
 }
+log.Fatal(http.ListenAndServe(":8080",
+    HandleMiddlewares(
+        r,
+        addRequestID(),
+        logRequest(),
+        setResponseHeaders, // Pass the middleware function directly
+    ),
+))
