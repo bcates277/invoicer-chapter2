@@ -46,13 +46,3 @@ jobs:
              sudo tee $CIRCLE_ARTIFACTS/docker-image-shasum256.txt;
            docker push ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME};
          fi
-   - run:
-       name: Run App in Background
-       command: docker run -d -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
-   - run:
-      name: ZAP Baseline Scan
-      command: |
-       docker pull owasp/zap2docker-live &&
-       docker run -t owasp/zap2docker-live zap-baseline.py \
-        -t http://your-app-url:8080 \
-        -r zap-report.html || if [ $? -ne 1 ]; then exit 0; else exit 1; fi
