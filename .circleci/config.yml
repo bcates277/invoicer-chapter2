@@ -49,6 +49,15 @@ jobs:
    - run:
        name: Run App in Background
        command: docker run -d -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
+       
+   - setup_remote_docker:
+      version: 20.10.7
+
+   - run:
+       name: Docker login
+       command: |
+        echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+
    - run:
        name: ZAP Scan
        command: |
