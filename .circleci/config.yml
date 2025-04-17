@@ -49,19 +49,10 @@ jobs:
    - run:
        name: Run App in Background
        command: docker run -d -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
-       
-   - setup_remote_docker:
-      version: 20.10.7
-
    - run:
-       name: Docker login
-       command: |
-        echo ${DOCKER_PASS} | docker login -u ${DOCKER_USER} --password-stdin
-
-   - run:
-       name: ZAP Scan
-       command: |
-         docker pull owasp/zap2docker-stable &&
-          docker run -t owasp/zap2docker-stable zap-baseline.py \
-           -u https://raw.githubusercontent.com/${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}/master/zap-baseline.conf \
-           -t http://172.17.0.2:8080/ || if [ $? -ne 1 ]; then exit 0; else exit 1; fi
+      name: ZAP Baseline Scan
+      command: |
+       docker pull ghcr.io/zaproxy/zap-stable &&
+       docker run -t ghcr.io/zaproxy/zap-stable zap-baseline.py \
+        -t http://172.17.0.2:8080/ \
+        -r zap-report.html || if [ $? -ne 1 ]; then exit 0; else exit 1; fi
