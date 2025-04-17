@@ -25,6 +25,8 @@ import (
 	"go.mozilla.org/mozlog"
 )
 
+
+
 func init() {
 	// initialize the logger
 	mozlog.Logger.LoggerName = "invoicer"
@@ -240,9 +242,14 @@ func getVersion(w http.ResponseWriter, r *http.Request) {
 "version": "%s",
 "commit": "%s",
 "build": "https://circleci.com/gh/Securing-DevOps/invoicer/"
-}`, version, commit)))
+}`, version, commit))
 }
 
-func getIndex(w http.ResponseWriter, r *http.Request) {
-	w.Header().Add("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; frame-ancestors 'none';")
+const cspPolicy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests; block-all-mixed-content;"
+
+func withCSP(next http.Handler) http.Handler {
+    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+        w.Header().Set("Content-Security-Policy", cspPolicy)
+        next.ServeHTTP(w, r)
+    })
 }
