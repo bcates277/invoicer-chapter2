@@ -1,78 +1,48 @@
-version: 2.1
-
+version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/golang:1.10
-    steps:
-      - checkout
-      - setup_remote_docker
+ build:
+  # Variable expansion in working_directory not supported at this time
+  # You will need to modify the code below to reflect your github account/repo setup
+  working_directory: /go/src/github.com/bcates277/invoicer-chapter2
+  docker:
+   - image: circleci/golang:1.10
+  steps:
+   - checkout
+   - setup_remote_docker
 
-      - run:
-          name: Setup environment
-          command: |
-            gb="/src/github.com/${THE_CIRCLE_PROJECT_USERNAME}";
-            if [ ${THE_CIRCLE_PROJECT_USERNAME} == 'Securing-DevOps' ]; then
-              dr="securingdevops"
-            else
-              dr=$DOCKER_USER
-            fi
-            cat >> $BASH_ENV << EOF
-            export GOPATH_HEAD="$(echo ${GOPATH}|cut -d ':' -f 1)"
-            export GOPATH_BASE="$(echo ${GOPATH}|cut -d ':' -f 1)${gb}"
-            export DOCKER_REPO="$dr"
-            EOF
+   - run: 
+      name: Setup environment
+      command: |
+       gb="/src/github.com/${THE_CIRCLE_PROJECT_USERNAME}";
+       if [ ${THE_CIRCLE_PROJECT_USERNAME} == 'Securing-DevOps' ]; then
+         dr="securingdevops"
+       else
+         dr=$DOCKER_USER
+       fi
+       cat >> $BASH_ENV << EOF
+       export GOPATH_HEAD="$(echo ${GOPATH}|cut -d ':' -f 1)"
+       export GOPATH_BASE="$(echo ${GOPATH}|cut -d ':' -f 1)${gb}"
+       export DOCKER_REPO="$dr"
+       EOF
+   - run: mkdir -p "${GOPATH_BASE}"
+   - run: mkdir -p "${GOPATH_HEAD}/bin"
+       
+   - run:
+      name: Testing application
+      command: |
+          go test \
+          github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
 
-      - run:
-          name: Set up GOPATH
-          command: |
-            mkdir -p "${GOPATH_BASE}"
-            mkdir -p "${GOPATH_HEAD}/bin"
-      
-      - run:
-          name: Test application
-          command: |
-            go test github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
-
-      - run:
-          name: Build Docker Image
-          command: |
-            docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
-            go install --ldflags '-extldflags "-static"' github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
-            mkdir bin
-            cp "$GOPATH_HEAD/bin/${THE_CIRCLE_PROJECT_REPONAME}" bin/invoicer
-            docker build -t ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME} .
-            docker images --no-trunc | awk '/^app/ {print $3}' | sudo tee $CIRCLE_ARTIFACTS/docker-image-shasum256.txt
-            docker push ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
-
-      # ZAP Baseline Scan
-      - run:
-          name: Run ZAP Baseline Scan
-          command: |
-            docker pull owasp/zap2docker-live
-            docker run --network="host" -t owasp/zap2docker-live zap-baseline.py \
-              -t http://localhost:8080 \
-              -r zap-report.html || if [ $? -ne 1 ]; then exit 0; else exit 1; fi
-
-      - store_artifacts:
-          path: zap-report.html
-          destination: zap-report
-
-  deploy:
-    docker:
-      - image: circleci/golang:1.10
-    steps:
-      - run:
-          name: Deploy to production
-          command: |
-            # Insert your deployment commands here (e.g., ECS, Kubernetes, etc.)
-            echo "Deploying app to production..."
-
-workflows:
-  version: 2
-  scan-on-push:
-    jobs:
-      - build
-      - deploy:
-          requires:
-            - build
+   - deploy:
+       command: |
+         if [ "${CIRCLE_BRANCH}" == "master" ]; then
+           docker login -u ${DOCKER_USER} -p ${DOCKER_PASS};
+           go install --ldflags '-extldflags "-static"' \
+           github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME};
+           mkdir bin;
+           cp "$GOPATH_HEAD/bin/${THE_CIRCLE_PROJECT_REPONAME}" bin/invoicer;
+           docker build -t ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME} .;
+           docker images --no-trunc | awk '/^app/ {print $3}' | \
+             sudo tee $CIRCLE_ARTIFACTS/docker-image-shasum256.txt;
+           docker push ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME};
+         fi
