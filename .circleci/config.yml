@@ -52,7 +52,7 @@ jobs:
    - run:
       name: ZAP Baseline Scan
       command: |
-       docker pull ghcr.io/zaproxy/zap-weekly:latest &&
-       docker run -t ghcr.io/zaproxy/zap-stable zap-baseline.py \
-        -t http://172.17.0.2:8080/ \
-        -r zap-report.html || if [ $? -ne 1 ]; then exit 0; else exit 1; fi
+       docker pull ghcr.io/zaproxy/zap-stable:latest-release &&
+       docker run -t ghcr.io/zaproxy/zap-stable:latest-release zap-baseline.py \
+       -t http://your-app-url:8080 \
+       -r zap-report.html || if [ $? -ne 1 ]; then exit 0; else exit 1; fi
