@@ -46,10 +46,13 @@ jobs:
              sudo tee $CIRCLE_ARTIFACTS/docker-image-shasum256.txt;
            docker push ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME};
          fi
+
    - run: 
-      name: Setup environment
+      name: Run in Background
       command: |
-       docker run ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME} --detach
+       docker run ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
+        background: true
+        
    - run: 
       name: ZAP baseline scan of applciation
       command: |
