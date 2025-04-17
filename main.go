@@ -242,9 +242,9 @@ func getVersion(w http.ResponseWriter, r *http.Request) {
 "version": "%s",
 "commit": "%s",
 "build": "https://circleci.com/gh/Securing-DevOps/invoicer/"
-}`, version, commit))
-}
+}`, version, commit)))
 
+}
 const cspPolicy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests; block-all-mixed-content;"
 
 func withCSP(next http.Handler) http.Handler {
