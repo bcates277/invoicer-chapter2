@@ -26,3 +26,7 @@ func httpError(w http.ResponseWriter, r *http.Request, errorCode int, errorMessa
 	http.Error(w, fmt.Sprintf(errorMessage, args...), errorCode)
 	return
 }
+
+func getIndex(w http.ResponseWriter, r *http.Request) {
+	w.Header().Add("Content-Security-Policy", "default-src 'self';")
+}
