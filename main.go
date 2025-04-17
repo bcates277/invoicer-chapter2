@@ -243,3 +243,4 @@ func getVersion(w http.ResponseWriter, r *http.Request) {
 "commit": "%s",
 "build": "https://circleci.com/gh/Securing-DevOps/invoicer/"
 }`, version, commit)))
+}
