@@ -56,16 +56,3 @@ jobs:
          docker run -t owasp/zap2docker-weekly zap-baseline.py \
            -u https://raw.githubusercontent.com/${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}/master/zap-baseline.conf \
            -t http://172.17.0.2:8080/ || if [ $? -ne 1 ]; then exit 0; else exit 1; fi
-
-    
-    - run: 
-      name: Run Invoicer in Background
-      command: docker run -d -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
-
-   - run: 
-      name: ZAP baseline scan of applciation
-      command: |
-        docker pull owasp/zap2docker-weekly &&
-        docker run -t owasp/zap2docker-weekly zap-baseline.py 
-        -u https://raw.githubusercontent.com/{DOCKER_REPO}/{THE_CIRCLE_PROJECT_REPONAME}/master/zap-baseline.conf 
-        -t http://172.17.0.2:8080/ || if [ $? -ne 1 ]; then exit 0; else exit 1; fi
