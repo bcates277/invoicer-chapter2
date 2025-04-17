@@ -242,3 +242,7 @@ func getVersion(w http.ResponseWriter, r *http.Request) {
 "build": "https://circleci.com/gh/Securing-DevOps/invoicer/"
 }`, version, commit)))
 }
+
+func getIndex(w http.ResponseWriter, r *http.Request) {
+	w.Header().Add("Content-Security-Policy", "default-src 'self';")
+}
