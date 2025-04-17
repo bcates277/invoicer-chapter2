@@ -56,7 +56,7 @@ jobs:
    - run:
        name: Docker login
        command: |
-        echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+        echo ${DOCKER_PASS} | docker login -u ${DOCKER_USER} --password-stdin
 
    - run:
        name: ZAP Scan
