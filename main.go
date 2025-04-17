@@ -264,11 +264,3 @@ func setResponseHeaders(next http.Handler) http.Handler {
 		next.ServeHTTP(w, r)
 	})
 }
-log.Fatal(http.ListenAndServe(":8080",
-    HandleMiddlewares(
-        r,
-        addRequestID(),
-        logRequest(),
-        setResponseHeaders, // Pass the middleware function directly
-    ),
-))
