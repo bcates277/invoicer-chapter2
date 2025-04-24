@@ -52,6 +52,10 @@ jobs:
                 -quickout /zap/wrk/zap-report.html \
                 -addoninstall pscanrulesBeta || true
 
+              # Inspect ZAP container logs
+              docker ps -a
+              docker logs $(docker ps -q -f name=zaproxy) || echo "No logs found"
+
               # Clean up
               docker stop invoicer-container
               docker rm invoicer-container
