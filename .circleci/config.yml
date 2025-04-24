@@ -46,4 +46,24 @@ jobs:
               docker run --rm \
                 --network host \
                 -v $(pwd)/zap-reports:/zap/wrk \
-                ghcr.io/zaproxy/zaproxy:
+                ghcr.io/zaproxy/zaproxy:stable \
+                zap.sh -cmd -quickurl http://localhost:8080 \
+                -quickprogress \
+                -quickout /zap/wrk/zap-report.html \
+                -addoninstall pscanrulesBeta || true
+
+              # Clean up
+              docker stop invoicer-container
+              docker rm invoicer-container
+
+              # Push image
+              docker push ${IMAGE_TAG}
+            fi
+
+      - run:
+          name: Check for ZAP report
+          command: ls -l zap-reports || echo "Report not found"
+
+      - store_artifacts:
+          path: /go/src/github.com/bcates277/invoicer-chapter2/zap-reports/zap-report.html
+          destination: zap-report
