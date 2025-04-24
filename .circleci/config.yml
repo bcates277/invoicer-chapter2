@@ -40,7 +40,7 @@ jobs:
               docker run -d -p 8080:8080 --name invoicer-container ${IMAGE_TAG}
               sleep 10 # Wait for app to become available
 
-              # Run ZAP scan with added options
+              # Run ZAP scan with more detailed logging
               mkdir -p zap-reports
               docker pull ghcr.io/zaproxy/zaproxy:stable
               docker run --rm \
@@ -50,12 +50,13 @@ jobs:
                 zap.sh -cmd -quickurl http://localhost:8080 \
                 -quickprogress \
                 -quickout /zap/wrk/zap-report.html \
-                -addoninstall pscanrulesBeta || true
+                -addoninstall pscanrulesBeta \
+                -verbose || true
 
-              # Inspect ZAP logs for errors or issues during scan
+              # Check ZAP logs for any errors or issues
               docker logs $(docker ps -q -f name=zaproxy) || echo "No logs found for ZAP container"
 
-              # Check if report exists inside the container
+              # Check the contents of /zap/wrk to confirm the report exists
               docker run --rm \
                 -v $(pwd)/zap-reports:/zap/wrk \
                 ghcr.io/zaproxy/zaproxy:stable \
