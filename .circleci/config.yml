@@ -8,7 +8,7 @@ jobs:
       - checkout
       - setup_remote_docker
 
-      - run: 
+      - run:
           name: Setup environment
           command: |
             gb="/src/github.com/${THE_CIRCLE_PROJECT_USERNAME}";
@@ -18,8 +18,8 @@ jobs:
               dr=$DOCKER_USER
             fi
             cat >> $BASH_ENV << EOF
-            export GOPATH_HEAD="$(echo ${GOPATH}|cut -d ':' -f 1)"
-            export GOPATH_BASE="$(echo ${GOPATH}|cut -d ':' -f 1)${gb}"
+            export GOPATH_HEAD="$(echo ${GOPATH} | cut -d ':' -f 1)"
+            export GOPATH_BASE="${GOPATH_HEAD}${gb}"
             export DOCKER_REPO="$dr"
             export IMAGE_TAG="$DOCKER_REPO/${THE_CIRCLE_PROJECT_REPONAME}:latest"
             EOF
@@ -37,26 +37,33 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
               go install --ldflags '-extldflags "-static"' \
-              github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
+                github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
               mkdir bin
               cp "$GOPATH_HEAD/bin/${THE_CIRCLE_PROJECT_REPONAME}" bin/invoicer
               docker build -t ${IMAGE_TAG} .
+
+              # Start your app container
               docker run -d -p 8080:8080 --name invoicer-container ${IMAGE_TAG}
-              sleep 10 # wait for app to start
+              sleep 10 # Give the app time to start
 
-              # Run ZAP baseline scan
-              docker run --network host -v $(pwd)/zap-reports:/zap/wrk owasp/zap2docker-stable \
-                zap-baseline.py -t http://localhost:8080 -r zap-report.html || true
+              # Run ZAP Scan
+              mkdir -p zap-reports
+              docker pull ghcr.io/zaproxy/zaproxy:stable
+              docker run --rm \
+                --network host \
+                -v $(pwd)/zap-reports:/zap/wrk \
+                ghcr.io/zaproxy/zaproxy:stable \
+                zap.sh -cmd -quickurl http://localhost:8080 \
+                -quickout /zap/wrk/zap-report.html || true
 
+              # Stop and clean up
               docker stop invoicer-container
+              docker rm invoicer-container
 
-              # Save report as CircleCI artifact
-              mkdir -p ~/zap
-              cp zap-reports/zap-report.html ~/zap/zap-report.html
-
+              # Push image to Docker Hub
               docker push ${IMAGE_TAG}
             fi
 
       - store_artifacts:
-          path: ~/zap
+          path: zap-reports/zap-report.html
           destination: zap-report
