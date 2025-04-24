@@ -40,7 +40,7 @@ jobs:
               docker run -d -p 8080:8080 --name invoicer-container ${IMAGE_TAG}
               sleep 10 # Wait for app to become available
 
-              # Run ZAP scan
+              # Run ZAP scan with added options
               mkdir -p zap-reports
               docker pull ghcr.io/zaproxy/zaproxy:stable
               docker run --rm \
@@ -48,16 +48,4 @@ jobs:
                 -v $(pwd)/zap-reports:/zap/wrk \
                 ghcr.io/zaproxy/zaproxy:stable \
                 zap.sh -cmd -quickurl http://localhost:8080 \
-                -quickout /zap/wrk/zap-report.html || true
-
-              # Clean up
-              docker stop invoicer-container
-              docker rm invoicer-container
-
-              # Push image
-              docker push ${IMAGE_TAG}
-            fi
-
-      - store_artifacts:
-          path: zap-reports/zap-report.html
-          destination: zap-report
+                -quickprogress \
