@@ -52,7 +52,10 @@ jobs:
                 -quickout /zap/wrk/zap-report.html \
                 -addoninstall pscanrulesBeta || true
 
-              # Check if the report was generated in the container
+              # Inspect ZAP logs for errors or issues during scan
+              docker logs $(docker ps -q -f name=zaproxy) || echo "No logs found for ZAP container"
+
+              # Check if report exists inside the container
               docker run --rm \
                 -v $(pwd)/zap-reports:/zap/wrk \
                 ghcr.io/zaproxy/zaproxy:stable \
