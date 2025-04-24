@@ -18,3 +18,46 @@ jobs:
             fi
             cat >> $BASH_ENV <<EOF
             export DOCKER_REPO="${dr}"
+            export IMAGE_TAG="${dr}/${THE_CIRCLE_PROJECT_REPONAME}:latest"
+            EOF
+
+      - run:
+          name: Testing application
+          command: |
+            go test github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
+
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
+              go install --ldflags '-extldflags "-static"' \
+                github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
+              mkdir bin
+              cp "$GOPATH/bin/${THE_CIRCLE_PROJECT_REPONAME}" bin/invoicer
+              docker build -t ${IMAGE_TAG} .
+
+              # Start app container
+              docker run -d -p 8080:8080 --name invoicer-container ${IMAGE_TAG}
+              sleep 10 # Wait for app to become available
+
+              # Run ZAP scan
+              mkdir -p zap-reports
+              docker pull ghcr.io/zaproxy/zaproxy:stable
+              docker run --rm \
+                --network host \
+                -v $(pwd)/zap-reports:/zap/wrk \
+                ghcr.io/zaproxy/zaproxy:stable \
+                zap.sh -cmd -quickurl http://localhost:8080 \
+                -quickout /zap/wrk/zap-report.html || true
+
+              # Clean up
+              docker stop invoicer-container
+              docker rm invoicer-container
+
+              # Push image
+              docker push ${IMAGE_TAG}
+            fi
+
+      - store_artifacts:
+          path: zap-reports/zap-report.html
+          destination: zap-report
