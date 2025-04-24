@@ -46,6 +46,4 @@ jobs:
               docker run --rm \
                 --network host \
                 -v $(pwd)/zap-reports:/zap/wrk \
-                ghcr.io/zaproxy/zaproxy:stable \
-                zap.sh -cmd -quickurl http://localhost:8080 \
-                -quickprogress \
+                ghcr.io/zaproxy/zaproxy:
