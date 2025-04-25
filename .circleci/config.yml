@@ -54,13 +54,18 @@ jobs:
             mkdir -p $(pwd)/reports
 
       - run:
-          name: Trivy Scan with Report
+          name: Trivy Scan with Full Output
           command: |
+            set -ex
+            IMAGE_NAME="${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}"
+            echo "Scanning image: $IMAGE_NAME"
+            mkdir -p reports
+            docker pull "$IMAGE_NAME"  # <-- Force pull to catch image errors
             docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
               -v $(pwd)/reports:/root/reports \
-              aquasec/trivy image --format json --output /root/reports/trivy-report.json \
-              ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
-              
+              aquasec/trivy image --debug --format json \
+              --output /root/reports/trivy-report.json "$IMAGE_NAME"
+
       - run:
           name: Check Trivy Report File
           command: |
