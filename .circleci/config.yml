@@ -53,9 +53,9 @@ jobs:
           command: |
             docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
               -v $(pwd):/root/reports \
-              aquasec/trivy image --format json --output /root/reports/trivy-report.json \
+              aquasec/trivy image --format json --output /invoicer-chapter2/trivy-report.json \
               ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
 
       - store_artifacts:
-          path: trivy-report.json
+          path: invoicer-chapter2/trivy-report.json
           destination: trivy-report
