@@ -49,7 +49,21 @@ jobs:
             fi
 
       - run:
-          name: Trivy Scan with Full Output
+          name: Trivy Scan with Summary Output
+          command: |
+            set -ex
+            IMAGE_NAME="${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:latest"
+            echo "Scanning image: $IMAGE_NAME"
+            docker pull "$IMAGE_NAME"
+            docker run --rm \
+              -v /var/run/docker.sock:/var/run/docker.sock \
+              aquasec/trivy:0.50.1 image \
+              --format table \
+              --exit-code 1 \
+              --severity HIGH,CRITICAL "$IMAGE_NAME"
+
+      - run:
+          name: Trivy Scan with Full Output (JSON)
           command: |
             set -ex
             IMAGE_NAME="${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:latest"
@@ -67,23 +81,9 @@ jobs:
           command: |
             echo "Listing /tmp directory:"
             ls -lah /tmp
-            echo "Showing Trivy report:"
+            echo "Showing Trivy report content:"
             cat /tmp/trivy-report.json || echo "Report not found"
 
       - store_artifacts:
           path: /tmp/trivy-report.json
           destination: trivy-report
-          
-      - run:
-          name: Trivy Scan with Summary Output
-          command: |
-            set -ex
-            IMAGE_NAME="${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:latest"
-            echo "Scanning image: $IMAGE_NAME"
-            docker pull "$IMAGE_NAME"
-            docker run --rm \
-              -v /var/run/docker.sock:/var/run/docker.sock \
-              aquasec/trivy:0.50.1 image \
-              --format table \
-              --exit-code 1 \
-              --severity HIGH,CRITICAL "$IMAGE_NAME"
