@@ -36,7 +36,14 @@ jobs:
           name: Build Docker Image
           command: |
             docker build -t ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} .
-
+      - run:
+          name: Build Go binary
+          command: |
+            go install --ldflags '-extldflags "-static"' \
+            github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
+            mkdir -p bin
+            cp "$GOPATH_HEAD/bin/${THE_CIRCLE_PROJECT_REPONAME}" bin/invoicer
+            
       - run:
           name: Push Docker Image (only on master)
           command: |
