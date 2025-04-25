@@ -49,34 +49,13 @@ jobs:
             fi
 
       - run:
-         name: Start App and ZAP Containers
-         command: |
-          docker login -u $DOCKER_USER -p $DOCKER_PASS || echo "Continuing without login"
-          docker network create zap-net
-          docker run -d --name app --network zap-net -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
-          docker run -u zap -d --name zap --network zap-net -p 8090:8090 owasp/zap2docker-stable \
-            zap.sh -daemon -host 0.0.0.0 -port 8090 -config api.disablekey=true
-
-      - run:
-          name: Run ZAP Active Scan via API
+          name: Trivy Scan with Report
           command: |
-            sudo apt-get update && sudo apt-get install -y jq
-            echo "Waiting for ZAP to be ready..."
-            until curl -s http://localhost:8090; do sleep 5; done
-            echo "Starting scan..."
-            curl "http://localhost:8090/JSON/ascan/action/scan/?url=http://app:8080"
-            echo "Polling scan status..."
-            while true; do
-              STATUS=$(curl -s "http://localhost:8090/JSON/ascan/view/status/" | jq -r '.status')
-              echo "Scan progress: $STATUS%"
-              if [ "$STATUS" -eq "100" ]; then
-                break
-              fi
-              sleep 5
-            done
-            echo "Downloading HTML report..."
-            curl "http://localhost:8090/OTHER/core/other/htmlreport/" -o zap_report.html
+            docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
+              -v $(pwd):/root/reports \
+              aquasec/trivy image --format html --output /root/reports/trivy-report.html \
+              ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
 
       - store_artifacts:
-          path: zap_report.html
-          destination: zap_report.html
+          path: trivy-report.html
+          destination: trivy-report
