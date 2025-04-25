@@ -60,7 +60,8 @@ jobs:
               aquasec/trivy:0.50.1 image \
               --format json \
               --output /tmp/trivy-report.json "$IMAGE_NAME" && \
-              docker run --rm aquasec/trivy:0.50.1 ls -la /tmp/trivy-report.json || echo "Report not found"
+              docker run --rm aquasec/trivy:0.50.1 
+              ls -la /tmp/trivy-report.json || echo "Report not found"
             
             # Debug: Check if the file was created and what is inside /tmp
             echo "Listing /tmp directory contents:"
