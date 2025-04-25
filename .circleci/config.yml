@@ -61,7 +61,7 @@ jobs:
             HOST_REPORT_DIR="/tmp/reports"
             echo "HOST_REPORT_DIR: $HOST_REPORT_DIR"
             echo "DOCKER_REPO: $DOCKER_REPO"
-            echo "THE_CIRCLE_PROJECT_REPONAME: $THE_CIRCLE_PROJECT_REPONAME""
+            echo "THE_CIRCLE_PROJECT_REPONAME: $THE_CIRCLE_PROJECT_REPONAME"
             echo "CIRCLE_ARTIFACTS: $CIRCLE_ARTIFACTS"
             echo "Scanning image: $IMAGE_NAME"
             mkdir -p "$HOST_REPORT_DIR"
