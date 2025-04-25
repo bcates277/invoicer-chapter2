@@ -18,7 +18,7 @@ jobs:
             else
               dr=$DOCKER_USER
             fi
-            cat >> $BASH_ENV \<< EOF
+            cat >> $BASH_ENV /<< EOF
             export GOPATH_HEAD="$(echo ${GOPATH}|cut -d ':' -f 1)"
             export GOPATH_BASE="$(echo ${GOPATH}|cut -d ':' -f 1)${gb}"
             export DOCKER_REPO="$dr"
@@ -59,7 +59,7 @@ jobs:
             docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
               -v $(pwd)/reports:/root/reports \
               aquasec/trivy image --format json --output /root/reports/trivy-report.json \
-              ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME} || echo "Trivy scan failed"
+              ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
 
       - run:
           name: Verify Trivy Report Creation
@@ -68,5 +68,5 @@ jobs:
             cat $(pwd)/reports/trivy-report.json || echo "Report file not found"
 
       - store_artifacts:
-          path: $(pwd)/reports/trivy-report.json
+          path: reports/trivy-report.json
           destination: trivy-report
