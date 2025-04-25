@@ -49,12 +49,13 @@ jobs:
             fi
 
       - run:
-          name: Start App and ZAP Containers
-          command: |
-            docker network create zap-net
-            docker run -d --name app --network zap-net -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
-            docker run -u zap -d --name zap --network zap-net -p 8090:8090 owasp/zap2docker-stable \
-              zap.sh -daemon -host 0.0.0.0 -port 8090 -config api.disablekey=true
+         name: Start App and ZAP Containers
+         command: |
+          docker login -u $DOCKER_USER -p $DOCKER_PASS || echo "Continuing without login"
+          docker network create zap-net
+          docker run -d --name app --network zap-net -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
+          docker run -u zap -d --name zap --network zap-net -p 8090:8090 owasp/zap2docker-stable \
+            zap.sh -daemon -host 0.0.0.0 -port 8090 -config api.disablekey=true
 
       - run:
           name: Run ZAP Active Scan via API
