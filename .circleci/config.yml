@@ -55,27 +55,20 @@ jobs:
             IMAGE_NAME="${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:latest"
             echo "Scanning image: $IMAGE_NAME"
             docker pull "$IMAGE_NAME"
+            # Run Trivy command with volume mapping for /tmp to persist the report on the host
             docker run --rm \
               -v /var/run/docker.sock:/var/run/docker.sock \
+              -v /tmp:/tmp \
               aquasec/trivy:0.50.1 image \
               --format json \
-              --output /tmp/trivy-report.json "$IMAGE_NAME" && \
-              docker run --rm aquasec/trivy:0.50.1 
-              ls -la /tmp/trivy-report.json || echo "Report not found"
+              --output /tmp/trivy-report.json "$IMAGE_NAME"
             
-            # Debug: Check if the file was created and what is inside /tmp
+            # Debug: list /tmp and show the report
             echo "Listing /tmp directory contents:"
             ls -la /tmp
             echo "Showing contents of trivy-report.json:"
             cat /tmp/trivy-report.json || echo "Report not found"
 
-      - run:
-          name: Confirm Trivy Report Exists
-          command: |
-            echo "Listing /tmp directory again:"
-            ls -la /tmp
-            echo "Confirming trivy-report.json content:"
-            cat /tmp/trivy-report.json || echo "Report not found"
 
       - store_artifacts:
           path: /tmp/trivy-report.json
