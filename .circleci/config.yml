@@ -51,14 +51,14 @@ jobs:
       - run:
           name: Create reports directory
           command: |
-            mkdir -p $(pwd)/reports
+            mkdir -p /tmp/reports
 
       - run:
           name: Trivy Scan with Full Output
           command: |
             set -ex
             IMAGE_NAME="${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:latest"
-            REPORT_DIR="/home/circleci/project/reports"
+            REPORT_DIR="/tmp/reports"
             echo "Scanning image: $IMAGE_NAME"
             mkdir -p "$REPORT_DIR"
             docker pull "$IMAGE_NAME"
@@ -68,17 +68,20 @@ jobs:
               aquasec/trivy:0.50.1 image \
               --format json \
               --output /reports/trivy-report.json "$IMAGE_NAME"
+            # Move report into working directory so CircleCI can access it
+            cp "$REPORT_DIR/trivy-report.json" /tmp/reports/trivy-report.json
 
       - run:
           name: Confirm Trivy Report Exists
           command: |
             echo "Listing reports directory:"
-            ls -lah /home/circleci/project/reports
+            ls -lah /tmp/reports
             echo "Showing Trivy report:"
-            cat /home/circleci/project/reports/trivy-report.json || echo "Report not found"
-
+            cat /tmp/reports/trivy-report.json || echo "Report not found"
 
       - store_artifacts:
-          path: reports/trivy-report.json
+          path: /tmp/reports/trivy-report.json
           destination: trivy-report
 
+      - store_artifacts:
+          path: /tmp/reports
