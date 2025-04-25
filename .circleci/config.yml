@@ -57,5 +57,5 @@ jobs:
               ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
 
       - store_artifacts:
-          path: trivy-report.html
+          path: trivy-report.json
           destination: trivy-report
