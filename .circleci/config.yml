@@ -1,4 +1,5 @@
-version: 2
+version: 2.1
+
 jobs:
   build:
     working_directory: /go/src/github.com/bcates277/invoicer-chapter2
@@ -11,69 +12,70 @@ jobs:
       - run:
           name: Setup environment
           command: |
-            if [ "${THE_CIRCLE_PROJECT_USERNAME}" == "Securing-DevOps" ]; then
+            gb="/src/github.com/${THE_CIRCLE_PROJECT_USERNAME}";
+            if [ ${THE_CIRCLE_PROJECT_USERNAME} == 'Securing-DevOps' ]; then
               dr="securingdevops"
             else
-              dr=${DOCKER_USER}
+              dr=$DOCKER_USER
             fi
-            cat >> $BASH_ENV <<EOF
-            export DOCKER_REPO="${dr}"
-            export IMAGE_TAG="${dr}/${THE_CIRCLE_PROJECT_REPONAME}:latest"
+            cat >> $BASH_ENV << EOF
+            export GOPATH_HEAD="$(echo ${GOPATH}|cut -d ':' -f 1)"
+            export GOPATH_BASE="$(echo ${GOPATH}|cut -d ':' -f 1)${gb}"
+            export DOCKER_REPO="$dr"
             EOF
+
+      - run: mkdir -p "${GOPATH_BASE}"
+      - run: mkdir -p "${GOPATH_HEAD}/bin"
 
       - run:
           name: Testing application
           command: |
-            go test github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
+            go test \
+            github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
 
-      - deploy:
+      - run:
+          name: Build and Push Docker Image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
+              docker login -u ${DOCKER_USER} -p ${DOCKER_PASS};
               go install --ldflags '-extldflags "-static"' \
-                github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
-              mkdir bin
-              cp "$GOPATH/bin/${THE_CIRCLE_PROJECT_REPONAME}" bin/invoicer
-              docker build -t ${IMAGE_TAG} .
-
-              # Start app container
-              docker run -d -p 8080:8080 --name invoicer-container ${IMAGE_TAG}
-              sleep 10 # Wait for app to become available
-
-              # Run ZAP scan with more detailed logging
-              mkdir -p zap-reports
-              docker pull ghcr.io/zaproxy/zaproxy:stable
-              docker run --rm \
-                --network host \
-                -v $(pwd)/zap-reports:/zap/wrk \
-                ghcr.io/zaproxy/zaproxy:stable \
-                zap.sh -cmd -quickurl http://localhost:8080 \
-                -quickprogress \
-                -quickout /zap/wrk/zap-report.html \
-                -addoninstall pscanrulesBeta \
-                -verbose || true
-
-              # Check ZAP logs for any errors or issues
-              docker logs $(docker ps -q -f name=zaproxy) || echo "No logs found for ZAP container"
-
-              # Check the contents of /zap/wrk to confirm the report exists
-              docker run --rm \
-                -v $(pwd)/zap-reports:/zap/wrk \
-                ghcr.io/zaproxy/zaproxy:stable \
-                ls -l /zap/wrk || echo "No report found in container"
-
-              # Clean up
-              docker stop invoicer-container
-              docker rm invoicer-container
-
-              # Push image
-              docker push ${IMAGE_TAG}
+              github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME};
+              mkdir bin;
+              cp "$GOPATH_HEAD/bin/${THE_CIRCLE_PROJECT_REPONAME}" bin/invoicer;
+              docker build -t ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME} .;
+              docker images --no-trunc | awk '/^app/ {print $3}' | \
+                sudo tee $CIRCLE_ARTIFACTS/docker-image-shasum256.txt;
+              docker push ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME};
             fi
 
       - run:
-          name: Check for ZAP report
-          command: ls -l zap-reports || echo "Report not found"
+          name: Start App and ZAP Containers
+          command: |
+            docker network create zap-net
+            docker run -d --name app --network zap-net -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
+            docker run -u zap -d --name zap --network zap-net -p 8090:8090 owasp/zap2docker-stable \
+              zap.sh -daemon -host 0.0.0.0 -port 8090 -config api.disablekey=true
+
+      - run:
+          name: Run ZAP Active Scan via API
+          command: |
+            sudo apt-get update && sudo apt-get install -y jq
+            echo "Waiting for ZAP to be ready..."
+            until curl -s http://localhost:8090; do sleep 5; done
+            echo "Starting scan..."
+            curl "http://localhost:8090/JSON/ascan/action/scan/?url=http://app:8080"
+            echo "Polling scan status..."
+            while true; do
+              STATUS=$(curl -s "http://localhost:8090/JSON/ascan/view/status/" | jq -r '.status')
+              echo "Scan progress: $STATUS%"
+              if [ "$STATUS" -eq "100" ]; then
+                break
+              fi
+              sleep 5
+            done
+            echo "Downloading HTML report..."
+            curl "http://localhost:8090/OTHER/core/other/htmlreport/" -o zap_report.html
 
       - store_artifacts:
-          path: /go/src/github.com/bcates277/invoicer-chapter2/zap-reports/zap-report.html
-          destination: zap-report
+          path: zap_report.html
+          destination: zap_report.html
