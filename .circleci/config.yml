@@ -75,13 +75,19 @@ jobs:
               aquasec/trivy:0.50.1 image \
               --format json \
               --output /tmp/trivy-report.json "$IMAGE_NAME"
+            
+            # Debug: Check if the file was created and what is inside /tmp
+            echo "Listing /tmp directory contents:"
+            ls -la /tmp
+            echo "Showing contents of trivy-report.json:"
+            cat /tmp/trivy-report.json || echo "Report not found"
 
       - run:
           name: Confirm Trivy Report Exists
           command: |
-            echo "Listing /tmp directory:"
-            ls -lah /tmp
-            echo "Showing Trivy report content:"
+            echo "Listing /tmp directory again:"
+            ls -la /tmp
+            echo "Confirming trivy-report.json content:"
             cat /tmp/trivy-report.json || echo "Report not found"
 
       - store_artifacts:
