@@ -58,30 +58,24 @@ jobs:
           command: |
             set -ex
             IMAGE_NAME="${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}"
-            REPORT_DIR="/go/src/github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}/reports"
+            REPORT_DIR="$(pwd)/reports"
             echo "Scanning image: $IMAGE_NAME"
             mkdir -p "$REPORT_DIR"
             docker pull "$IMAGE_NAME"
             docker run --rm \
               -v /var/run/docker.sock:/var/run/docker.sock \
               -v "$REPORT_DIR":/reports \
-              aquasec/trivy image \
+              aquasec/trivy:0.50.1 image \
               --format json \
               --output /reports/trivy-report.json "$IMAGE_NAME"
 
       - run:
-          name: Check Trivy Report File
+          name: Confirm Trivy Report Exists
           command: |
-            echo "Current directory: $(pwd)"
-            ls -al
-            echo "Checking reports directory:"
-            ls -al reports
-
-      - run:
-          name: Verify Trivy Report Creation
-          command: |
-            ls -l $(pwd)/reports
-            cat $(pwd)/reports/trivy-report.json || echo "Report file not found"
+            echo "Listing reports directory:"
+            ls -lah $(pwd)/reports
+            echo "Showing Trivy report:"
+            cat $(pwd)/reports/trivy-report.json || echo "Report not found"
 
       - store_artifacts:
           path: reports/trivy-report.json
