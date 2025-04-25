@@ -59,22 +59,18 @@ jobs:
             set -ex
             IMAGE_NAME="${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:latest"
             HOST_REPORT_DIR="/tmp/reports"
-            echo "HOST_REPORT_DIR: $HOST_REPORT_DIR"
-            echo "DOCKER_REPO: $DOCKER_REPO"
-            echo "THE_CIRCLE_PROJECT_REPONAME: $THE_CIRCLE_PROJECT_REPONAME"
-            echo "CIRCLE_ARTIFACTS: $CIRCLE_ARTIFACTS"
             echo "Scanning image: $IMAGE_NAME"
             mkdir -p "$HOST_REPORT_DIR"
             docker pull "$IMAGE_NAME"
             docker run --rm \
               -v /var/run/docker.sock:/var/run/docker.sock \
-              -v "$HOST_REPORT_DIR"/reports \
+              -v "$HOST_REPORT_DIR:/reports" \
               aquasec/trivy:0.50.1 image \
               --format json \
               --output /reports/trivy-report.json "$IMAGE_NAME"
             # Move report into working directory so CircleCI can access it
-            mkdir -p $(pwd)/reports
-            cp "$HOST_REPORT_DIR/trivy-report.json" $(pwd)/reports/
+            cp "$HOST_REPORT_DIR/trivy-report.json" $(pwd)/reports/trivy-report.json
+
 
 
       - run:
