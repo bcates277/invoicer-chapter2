@@ -68,5 +68,6 @@ jobs:
             cat $(pwd)/reports/trivy-report.json || echo "Report file not found"
 
       - store_artifacts:
-          path: reports/trivy-report.json
+          path: $(pwd)/reports/trivy-report.json
           destination: trivy-report
+
