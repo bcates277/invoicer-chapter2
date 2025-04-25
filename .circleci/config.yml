@@ -18,7 +18,7 @@ jobs:
             else
               dr=$DOCKER_USER
             fi
-            cat >> $BASH_ENV \<< EOF
+            cat >> $BASH_ENV <<EOF
             export GOPATH_HEAD="$(echo ${GOPATH}|cut -d ':' -f 1)"
             export GOPATH_BASE="$(echo ${GOPATH}|cut -d ':' -f 1)${gb}"
             export DOCKER_REPO="$dr"
@@ -30,44 +30,51 @@ jobs:
       - run:
           name: Testing application
           command: |
-            go test \
-            github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
+            go test github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
 
       - run:
-          name: Build and Push Docker Image
+          name: Build Docker Image
+          command: |
+            docker build -t ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} .
+
+      - run:
+          name: Push Docker Image (only on master)
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              docker login -u ${DOCKER_USER} -p ${DOCKER_PASS};
-              go install --ldflags '-extldflags "-static"' \
-              github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME};
-              mkdir bin;
-              cp "$GOPATH_HEAD/bin/${THE_CIRCLE_PROJECT_REPONAME}" bin/invoicer;
-              docker build -t ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME} .;
-              docker images --no-trunc | awk '/^app/ {print $3}' | \
-                sudo tee $CIRCLE_ARTIFACTS/docker-image-shasum256.txt;
-              docker push ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME};
+              docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
+              docker push ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
             fi
 
       - run:
-          name: Trivy Scan with Full Output (JSON)
+          name: Install Trivy
           command: |
-            set -ex
-            IMAGE_NAME="${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:latest"
-            echo "Scanning image: $IMAGE_NAME"
-            docker pull "$IMAGE_NAME"
-            docker run --rm \
-              -v /var/run/docker.sock:/var/run/docker.sock \
-              -v /tmp:/tmp \
-              aquasec/trivy:0.50.1 image \
-              --format json \
-              --output /tmp/trivy-report.json "$IMAGE_NAME"
-            
-            echo "Listing /tmp directory contents:"
-            ls -la /tmp
-            echo "Showing contents of trivy-report.json:"
-            cat /tmp/trivy-report.json || echo "Report not found"
+            sudo apt-get update && sudo apt-get install -y curl
+            curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
 
+      - run:
+          name: Trivy Summary Scan
+          command: |
+            trivy image --exit-code 0 --no-progress --severity HIGH,CRITICAL ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
+
+      - run:
+          name: Trivy JSON Report
+          command: |
+            mkdir -p /tmp/trivy
+            trivy image --format json --output /tmp/trivy/trivy-report.json ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
+
+      - run:
+          name: Confirm Report Exists
+          command: |
+            echo "Contents of /tmp/trivy:"
+            ls -lah /tmp/trivy
+            cat /tmp/trivy/trivy-report.json || echo "No report found."
 
       - store_artifacts:
-          path: /tmp/trivy-report.json
-          destination: trivy-report.json
+          path: /tmp/trivy/trivy-report.json
+          destination: trivy-report
+
+workflows:
+  version: 2
+  build_and_scan:
+    jobs:
+      - build
