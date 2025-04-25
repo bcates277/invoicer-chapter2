@@ -91,5 +91,5 @@ jobs:
             cat /tmp/trivy-report.json || echo "Report not found"
 
       - store_artifacts:
-          path: /tmp/trivy-report.json
-          destination: trivy-report
+          path: /tmp
+          destination: /tmp
