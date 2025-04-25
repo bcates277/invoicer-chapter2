@@ -53,24 +53,9 @@ jobs:
           command: |
             docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
               -v $(pwd):/root/reports \
-              aquasec/trivy image --format json --output /root/reports/trivy-report.json \
+              aquasec/trivy image --format json --output /go/src/github.com/bcates277/invoicer-chapter2/trivy-report.json \
               ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
 
       - store_artifacts:
-          path: /root/reports/trivy-report.json
+          path: /go/src/github.com/bcates277/invoicer-chapter2/trivy-report.json
           destination: trivy-report
-    jobs:
-    build:
-      working_directory: /tmp
-      steps:
-        - run:
-            name: Creating Dummy Artifacts
-            command: |
-              echo "my artifact file" > /tmp/art-1;
-              mkdir /tmp/artifacts;
-              echo "my artifact files in a dir" > /tmp/artifacts/art-2;
-        - store_artifacts:
-            path: /tmp/art-1
-            destination: artifact-file
-        - store_artifacts:
-            path: /tmp/artifacts
