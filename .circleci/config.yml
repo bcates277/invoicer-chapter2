@@ -49,20 +49,6 @@ jobs:
             fi
 
       - run:
-          name: Trivy Scan with Summary Output
-          command: |
-            set -ex
-            IMAGE_NAME="${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:latest"
-            echo "Scanning image: $IMAGE_NAME"
-            docker pull "$IMAGE_NAME"
-            docker run --rm \
-              -v /var/run/docker.sock:/var/run/docker.sock \
-              aquasec/trivy:0.50.1 image \
-              --format table \
-              --exit-code 1 \
-              --severity HIGH,CRITICAL "$IMAGE_NAME"
-
-      - run:
           name: Trivy Scan with Full Output (JSON)
           command: |
             set -ex
@@ -91,5 +77,5 @@ jobs:
             cat /tmp/trivy-report.json || echo "Report not found"
 
       - store_artifacts:
-          path: /tmp
-          destination: /tmp
+          path: /tmp/trivy-report.json
+          destination: trivy-report.json
