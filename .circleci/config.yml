@@ -60,6 +60,14 @@ jobs:
               -v $(pwd)/reports:/root/reports \
               aquasec/trivy image --format json --output /root/reports/trivy-report.json \
               ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}
+              
+      - run:
+          name: Check Trivy Report File
+          command: |
+            echo "Current directory: $(pwd)"
+            ls -al
+            echo "Checking reports directory:"
+            ls -al reports
 
       - run:
           name: Verify Trivy Report Creation
