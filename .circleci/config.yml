@@ -58,7 +58,7 @@ jobs:
           command: |
             set -ex
             IMAGE_NAME="${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:latest"
-            REPORT_DIR="$(pwd)/reports"
+            REPORT_DIR="/home/circleci/project/reports"
             echo "Scanning image: $IMAGE_NAME"
             mkdir -p "$REPORT_DIR"
             docker pull "$IMAGE_NAME"
@@ -73,9 +73,10 @@ jobs:
           name: Confirm Trivy Report Exists
           command: |
             echo "Listing reports directory:"
-            ls -lah ./reports
+            ls -lah /home/circleci/project/reports
             echo "Showing Trivy report:"
-            cat ./reports/trivy-report.json || echo "Report not found"
+            cat /home/circleci/project/reports/trivy-report.json || echo "Report not found"
+
 
       - store_artifacts:
           path: reports/trivy-report.json
