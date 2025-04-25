@@ -69,6 +69,7 @@ jobs:
               --format json \
               --output /reports/trivy-report.json "$IMAGE_NAME"
             # Move report into working directory so CircleCI can access it
+            mkdir -p ./reports
             cp "$HOST_REPORT_DIR/trivy-report.json" $(pwd)/reports/trivy-report.json
 
 
