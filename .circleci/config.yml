@@ -92,9 +92,3 @@ jobs:
       - store_artifacts:
           path: /tmp/trivy/trivy-report.json
           destination: trivy-report
-
-workflows:
-  version: 2
-  build_and_scan:
-    jobs:
-      - build
