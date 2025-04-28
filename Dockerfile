@@ -7,6 +7,9 @@ WORKDIR /app
 COPY go.mod ./
 RUN go mod download
 
+# If you are using a vendor directory, copy it too
+COPY ./vendor ./vendor
+
 # Copy the source code
 COPY . .
 
