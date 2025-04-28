@@ -79,15 +79,14 @@ jobs:
       - run:
           name: Trivy Summary Scan
           command: |
-            trivy image --exit-code 0 --no-progress --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
+            trivy image --exit-code 0 --no-progress --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL --list-all-pkgs ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
 
       - run:
           name: Trivy JSON Report
           command: |
             mkdir -p /tmp/trivy
-            trivy clean --scan-cache
             trivy image --format json --output /tmp/trivy/trivy-report.json --list-all-pkgs --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
-     
+
       - run:
           name: Confirm Report Exists
           command: |
@@ -98,3 +97,9 @@ jobs:
       - store_artifacts:
           path: /tmp/trivy/trivy-report.json
           destination: trivy-report
+
+workflows:
+  version: 2
+  release:
+    jobs:
+      - build
