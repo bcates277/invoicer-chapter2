@@ -414,8 +414,10 @@ linux-libc-dev	6.1.129-1	CVE-2025-21979	HIGH	kernel: wifi: cfg80211: cancel wiph
 linux-libc-dev	6.1.129-1	CVE-2025-21991	HIGH	kernel: x86/microcode/AMD: Fix out-of-bounds on systems with CPU-less NUMA nodes
 linux-libc-dev	6.1.129-1	CVE-2025-21993	HIGH	kernel: iscsi_ibft: Fix UBSAN shift-out-of-bounds warning in ibft_attr_show_nic()
 linux-libc-dev	6.1.129-1	CVE-2025-22055	HIGH	kernel: net: fix geneve_opt length integer overflow
+linux-libc-dev	6.1.129-1	CVE-2025-22058	HIGH	kernel: udp: Fix memory accounting leak.
 linux-libc-dev	6.1.129-1	CVE-2025-37785	HIGH	kernel: ext4: fix OOB read when checking dotdot dir
 linux-libc-dev	6.1.129-1	CVE-2025-39735	HIGH	kernel: jfs: fix slab-out-of-bounds read in ea_get()
+linux-libc-dev	6.1.129-1	CVE-2025-40014	HIGH	kernel: objtool, spi: amd: Fix out-of-bounds stack access in amd_set_spi_freq()
 linux-libc-dev	6.1.129-1	CVE-2019-15213	MEDIUM	kernel: use-after-free caused by malicious USB device in drivers/media/usb/dvb-usb/dvb-usb-init.c
 linux-libc-dev	6.1.129-1	CVE-2019-16089	MEDIUM	kernel: Improper return check in nbd_genl_status function in drivers/block/nbd.c
 linux-libc-dev	6.1.129-1	CVE-2019-20794	MEDIUM	kernel: task processes not being properly ended could lead to resource exhaustion
@@ -895,7 +897,6 @@ linux-libc-dev	6.1.129-1	CVE-2025-22053	MEDIUM	kernel: net: ibmveth: make veth_p
 linux-libc-dev	6.1.129-1	CVE-2025-22054	MEDIUM	kernel: arcnet: Add NULL check in com20020pci_probe()
 linux-libc-dev	6.1.129-1	CVE-2025-22056	MEDIUM	kernel: netfilter: nft_tunnel: fix geneve_opt type confusion addition
 linux-libc-dev	6.1.129-1	CVE-2025-22057	MEDIUM	kernel: net: decrease cached dst counters in dst_release
-linux-libc-dev	6.1.129-1	CVE-2025-22058	MEDIUM	kernel: udp: Fix memory accounting leak.
 linux-libc-dev	6.1.129-1	CVE-2025-22060	MEDIUM	kernel: net: mvpp2: Prevent parser TCAM memory corruption
 linux-libc-dev	6.1.129-1	CVE-2025-22062	MEDIUM	kernel: sctp: add mutual exclusion in proc_sctp_do_udp_port()
 linux-libc-dev	6.1.129-1	CVE-2025-22063	MEDIUM	kernel: netlabel: Fix NULL pointer exception caused by CALIPSO on IPv4 sockets
@@ -945,8 +946,6 @@ linux-libc-dev	6.1.129-1	CVE-2025-38575	MEDIUM	kernel: ksmbd: use aead_request_f
 linux-libc-dev	6.1.129-1	CVE-2025-38637	MEDIUM	kernel: net_sched: skbprio: Remove overly strict queue assertions
 linux-libc-dev	6.1.129-1	CVE-2025-39728	MEDIUM	kernel: clk: samsung: Fix UBSAN panic in samsung_clk_init()
 linux-libc-dev	6.1.129-1	CVE-2025-39989	MEDIUM	kernel: x86/mce: use is_copy_from_user() to determine copy-from-user context
-linux-libc-dev	6.1.129-1	CVE-2025-40014	MEDIUM	kernel: objtool, spi: amd: Fix out-of-bounds stack access in amd_set_spi_freq()
-linux-libc-dev	6.1.129-1	CVE-2025-40325	MEDIUM	kernel: md/raid10: wait barrier before returning discard request with REQ_NOWAIT
 linux-libc-dev	6.1.129-1	CVE-2004-0230	LOW	TCP, when using a large Window Size, makes it easier for remote attack ...
 linux-libc-dev	6.1.129-1	CVE-2005-3660	LOW	Linux kernel 2.4 and 2.6 allows attackers to cause a denial of service ...
 linux-libc-dev	6.1.129-1	CVE-2007-3719	LOW	kernel: secretly Monopolizing the CPU Without Superuser Privileges
@@ -1015,6 +1014,7 @@ linux-libc-dev	6.1.129-1	CVE-2024-50057	LOW	kernel: usb: typec: tipd: Free IRQ o
 linux-libc-dev	6.1.129-1	CVE-2024-50211	LOW	kernel: udf: refactor inode_bmap() to handle error
 linux-libc-dev	6.1.129-1	CVE-2024-56641	LOW	kernel: net/smc: initialize close_work early to avoid warning
 linux-libc-dev	6.1.129-1	CVE-2025-21825	LOW	kernel: bpf: Cancel the running bpf_timer through kworker for PREEMPT_RT
+linux-libc-dev	6.1.129-1	CVE-2025-40325	LOW	kernel: md/raid10: wait barrier before returning discard request with REQ_NOWAIT
 linux-libc-dev	6.1.129-1	TEMP-0000000-F7A20F	LOW	[Kernel: Unprivileged user can freeze journald]
 login	1:4.13+dfsg1-1+b1	CVE-2023-4641	MEDIUM	shadow-utils: possible password leak during passwd(1) change
 login	1:4.13+dfsg1-1+b1	CVE-2007-5686	LOW	initscripts in rPath Linux 1 sets insecure permissions for the /var/lo ...

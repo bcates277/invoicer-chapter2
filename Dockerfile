@@ -1,5 +1,10 @@
 FROM golang:latest
 
+# Update the package list and install binutils
+RUN apt-get update && \
+    apt-get install -y binutils && \
+    apt-get clean
+
 # Create app group and user
 RUN addgroup --gid 10001 app
 RUN adduser --gid 10001 --uid 10001 \
