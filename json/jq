@@ -1,0 +1,7 @@
+#!/bin/bash
+# run this on the .json report file
+jq -r '
+  .Results[]?.Vulnerabilities[]? |
+  [.PkgName, .InstalledVersion, .VulnerabilityID, .Severity, .Title] |
+  @tsv
+' trivy-report.json > vulns.tsv
