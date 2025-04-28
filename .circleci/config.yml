@@ -4,7 +4,8 @@ jobs:
   build:
     working_directory: /go/src/github.com/bcates277/invoicer-chapter2
     docker:
-      - image: cimg/golang:1.18
+      - image: cimg/go:1.18
+
     steps:
       - checkout
       - setup_remote_docker
