@@ -213,7 +213,7 @@ func (iv *invoicer) getIndex(w http.ResponseWriter, r *http.Request) {
         "object-src 'none';"                 // Prevent embedding Java applets, Flash, etc.
     )
     log.Println("serving index page")
-}
+
 	w.Write([]byte(`
 <!DOCTYPE html>
 <html>
