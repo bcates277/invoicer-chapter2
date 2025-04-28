@@ -210,7 +210,7 @@ func (iv *invoicer) getIndex(w http.ResponseWriter, r *http.Request) {
         "font-src 'self'; " +                // Font loading should also be restricted to same-origin
         "connect-src 'self'; " +             // Restrict AJAX/fetch requests to the same origin
         "frame-ancestors 'none'; " +         // Prevent embedding in frames
-        "object-src 'none';"                 // Prevent embedding Java applets, Flash, etc.
+		"object-src 'none';",                // Prevent embedding Java applets, Flash, etc.
     )
     log.Println("serving index page")
 
