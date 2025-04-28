@@ -1,0 +1,1 @@
+stdlib	v1.22.12	CVE-2025-22871	MEDIUM	net/http: Request smuggling due to acceptance of invalid chunked data in net/http

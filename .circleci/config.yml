@@ -72,15 +72,20 @@ jobs:
             curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
 
       - run:
+          name: Set Trivy Options
+          command: |
+            echo 'export TRIVY_OPTIONS="--severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL --no-progress"' >> $BASH_ENV
+
+      - run:
           name: Trivy Summary Scan
           command: |
-            trivy image --exit-code 0 --no-progress --severity HIGH,CRITICAL ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
+            trivy image --exit-code 0 --no-progress --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
 
       - run:
           name: Trivy JSON Report
           command: |
             mkdir -p /tmp/trivy
-            trivy image --format json --output /tmp/trivy/trivy-report.json ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
+            trivy image --format json --output /tmp/trivy/trivy-report.json --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
 
       - run:
           name: Confirm Report Exists
