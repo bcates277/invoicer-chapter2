@@ -3,6 +3,9 @@ FROM golang:1.22 as builder
 
 WORKDIR /app
 
+# Fix permissions for the working directory
+RUN chmod -R 777 /app
+
 # Copy Go module files and download dependencies
 COPY go.mod ./
 COPY go.sum ./
@@ -22,6 +25,9 @@ FROM gcr.io/distroless/static:nonroot
 
 WORKDIR /app
 
+# Fix permissions for the minimal runtime image
+RUN chmod -R 777 /app
+
 # Copy only the compiled Go binary from builder
 COPY --from=builder /app/invoicer .
 
@@ -29,7 +35,7 @@ COPY --from=builder /app/invoicer .
 COPY --from=builder /app/statics ./statics
 
 # Reports folder if needed
-RUN mkdir /app/reports
+RUN mkdir /app/reports && chmod 777 /app/reports
 
 USER nonroot
 

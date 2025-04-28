@@ -2,13 +2,19 @@ version: 2.1
 
 jobs:
   build:
-    working_directory: /go/src/github.com/bcates277/invoicer-chapter2
     docker:
       - image: cimg/go:1.18
-
+    working_directory: /go/src/github.com/bcates277/invoicer-chapter2
     steps:
       - checkout
       - setup_remote_docker
+
+      # Ensure /go directory exists and has correct permissions
+      - run:
+          name: Ensure /go directory exists and has correct permissions
+          command: |
+            sudo mkdir -p /go/src/github.com/bcates277/invoicer-chapter2
+            sudo chown -R circleci:circleci /go
 
       - run:
           name: Setup environment
@@ -19,14 +25,17 @@ jobs:
             else
               dr=$DOCKER_USER
             fi
-            cat >> $BASH_ENV \<<EOF
+            cat >> $BASH_ENV <<EOF
             export GOPATH_HEAD="$(echo ${GOPATH}|cut -d ':' -f 1)"
             export GOPATH_BASE="$(echo ${GOPATH}|cut -d ':' -f 1)${gb}"
             export DOCKER_REPO="$dr"
             EOF
 
-      - run: mkdir -p "${GOPATH_BASE}"
-      - run: mkdir -p "${GOPATH_HEAD}/bin"
+      - run:
+          name: Make directories
+          command: |
+            mkdir -p "${GOPATH_BASE}"
+            mkdir -p "${GOPATH_HEAD}/bin"
 
       - run:
           name: Testing application
@@ -75,15 +84,3 @@ jobs:
           name: Confirm Report Exists
           command: |
             echo "Contents of /tmp/trivy:"
-            ls -lah /tmp/trivy
-            cat /tmp/trivy/trivy-report.json || echo "No report found."
-
-      - store_artifacts:
-          path: /tmp/trivy/trivy-report.json
-          destination: trivy-report
-
-workflows:
-  version: 2
-  build_and_scan:
-    jobs:
-      - build
