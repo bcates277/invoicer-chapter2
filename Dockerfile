@@ -1,43 +1,33 @@
-# Stage 1: Build the Go app
+# syntax=docker/dockerfile:1
+
+# Step 1: Build the Go binary
 FROM golang:1.22 as builder
 
+# Set working directory inside builder container
 WORKDIR /app
 
-# Fix permissions for the working directory
-RUN chmod -R 777 /app
-
-# Copy Go module files and download dependencies
-COPY go.mod ./
-COPY go.sum ./
+# Copy go mod files and download dependencies
+COPY go.mod go.sum ./
 RUN go mod download
 
-# If you are using a vendor directory, copy it too
-COPY ./vendor ./vendor
-
-# Copy the source code
+# Copy the rest of your app source code
 COPY . .
 
-# Build the Go binary
-RUN CGO_ENABLED=0 GOOS=linux go build -o invoicer ./cmd/invoicer
+# Build the Go app
+RUN go build -o invoicer
 
-# Stage 2: Create minimal image
+# Step 2: Create a minimal final image
 FROM gcr.io/distroless/static:nonroot
 
+# Set working directory inside final image
 WORKDIR /app
 
-# Fix permissions for the minimal runtime image
-RUN chmod -R 777 /app
+# Copy the binary from the builder stage
+# --chown makes sure the file is owned by nonroot user
+COPY --chown=nonroot:nonroot --from=builder /app/invoicer /app/invoicer
 
-# Copy only the compiled Go binary from builder
-COPY --from=builder /app/invoicer .
-
-# Static assets (if needed)
-COPY --from=builder /app/statics ./statics
-
-# Reports folder if needed
-RUN mkdir /app/reports && chmod 777 /app/reports
-
+# Set the user to nonroot (optional, because static:nonroot expects it)
 USER nonroot
 
-EXPOSE 8080
+# Run the binary
 ENTRYPOINT ["/app/invoicer"]
