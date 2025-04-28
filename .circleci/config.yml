@@ -65,38 +65,26 @@ jobs:
               docker push ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
             fi
 
+      # Install ZAP Docker Image
       - run:
-          name: Install Trivy
+          name: Pull OWASP ZAP Docker image
           command: |
-            sudo apt-get update && sudo apt-get install -y curl
-            curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
+            docker pull owasp/zap2docker-stable
 
+      # Run ZAP Scan on the Docker image
       - run:
-          name: Set Trivy Options
+          name: Run OWASP ZAP Scan on Docker Image
           command: |
-            echo 'export TRIVY_OPTIONS="--severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL --no-progress"' >> $BASH_ENV
+            docker run --rm \
+              -v /var/run/docker.sock:/var/run/docker.sock \
+              -v $(pwd):/zap/wrk/:rw \
+              owasp/zap2docker-stable \
+              zap-full-scan.py -t "http://host.docker.internal:8080" -g gen.conf -r zap-report.html
 
-      - run:
-          name: Trivy Summary Scan
-          command: |
-            trivy image --exit-code 0 --no-progress --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL --list-all-pkgs ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
-
-      - run:
-          name: Trivy JSON Report
-          command: |
-            mkdir -p /tmp/trivy
-            trivy image --offline-scan --format json --output /tmp/trivy/trivy-report.json --list-all-pkgs --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
-
-      - run:
-          name: Confirm Report Exists
-          command: |
-            echo "Contents of /tmp/trivy:"
-            ls -lah /tmp/trivy
-            cat /tmp/trivy/trivy-report.json || echo "No report found."
-
+      # Store ZAP report as artifact
       - store_artifacts:
-          path: /tmp/trivy/trivy-report.json
-          destination: trivy-report
+          path: zap-report.html
+          destination: zap-report
 
 workflows:
   version: 2

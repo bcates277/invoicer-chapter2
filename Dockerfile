@@ -26,6 +26,9 @@ WORKDIR /app
 # --chown makes sure the file is owned by nonroot user
 COPY --chown=nonroot:nonroot --from=builder /app/invoicer /app/invoicer
 
+# Expose the port the app will listen on (e.g., 8080)
+EXPOSE 8080
+
 # Set the user to nonroot (optional, because static:nonroot expects it)
 USER nonroot
 
