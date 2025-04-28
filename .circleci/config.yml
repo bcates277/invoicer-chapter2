@@ -4,7 +4,7 @@ jobs:
   build:
     working_directory: /go/src/github.com/bcates277/invoicer-chapter2
     docker:
-      - image: circleci/golang:1.18
+      - image: golang:1.18
     steps:
       - checkout
       - setup_remote_docker
