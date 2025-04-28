@@ -1,4 +1,4 @@
-module invoicer-chapter2
+module github.com/bcates277/invoicer-chapter2
 
 go 1.18
 
