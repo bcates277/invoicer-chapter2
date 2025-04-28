@@ -85,7 +85,7 @@ jobs:
           name: Trivy JSON Report
           command: |
             mkdir -p /tmp/trivy
-            trivy image --format json --output /tmp/trivy/trivy-report.json --list-all-pkgs --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
+            trivy image --no-cache --format json --output /tmp/trivy/trivy-report.json --list-all-pkgs --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
 
       - run:
           name: Confirm Report Exists
