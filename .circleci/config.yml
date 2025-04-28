@@ -4,17 +4,19 @@ jobs:
   build:
     docker:
       - image: cimg/go:1.18
-    working_directory: /go/src/github.com/bcates277/invoicer-chapter2
+    working_directory: /home/circleci/project  # Use a more standard path for CircleCI
+
     steps:
       - checkout
-      - setup_remote_docker
 
       # Ensure /go directory exists and has correct permissions
       - run:
-          name: Ensure /go directory exists and has correct permissions
+          name: Create directories with proper permissions
           command: |
             sudo mkdir -p /go/src/github.com/bcates277/invoicer-chapter2
             sudo chown -R circleci:circleci /go
+
+      - setup_remote_docker
 
       - run:
           name: Setup environment
@@ -84,3 +86,15 @@ jobs:
           name: Confirm Report Exists
           command: |
             echo "Contents of /tmp/trivy:"
+            ls -lah /tmp/trivy
+            cat /tmp/trivy/trivy-report.json || echo "No report found."
+
+      - store_artifacts:
+          path: /tmp/trivy/trivy-report.json
+          destination: trivy-report
+
+workflows:
+  version: 2
+  build_and_scan:
+    jobs:
+      - build
