@@ -1,27 +1,33 @@
-FROM golang:latest
+# Stage 1: Build the Go app
+FROM golang:1.22 as builder
 
-# Update the package list and install binutils
-RUN apt-get update && \
-    apt-get install -y binutils && \
-    apt-get clean
-
-# Create app group and user
-RUN addgroup --gid 10001 app
-RUN adduser --gid 10001 --uid 10001 \
-    --home /app --shell /sbin/nologin \
-    --disabled-password app
-
-# Create statics directory and add static files
-RUN mkdir /app/statics/
-ADD statics /app/statics/
-
-# Copy the application binary
-COPY bin/invoicer /app/invoicer
-
-# Ensure the reports directory exists and has the correct permissions for the 'app' user
-RUN mkdir /app/reports && chown app:app /app/reports
-
-USER app
-EXPOSE 8080
 WORKDIR /app
+
+# Copy Go module files and download dependencies
+COPY go.mod go.sum ./
+RUN go mod download
+
+# Copy the source code
+COPY . .
+
+# Build the Go binary
+RUN CGO_ENABLED=0 GOOS=linux go build -o invoicer ./cmd/invoicer
+
+# Stage 2: Create minimal image
+FROM gcr.io/distroless/static:nonroot
+
+WORKDIR /app
+
+# Copy only the compiled Go binary from builder
+COPY --from=builder /app/invoicer .
+
+# Static assets (if needed)
+COPY --from=builder /app/statics ./statics
+
+# Reports folder if needed
+RUN mkdir /app/reports
+
+USER nonroot
+
+EXPOSE 8080
 ENTRYPOINT ["/app/invoicer"]

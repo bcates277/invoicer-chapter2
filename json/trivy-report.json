@@ -1,14 +1,14 @@
 {
   "SchemaVersion": 2,
-  "CreatedAt": "2025-04-28T18:05:29.845014745Z",
-  "ArtifactName": "bcates227/invoicer-chapter2:c52960729374323f40633b17ea1ef039e60dd746",
+  "CreatedAt": "2025-04-28T18:15:56.953328829Z",
+  "ArtifactName": "bcates227/invoicer-chapter2:73b66169023d6b6c970a9765a1a61ea93dfe53ff",
   "ArtifactType": "container_image",
   "Metadata": {
     "OS": {
       "Family": "debian",
       "Name": "12.10"
     },
-    "ImageID": "sha256:6bc819db6409540047299c1b9b1d3f92040bcfb06ac9ff9db5609b6da063c975",
+    "ImageID": "sha256:fd823bee3e337e004ef506adb25d795adb04863dbfad79a34a14b5fb1b0c1006",
     "DiffIDs": [
       "sha256:f7f2b929d8a55112a2db1bc16fb8731045c9572b84d6dfbbdbd5dc6dd2bd9fe4",
       "sha256:7f0053786e6e2411ce577e795ef6c278601de3faa0817c071801b11a3f83fd0d",
@@ -17,23 +17,24 @@
       "sha256:b31c32c740a58123303071268b6e4067915ea67c3186607fc803b33f73de0cdd",
       "sha256:7af57deb79828d4d070b9d31fa5e581dd2c5bb18a8fdbdf5e3ba4b785f495e4e",
       "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
-      "sha256:1ad46d1ecce6d534a0362fabe32f57ab6d69277bc963c38a016c4526b51c1290",
-      "sha256:7da2199d0eb33588143aae5ad8f61c7b5b03fef3fefbe5405b6e647a6078bd4d",
-      "sha256:c83754641b21478c620741dbdea05c2b6a8af28e77e357106f17e656223ca975",
-      "sha256:3f11149378c204d4015166687e3d393b48962c554b19b4c350164b593a9b5f0a",
-      "sha256:24cf80db3a761a868c0fc8b6f3e62edd844b09f74f25c71e6852f56bf493ead9",
-      "sha256:e6562c6ff99ba7345a58a548f6cfc8edfd259bf3186415c7cad0604db422fdc1",
+      "sha256:c1af77e3e1da5ea4276d3289b4c1620b15344ad656c2b7e5f9acd53984be8c23",
+      "sha256:73b3a50de0ec70d582f77ad7be35695d590ea6bd9e6458ae2d6d1ee20289fa6b",
+      "sha256:627a3d8c1effca25f21832bcc32329a1020a57f60d38f4ad4c23e7ce0b244b65",
+      "sha256:a30df10d7b5861f5b265c7d4456fd051f18ddca5e0b7d9078ff41c9255ed1bea",
+      "sha256:d59290541e69cec809fe7bf317b62b6b5bbf05bbb3eae8f3697e08b9181de6c7",
+      "sha256:9df5348345c73a9d4a6146fd0551320066f925de7b49db5ceeab14479730f2b9",
+      "sha256:46e141ad266671a6766a2a8004e5b92146e98375cd7166c9c8aafdb24da5e99c",
       "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
     ],
     "RepoTags": [
-      "bcates227/invoicer-chapter2:c52960729374323f40633b17ea1ef039e60dd746"
+      "bcates227/invoicer-chapter2:73b66169023d6b6c970a9765a1a61ea93dfe53ff"
     ],
     "RepoDigests": [
-      "bcates227/invoicer-chapter2@sha256:faa83192515f3d6a0d5e71f2ec328e95640cbc7ba4f7ee418932a44b5d4686bf"
+      "bcates227/invoicer-chapter2@sha256:1be033a45328bc925052d7eba3b21e252e0a4b59c01b2094f96d8750b120726e"
     ],
     "ImageConfig": {
       "architecture": "amd64",
-      "created": "2025-04-28T18:05:11.718161596Z",
+      "created": "2025-04-28T18:15:30.346350316Z",
       "history": [
         {
           "created": "2023-05-10T23:29:59Z",
@@ -95,54 +96,59 @@
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-04-28T18:05:10Z",
+          "created": "2025-04-28T18:15:29Z",
+          "created_by": "RUN /bin/sh -c apt-get update \u0026\u0026     apt-get install -y binutils \u0026\u0026     apt-get clean # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-04-28T18:15:29Z",
           "created_by": "RUN /bin/sh -c addgroup --gid 10001 app # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-04-28T18:05:11Z",
+          "created": "2025-04-28T18:15:29Z",
           "created_by": "RUN /bin/sh -c adduser --gid 10001 --uid 10001     --home /app --shell /sbin/nologin     --disabled-password app # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-04-28T18:05:11Z",
+          "created": "2025-04-28T18:15:29Z",
           "created_by": "RUN /bin/sh -c mkdir /app/statics/ # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-04-28T18:05:11Z",
+          "created": "2025-04-28T18:15:30Z",
           "created_by": "ADD statics /app/statics/ # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-04-28T18:05:11Z",
+          "created": "2025-04-28T18:15:30Z",
           "created_by": "COPY bin/invoicer /app/invoicer # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-04-28T18:05:11Z",
+          "created": "2025-04-28T18:15:30Z",
           "created_by": "RUN /bin/sh -c mkdir /app/reports \u0026\u0026 chown app:app /app/reports # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-04-28T18:05:11Z",
+          "created": "2025-04-28T18:15:30Z",
           "created_by": "USER app",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },
         {
-          "created": "2025-04-28T18:05:11Z",
+          "created": "2025-04-28T18:15:30Z",
           "created_by": "EXPOSE map[8080/tcp:{}]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },
         {
-          "created": "2025-04-28T18:05:11Z",
+          "created": "2025-04-28T18:15:30Z",
           "created_by": "WORKDIR /app",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-04-28T18:05:11Z",
+          "created": "2025-04-28T18:15:30Z",
           "created_by": "ENTRYPOINT [\"/app/invoicer\"]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
@@ -159,12 +165,13 @@
           "sha256:b31c32c740a58123303071268b6e4067915ea67c3186607fc803b33f73de0cdd",
           "sha256:7af57deb79828d4d070b9d31fa5e581dd2c5bb18a8fdbdf5e3ba4b785f495e4e",
           "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
-          "sha256:1ad46d1ecce6d534a0362fabe32f57ab6d69277bc963c38a016c4526b51c1290",
-          "sha256:7da2199d0eb33588143aae5ad8f61c7b5b03fef3fefbe5405b6e647a6078bd4d",
-          "sha256:c83754641b21478c620741dbdea05c2b6a8af28e77e357106f17e656223ca975",
-          "sha256:3f11149378c204d4015166687e3d393b48962c554b19b4c350164b593a9b5f0a",
-          "sha256:24cf80db3a761a868c0fc8b6f3e62edd844b09f74f25c71e6852f56bf493ead9",
-          "sha256:e6562c6ff99ba7345a58a548f6cfc8edfd259bf3186415c7cad0604db422fdc1",
+          "sha256:c1af77e3e1da5ea4276d3289b4c1620b15344ad656c2b7e5f9acd53984be8c23",
+          "sha256:73b3a50de0ec70d582f77ad7be35695d590ea6bd9e6458ae2d6d1ee20289fa6b",
+          "sha256:627a3d8c1effca25f21832bcc32329a1020a57f60d38f4ad4c23e7ce0b244b65",
+          "sha256:a30df10d7b5861f5b265c7d4456fd051f18ddca5e0b7d9078ff41c9255ed1bea",
+          "sha256:d59290541e69cec809fe7bf317b62b6b5bbf05bbb3eae8f3697e08b9181de6c7",
+          "sha256:9df5348345c73a9d4a6146fd0551320066f925de7b49db5ceeab14479730f2b9",
+          "sha256:46e141ad266671a6766a2a8004e5b92146e98375cd7166c9c8aafdb24da5e99c",
           "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
         ]
       },
@@ -188,7 +195,7 @@
   },
   "Results": [
     {
-      "Target": "bcates227/invoicer-chapter2:c52960729374323f40633b17ea1ef039e60dd746 (debian 12.10)",
+      "Target": "bcates227/invoicer-chapter2:73b66169023d6b6c970a9765a1a61ea93dfe53ff (debian 12.10)",
       "Class": "os-pkgs",
       "Type": "debian",
       "Vulnerabilities": [

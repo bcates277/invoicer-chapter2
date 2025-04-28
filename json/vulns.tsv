@@ -1,0 +1,1067 @@
+apt	2.6.1	CVE-2011-3374	LOW	It was found that apt-key in apt, all versions, do not correctly valid ...
+bash	5.2.15-2+b7	TEMP-0841856-B18BAF	LOW	[Privilege escalation possible to other user than root]
+binutils	2.40-2	CVE-2017-13716	LOW	binutils: Memory leak with the C++ symbol demangler routine in libiberty
+binutils	2.40-2	CVE-2018-20673	LOW	libiberty: Integer overflow in demangle_template() function
+binutils	2.40-2	CVE-2018-20712	LOW	libiberty: heap-based buffer over-read in d_expression_1
+binutils	2.40-2	CVE-2018-9996	LOW	binutils: Stack-overflow in libiberty/cplus-dem.c causes crash
+binutils	2.40-2	CVE-2021-32256	LOW	binutils: stack-overflow issue in demangle_type in rust-demangle.c.
+binutils	2.40-2	CVE-2023-1972	LOW	binutils: Illegal memory access when accessing a zer0-lengthverdef table
+binutils	2.40-2	CVE-2024-53589	LOW	binutils: objdump: buffer Overflow in the BFD library's handling of tekhex format files
+binutils	2.40-2	CVE-2024-57360	LOW	binutils: nm: potential segmentation fault when displaying symbols without version info
+binutils	2.40-2	CVE-2025-0840	LOW	binutils: GNU Binutils objdump.c disassemble_bytes stack-based overflow
+binutils	2.40-2	CVE-2025-1147	LOW	binutils: GNU Binutils nm nm.c internal_strlen buffer overflow
+binutils	2.40-2	CVE-2025-1148	LOW	binutils: GNU Binutils ld ldelfgen.c link_order_scan memory leak
+binutils	2.40-2	CVE-2025-1149	LOW	binutils: GNU Binutils ld xmalloc.c xstrdup memory leak
+binutils	2.40-2	CVE-2025-1150	LOW	binutils: GNU Binutils ld libbfd.c bfd_malloc memory leak
+binutils	2.40-2	CVE-2025-1151	LOW	binutils: GNU Binutils ld xmemdup.c xmemdup memory leak
+binutils	2.40-2	CVE-2025-1152	LOW	binutils: GNU Binutils ld xstrdup.c xstrdup memory leak
+binutils	2.40-2	CVE-2025-1153	LOW	binutils: GNU Binutils format.c bfd_set_format memory corruption
+binutils	2.40-2	CVE-2025-1176	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec heap-based overflow
+binutils	2.40-2	CVE-2025-1178	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+binutils	2.40-2	CVE-2025-1179	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+binutils	2.40-2	CVE-2025-1180	LOW	binutils: GNU Binutils ld elf-eh-frame.c _bfd_elf_write_section_eh_frame memory corruption
+binutils	2.40-2	CVE-2025-1181	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec memory corruption
+binutils	2.40-2	CVE-2025-1182	LOW	binutils: GNU Binutils ld elflink.c bfd_elf_reloc_symbol_deleted_p memory corruption
+binutils	2.40-2	CVE-2025-3198	LOW	binutils: GNU Binutils objdump bucomm.c display_info memory leak
+binutils-common	2.40-2	CVE-2017-13716	LOW	binutils: Memory leak with the C++ symbol demangler routine in libiberty
+binutils-common	2.40-2	CVE-2018-20673	LOW	libiberty: Integer overflow in demangle_template() function
+binutils-common	2.40-2	CVE-2018-20712	LOW	libiberty: heap-based buffer over-read in d_expression_1
+binutils-common	2.40-2	CVE-2018-9996	LOW	binutils: Stack-overflow in libiberty/cplus-dem.c causes crash
+binutils-common	2.40-2	CVE-2021-32256	LOW	binutils: stack-overflow issue in demangle_type in rust-demangle.c.
+binutils-common	2.40-2	CVE-2023-1972	LOW	binutils: Illegal memory access when accessing a zer0-lengthverdef table
+binutils-common	2.40-2	CVE-2024-53589	LOW	binutils: objdump: buffer Overflow in the BFD library's handling of tekhex format files
+binutils-common	2.40-2	CVE-2024-57360	LOW	binutils: nm: potential segmentation fault when displaying symbols without version info
+binutils-common	2.40-2	CVE-2025-0840	LOW	binutils: GNU Binutils objdump.c disassemble_bytes stack-based overflow
+binutils-common	2.40-2	CVE-2025-1147	LOW	binutils: GNU Binutils nm nm.c internal_strlen buffer overflow
+binutils-common	2.40-2	CVE-2025-1148	LOW	binutils: GNU Binutils ld ldelfgen.c link_order_scan memory leak
+binutils-common	2.40-2	CVE-2025-1149	LOW	binutils: GNU Binutils ld xmalloc.c xstrdup memory leak
+binutils-common	2.40-2	CVE-2025-1150	LOW	binutils: GNU Binutils ld libbfd.c bfd_malloc memory leak
+binutils-common	2.40-2	CVE-2025-1151	LOW	binutils: GNU Binutils ld xmemdup.c xmemdup memory leak
+binutils-common	2.40-2	CVE-2025-1152	LOW	binutils: GNU Binutils ld xstrdup.c xstrdup memory leak
+binutils-common	2.40-2	CVE-2025-1153	LOW	binutils: GNU Binutils format.c bfd_set_format memory corruption
+binutils-common	2.40-2	CVE-2025-1176	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec heap-based overflow
+binutils-common	2.40-2	CVE-2025-1178	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+binutils-common	2.40-2	CVE-2025-1179	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+binutils-common	2.40-2	CVE-2025-1180	LOW	binutils: GNU Binutils ld elf-eh-frame.c _bfd_elf_write_section_eh_frame memory corruption
+binutils-common	2.40-2	CVE-2025-1181	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec memory corruption
+binutils-common	2.40-2	CVE-2025-1182	LOW	binutils: GNU Binutils ld elflink.c bfd_elf_reloc_symbol_deleted_p memory corruption
+binutils-common	2.40-2	CVE-2025-3198	LOW	binutils: GNU Binutils objdump bucomm.c display_info memory leak
+binutils-x86-64-linux-gnu	2.40-2	CVE-2017-13716	LOW	binutils: Memory leak with the C++ symbol demangler routine in libiberty
+binutils-x86-64-linux-gnu	2.40-2	CVE-2018-20673	LOW	libiberty: Integer overflow in demangle_template() function
+binutils-x86-64-linux-gnu	2.40-2	CVE-2018-20712	LOW	libiberty: heap-based buffer over-read in d_expression_1
+binutils-x86-64-linux-gnu	2.40-2	CVE-2018-9996	LOW	binutils: Stack-overflow in libiberty/cplus-dem.c causes crash
+binutils-x86-64-linux-gnu	2.40-2	CVE-2021-32256	LOW	binutils: stack-overflow issue in demangle_type in rust-demangle.c.
+binutils-x86-64-linux-gnu	2.40-2	CVE-2023-1972	LOW	binutils: Illegal memory access when accessing a zer0-lengthverdef table
+binutils-x86-64-linux-gnu	2.40-2	CVE-2024-53589	LOW	binutils: objdump: buffer Overflow in the BFD library's handling of tekhex format files
+binutils-x86-64-linux-gnu	2.40-2	CVE-2024-57360	LOW	binutils: nm: potential segmentation fault when displaying symbols without version info
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-0840	LOW	binutils: GNU Binutils objdump.c disassemble_bytes stack-based overflow
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1147	LOW	binutils: GNU Binutils nm nm.c internal_strlen buffer overflow
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1148	LOW	binutils: GNU Binutils ld ldelfgen.c link_order_scan memory leak
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1149	LOW	binutils: GNU Binutils ld xmalloc.c xstrdup memory leak
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1150	LOW	binutils: GNU Binutils ld libbfd.c bfd_malloc memory leak
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1151	LOW	binutils: GNU Binutils ld xmemdup.c xmemdup memory leak
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1152	LOW	binutils: GNU Binutils ld xstrdup.c xstrdup memory leak
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1153	LOW	binutils: GNU Binutils format.c bfd_set_format memory corruption
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1176	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec heap-based overflow
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1178	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1179	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1180	LOW	binutils: GNU Binutils ld elf-eh-frame.c _bfd_elf_write_section_eh_frame memory corruption
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1181	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec memory corruption
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-1182	LOW	binutils: GNU Binutils ld elflink.c bfd_elf_reloc_symbol_deleted_p memory corruption
+binutils-x86-64-linux-gnu	2.40-2	CVE-2025-3198	LOW	binutils: GNU Binutils objdump bucomm.c display_info memory leak
+bsdutils	1:2.38.1-5+deb12u3	CVE-2022-0563	LOW	util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline
+coreutils	9.1-1	CVE-2016-2781	LOW	coreutils: Non-privileged session can escape to the parent session in chroot
+coreutils	9.1-1	CVE-2017-18018	LOW	coreutils: race condition vulnerability in chown and chgrp
+cpp-12	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+cpp-12	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+curl	7.88.1-10+deb12u12	CVE-2024-2379	LOW	curl: QUIC certificate check bypass with wolfSSL
+curl	7.88.1-10+deb12u12	CVE-2025-0725	LOW	libcurl: Buffer Overflow in libcurl via zlib Integer Overflow
+dirmngr	2.2.40-1.1	CVE-2022-3219	LOW	gnupg: denial of service issue (resource consumption) using compressed packets
+dirmngr	2.2.40-1.1	CVE-2025-30258	LOW	gnupg: verification DoS due to a malicious subkey in the keyring
+g++-12	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+g++-12	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+gcc-12	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+gcc-12	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+gcc-12-base	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+gcc-12-base	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+git	1:2.39.5-0+deb12u2	CVE-2018-1000021	LOW	git: client prints server-sent ANSI escape codes to the terminal, allowing for unverified messages to potentially execute arbitrary commands
+git	1:2.39.5-0+deb12u2	CVE-2022-24975	LOW	git: The --mirror option for git leaks secret for deleted content, aka the "GitBleed"
+git	1:2.39.5-0+deb12u2	CVE-2024-52005	LOW	git: The sideband payload is passed unfiltered to the terminal in git
+git-man	1:2.39.5-0+deb12u2	CVE-2018-1000021	LOW	git: client prints server-sent ANSI escape codes to the terminal, allowing for unverified messages to potentially execute arbitrary commands
+git-man	1:2.39.5-0+deb12u2	CVE-2022-24975	LOW	git: The --mirror option for git leaks secret for deleted content, aka the "GitBleed"
+git-man	1:2.39.5-0+deb12u2	CVE-2024-52005	LOW	git: The sideband payload is passed unfiltered to the terminal in git
+gnupg	2.2.40-1.1	CVE-2022-3219	LOW	gnupg: denial of service issue (resource consumption) using compressed packets
+gnupg	2.2.40-1.1	CVE-2025-30258	LOW	gnupg: verification DoS due to a malicious subkey in the keyring
+gnupg-l10n	2.2.40-1.1	CVE-2022-3219	LOW	gnupg: denial of service issue (resource consumption) using compressed packets
+gnupg-l10n	2.2.40-1.1	CVE-2025-30258	LOW	gnupg: verification DoS due to a malicious subkey in the keyring
+gnupg-utils	2.2.40-1.1	CVE-2022-3219	LOW	gnupg: denial of service issue (resource consumption) using compressed packets
+gnupg-utils	2.2.40-1.1	CVE-2025-30258	LOW	gnupg: verification DoS due to a malicious subkey in the keyring
+gpg	2.2.40-1.1	CVE-2022-3219	LOW	gnupg: denial of service issue (resource consumption) using compressed packets
+gpg	2.2.40-1.1	CVE-2025-30258	LOW	gnupg: verification DoS due to a malicious subkey in the keyring
+gpg-agent	2.2.40-1.1	CVE-2022-3219	LOW	gnupg: denial of service issue (resource consumption) using compressed packets
+gpg-agent	2.2.40-1.1	CVE-2025-30258	LOW	gnupg: verification DoS due to a malicious subkey in the keyring
+gpg-wks-client	2.2.40-1.1	CVE-2022-3219	LOW	gnupg: denial of service issue (resource consumption) using compressed packets
+gpg-wks-client	2.2.40-1.1	CVE-2025-30258	LOW	gnupg: verification DoS due to a malicious subkey in the keyring
+gpg-wks-server	2.2.40-1.1	CVE-2022-3219	LOW	gnupg: denial of service issue (resource consumption) using compressed packets
+gpg-wks-server	2.2.40-1.1	CVE-2025-30258	LOW	gnupg: verification DoS due to a malicious subkey in the keyring
+gpgconf	2.2.40-1.1	CVE-2022-3219	LOW	gnupg: denial of service issue (resource consumption) using compressed packets
+gpgconf	2.2.40-1.1	CVE-2025-30258	LOW	gnupg: verification DoS due to a malicious subkey in the keyring
+gpgsm	2.2.40-1.1	CVE-2022-3219	LOW	gnupg: denial of service issue (resource consumption) using compressed packets
+gpgsm	2.2.40-1.1	CVE-2025-30258	LOW	gnupg: verification DoS due to a malicious subkey in the keyring
+gpgv	2.2.40-1.1	CVE-2022-3219	LOW	gnupg: denial of service issue (resource consumption) using compressed packets
+gpgv	2.2.40-1.1	CVE-2025-30258	LOW	gnupg: verification DoS due to a malicious subkey in the keyring
+libapt-pkg6.0	2.6.1	CVE-2011-3374	LOW	It was found that apt-key in apt, all versions, do not correctly valid ...
+libasan8	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+libasan8	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libatomic1	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+libatomic1	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libbinutils	2.40-2	CVE-2017-13716	LOW	binutils: Memory leak with the C++ symbol demangler routine in libiberty
+libbinutils	2.40-2	CVE-2018-20673	LOW	libiberty: Integer overflow in demangle_template() function
+libbinutils	2.40-2	CVE-2018-20712	LOW	libiberty: heap-based buffer over-read in d_expression_1
+libbinutils	2.40-2	CVE-2018-9996	LOW	binutils: Stack-overflow in libiberty/cplus-dem.c causes crash
+libbinutils	2.40-2	CVE-2021-32256	LOW	binutils: stack-overflow issue in demangle_type in rust-demangle.c.
+libbinutils	2.40-2	CVE-2023-1972	LOW	binutils: Illegal memory access when accessing a zer0-lengthverdef table
+libbinutils	2.40-2	CVE-2024-53589	LOW	binutils: objdump: buffer Overflow in the BFD library's handling of tekhex format files
+libbinutils	2.40-2	CVE-2024-57360	LOW	binutils: nm: potential segmentation fault when displaying symbols without version info
+libbinutils	2.40-2	CVE-2025-0840	LOW	binutils: GNU Binutils objdump.c disassemble_bytes stack-based overflow
+libbinutils	2.40-2	CVE-2025-1147	LOW	binutils: GNU Binutils nm nm.c internal_strlen buffer overflow
+libbinutils	2.40-2	CVE-2025-1148	LOW	binutils: GNU Binutils ld ldelfgen.c link_order_scan memory leak
+libbinutils	2.40-2	CVE-2025-1149	LOW	binutils: GNU Binutils ld xmalloc.c xstrdup memory leak
+libbinutils	2.40-2	CVE-2025-1150	LOW	binutils: GNU Binutils ld libbfd.c bfd_malloc memory leak
+libbinutils	2.40-2	CVE-2025-1151	LOW	binutils: GNU Binutils ld xmemdup.c xmemdup memory leak
+libbinutils	2.40-2	CVE-2025-1152	LOW	binutils: GNU Binutils ld xstrdup.c xstrdup memory leak
+libbinutils	2.40-2	CVE-2025-1153	LOW	binutils: GNU Binutils format.c bfd_set_format memory corruption
+libbinutils	2.40-2	CVE-2025-1176	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec heap-based overflow
+libbinutils	2.40-2	CVE-2025-1178	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+libbinutils	2.40-2	CVE-2025-1179	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+libbinutils	2.40-2	CVE-2025-1180	LOW	binutils: GNU Binutils ld elf-eh-frame.c _bfd_elf_write_section_eh_frame memory corruption
+libbinutils	2.40-2	CVE-2025-1181	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec memory corruption
+libbinutils	2.40-2	CVE-2025-1182	LOW	binutils: GNU Binutils ld elflink.c bfd_elf_reloc_symbol_deleted_p memory corruption
+libbinutils	2.40-2	CVE-2025-3198	LOW	binutils: GNU Binutils objdump bucomm.c display_info memory leak
+libblkid1	2.38.1-5+deb12u3	CVE-2022-0563	LOW	util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline
+libc-bin	2.36-9+deb12u10	CVE-2010-4756	LOW	glibc: glob implementation can cause excessive CPU and memory consumption due to crafted glob expressions
+libc-bin	2.36-9+deb12u10	CVE-2018-20796	LOW	glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c
+libc-bin	2.36-9+deb12u10	CVE-2019-1010022	LOW	glibc: stack guard protection bypass
+libc-bin	2.36-9+deb12u10	CVE-2019-1010023	LOW	glibc: running ldd on malicious ELF leads to code execution because of wrong size computation
+libc-bin	2.36-9+deb12u10	CVE-2019-1010024	LOW	glibc: ASLR bypass using cache of thread stack and heap
+libc-bin	2.36-9+deb12u10	CVE-2019-1010025	LOW	glibc: information disclosure of heap addresses of pthread_created thread
+libc-bin	2.36-9+deb12u10	CVE-2019-9192	LOW	glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c
+libc-dev-bin	2.36-9+deb12u10	CVE-2010-4756	LOW	glibc: glob implementation can cause excessive CPU and memory consumption due to crafted glob expressions
+libc-dev-bin	2.36-9+deb12u10	CVE-2018-20796	LOW	glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c
+libc-dev-bin	2.36-9+deb12u10	CVE-2019-1010022	LOW	glibc: stack guard protection bypass
+libc-dev-bin	2.36-9+deb12u10	CVE-2019-1010023	LOW	glibc: running ldd on malicious ELF leads to code execution because of wrong size computation
+libc-dev-bin	2.36-9+deb12u10	CVE-2019-1010024	LOW	glibc: ASLR bypass using cache of thread stack and heap
+libc-dev-bin	2.36-9+deb12u10	CVE-2019-1010025	LOW	glibc: information disclosure of heap addresses of pthread_created thread
+libc-dev-bin	2.36-9+deb12u10	CVE-2019-9192	LOW	glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c
+libc6	2.36-9+deb12u10	CVE-2010-4756	LOW	glibc: glob implementation can cause excessive CPU and memory consumption due to crafted glob expressions
+libc6	2.36-9+deb12u10	CVE-2018-20796	LOW	glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c
+libc6	2.36-9+deb12u10	CVE-2019-1010022	LOW	glibc: stack guard protection bypass
+libc6	2.36-9+deb12u10	CVE-2019-1010023	LOW	glibc: running ldd on malicious ELF leads to code execution because of wrong size computation
+libc6	2.36-9+deb12u10	CVE-2019-1010024	LOW	glibc: ASLR bypass using cache of thread stack and heap
+libc6	2.36-9+deb12u10	CVE-2019-1010025	LOW	glibc: information disclosure of heap addresses of pthread_created thread
+libc6	2.36-9+deb12u10	CVE-2019-9192	LOW	glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c
+libc6-dev	2.36-9+deb12u10	CVE-2010-4756	LOW	glibc: glob implementation can cause excessive CPU and memory consumption due to crafted glob expressions
+libc6-dev	2.36-9+deb12u10	CVE-2018-20796	LOW	glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c
+libc6-dev	2.36-9+deb12u10	CVE-2019-1010022	LOW	glibc: stack guard protection bypass
+libc6-dev	2.36-9+deb12u10	CVE-2019-1010023	LOW	glibc: running ldd on malicious ELF leads to code execution because of wrong size computation
+libc6-dev	2.36-9+deb12u10	CVE-2019-1010024	LOW	glibc: ASLR bypass using cache of thread stack and heap
+libc6-dev	2.36-9+deb12u10	CVE-2019-1010025	LOW	glibc: information disclosure of heap addresses of pthread_created thread
+libc6-dev	2.36-9+deb12u10	CVE-2019-9192	LOW	glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c
+libcap2	1:2.66-4	CVE-2025-1390	MEDIUM	libcap: pam_cap: Fix potential configuration parsing error
+libcc1-0	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+libcc1-0	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libctf-nobfd0	2.40-2	CVE-2017-13716	LOW	binutils: Memory leak with the C++ symbol demangler routine in libiberty
+libctf-nobfd0	2.40-2	CVE-2018-20673	LOW	libiberty: Integer overflow in demangle_template() function
+libctf-nobfd0	2.40-2	CVE-2018-20712	LOW	libiberty: heap-based buffer over-read in d_expression_1
+libctf-nobfd0	2.40-2	CVE-2018-9996	LOW	binutils: Stack-overflow in libiberty/cplus-dem.c causes crash
+libctf-nobfd0	2.40-2	CVE-2021-32256	LOW	binutils: stack-overflow issue in demangle_type in rust-demangle.c.
+libctf-nobfd0	2.40-2	CVE-2023-1972	LOW	binutils: Illegal memory access when accessing a zer0-lengthverdef table
+libctf-nobfd0	2.40-2	CVE-2024-53589	LOW	binutils: objdump: buffer Overflow in the BFD library's handling of tekhex format files
+libctf-nobfd0	2.40-2	CVE-2024-57360	LOW	binutils: nm: potential segmentation fault when displaying symbols without version info
+libctf-nobfd0	2.40-2	CVE-2025-0840	LOW	binutils: GNU Binutils objdump.c disassemble_bytes stack-based overflow
+libctf-nobfd0	2.40-2	CVE-2025-1147	LOW	binutils: GNU Binutils nm nm.c internal_strlen buffer overflow
+libctf-nobfd0	2.40-2	CVE-2025-1148	LOW	binutils: GNU Binutils ld ldelfgen.c link_order_scan memory leak
+libctf-nobfd0	2.40-2	CVE-2025-1149	LOW	binutils: GNU Binutils ld xmalloc.c xstrdup memory leak
+libctf-nobfd0	2.40-2	CVE-2025-1150	LOW	binutils: GNU Binutils ld libbfd.c bfd_malloc memory leak
+libctf-nobfd0	2.40-2	CVE-2025-1151	LOW	binutils: GNU Binutils ld xmemdup.c xmemdup memory leak
+libctf-nobfd0	2.40-2	CVE-2025-1152	LOW	binutils: GNU Binutils ld xstrdup.c xstrdup memory leak
+libctf-nobfd0	2.40-2	CVE-2025-1153	LOW	binutils: GNU Binutils format.c bfd_set_format memory corruption
+libctf-nobfd0	2.40-2	CVE-2025-1176	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec heap-based overflow
+libctf-nobfd0	2.40-2	CVE-2025-1178	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+libctf-nobfd0	2.40-2	CVE-2025-1179	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+libctf-nobfd0	2.40-2	CVE-2025-1180	LOW	binutils: GNU Binutils ld elf-eh-frame.c _bfd_elf_write_section_eh_frame memory corruption
+libctf-nobfd0	2.40-2	CVE-2025-1181	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec memory corruption
+libctf-nobfd0	2.40-2	CVE-2025-1182	LOW	binutils: GNU Binutils ld elflink.c bfd_elf_reloc_symbol_deleted_p memory corruption
+libctf-nobfd0	2.40-2	CVE-2025-3198	LOW	binutils: GNU Binutils objdump bucomm.c display_info memory leak
+libctf0	2.40-2	CVE-2017-13716	LOW	binutils: Memory leak with the C++ symbol demangler routine in libiberty
+libctf0	2.40-2	CVE-2018-20673	LOW	libiberty: Integer overflow in demangle_template() function
+libctf0	2.40-2	CVE-2018-20712	LOW	libiberty: heap-based buffer over-read in d_expression_1
+libctf0	2.40-2	CVE-2018-9996	LOW	binutils: Stack-overflow in libiberty/cplus-dem.c causes crash
+libctf0	2.40-2	CVE-2021-32256	LOW	binutils: stack-overflow issue in demangle_type in rust-demangle.c.
+libctf0	2.40-2	CVE-2023-1972	LOW	binutils: Illegal memory access when accessing a zer0-lengthverdef table
+libctf0	2.40-2	CVE-2024-53589	LOW	binutils: objdump: buffer Overflow in the BFD library's handling of tekhex format files
+libctf0	2.40-2	CVE-2024-57360	LOW	binutils: nm: potential segmentation fault when displaying symbols without version info
+libctf0	2.40-2	CVE-2025-0840	LOW	binutils: GNU Binutils objdump.c disassemble_bytes stack-based overflow
+libctf0	2.40-2	CVE-2025-1147	LOW	binutils: GNU Binutils nm nm.c internal_strlen buffer overflow
+libctf0	2.40-2	CVE-2025-1148	LOW	binutils: GNU Binutils ld ldelfgen.c link_order_scan memory leak
+libctf0	2.40-2	CVE-2025-1149	LOW	binutils: GNU Binutils ld xmalloc.c xstrdup memory leak
+libctf0	2.40-2	CVE-2025-1150	LOW	binutils: GNU Binutils ld libbfd.c bfd_malloc memory leak
+libctf0	2.40-2	CVE-2025-1151	LOW	binutils: GNU Binutils ld xmemdup.c xmemdup memory leak
+libctf0	2.40-2	CVE-2025-1152	LOW	binutils: GNU Binutils ld xstrdup.c xstrdup memory leak
+libctf0	2.40-2	CVE-2025-1153	LOW	binutils: GNU Binutils format.c bfd_set_format memory corruption
+libctf0	2.40-2	CVE-2025-1176	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec heap-based overflow
+libctf0	2.40-2	CVE-2025-1178	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+libctf0	2.40-2	CVE-2025-1179	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+libctf0	2.40-2	CVE-2025-1180	LOW	binutils: GNU Binutils ld elf-eh-frame.c _bfd_elf_write_section_eh_frame memory corruption
+libctf0	2.40-2	CVE-2025-1181	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec memory corruption
+libctf0	2.40-2	CVE-2025-1182	LOW	binutils: GNU Binutils ld elflink.c bfd_elf_reloc_symbol_deleted_p memory corruption
+libctf0	2.40-2	CVE-2025-3198	LOW	binutils: GNU Binutils objdump bucomm.c display_info memory leak
+libcurl3-gnutls	7.88.1-10+deb12u12	CVE-2024-2379	LOW	curl: QUIC certificate check bypass with wolfSSL
+libcurl3-gnutls	7.88.1-10+deb12u12	CVE-2025-0725	LOW	libcurl: Buffer Overflow in libcurl via zlib Integer Overflow
+libcurl4	7.88.1-10+deb12u12	CVE-2024-2379	LOW	curl: QUIC certificate check bypass with wolfSSL
+libcurl4	7.88.1-10+deb12u12	CVE-2025-0725	LOW	libcurl: Buffer Overflow in libcurl via zlib Integer Overflow
+libexpat1	2.5.0-1+deb12u1	CVE-2023-52425	HIGH	expat: parsing large tokens can trigger a denial of service
+libexpat1	2.5.0-1+deb12u1	CVE-2024-8176	HIGH	libexpat: expat: Improper Restriction of XML Entity Expansion Depth in libexpat
+libexpat1	2.5.0-1+deb12u1	CVE-2024-50602	MEDIUM	libexpat: expat: DoS via XML_ResumeParser
+libexpat1	2.5.0-1+deb12u1	CVE-2023-52426	LOW	expat: recursive XML entity expansion vulnerability
+libexpat1	2.5.0-1+deb12u1	CVE-2024-28757	LOW	expat: XML Entity Expansion
+libgcc-12-dev	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+libgcc-12-dev	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libgcc-s1	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+libgcc-s1	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libgcrypt20	1.10.1-3	CVE-2018-6829	LOW	libgcrypt: ElGamal implementation doesn't have semantic security due to incorrectly encoded plaintexts possibly allowing to obtain sensitive information
+libgcrypt20	1.10.1-3	CVE-2024-2236	LOW	libgcrypt: vulnerable to Marvin Attack
+libgnutls30	3.7.9-2+deb12u4	CVE-2011-3389	LOW	HTTPS: block-wise chosen-plaintext attack against SSL/TLS (BEAST)
+libgomp1	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+libgomp1	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libgprofng0	2.40-2	CVE-2017-13716	LOW	binutils: Memory leak with the C++ symbol demangler routine in libiberty
+libgprofng0	2.40-2	CVE-2018-20673	LOW	libiberty: Integer overflow in demangle_template() function
+libgprofng0	2.40-2	CVE-2018-20712	LOW	libiberty: heap-based buffer over-read in d_expression_1
+libgprofng0	2.40-2	CVE-2018-9996	LOW	binutils: Stack-overflow in libiberty/cplus-dem.c causes crash
+libgprofng0	2.40-2	CVE-2021-32256	LOW	binutils: stack-overflow issue in demangle_type in rust-demangle.c.
+libgprofng0	2.40-2	CVE-2023-1972	LOW	binutils: Illegal memory access when accessing a zer0-lengthverdef table
+libgprofng0	2.40-2	CVE-2024-53589	LOW	binutils: objdump: buffer Overflow in the BFD library's handling of tekhex format files
+libgprofng0	2.40-2	CVE-2024-57360	LOW	binutils: nm: potential segmentation fault when displaying symbols without version info
+libgprofng0	2.40-2	CVE-2025-0840	LOW	binutils: GNU Binutils objdump.c disassemble_bytes stack-based overflow
+libgprofng0	2.40-2	CVE-2025-1147	LOW	binutils: GNU Binutils nm nm.c internal_strlen buffer overflow
+libgprofng0	2.40-2	CVE-2025-1148	LOW	binutils: GNU Binutils ld ldelfgen.c link_order_scan memory leak
+libgprofng0	2.40-2	CVE-2025-1149	LOW	binutils: GNU Binutils ld xmalloc.c xstrdup memory leak
+libgprofng0	2.40-2	CVE-2025-1150	LOW	binutils: GNU Binutils ld libbfd.c bfd_malloc memory leak
+libgprofng0	2.40-2	CVE-2025-1151	LOW	binutils: GNU Binutils ld xmemdup.c xmemdup memory leak
+libgprofng0	2.40-2	CVE-2025-1152	LOW	binutils: GNU Binutils ld xstrdup.c xstrdup memory leak
+libgprofng0	2.40-2	CVE-2025-1153	LOW	binutils: GNU Binutils format.c bfd_set_format memory corruption
+libgprofng0	2.40-2	CVE-2025-1176	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec heap-based overflow
+libgprofng0	2.40-2	CVE-2025-1178	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+libgprofng0	2.40-2	CVE-2025-1179	LOW	binutils: GNU Binutils ld libbfd.c bfd_putl64 memory corruption
+libgprofng0	2.40-2	CVE-2025-1180	LOW	binutils: GNU Binutils ld elf-eh-frame.c _bfd_elf_write_section_eh_frame memory corruption
+libgprofng0	2.40-2	CVE-2025-1181	LOW	binutils: GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec memory corruption
+libgprofng0	2.40-2	CVE-2025-1182	LOW	binutils: GNU Binutils ld elflink.c bfd_elf_reloc_symbol_deleted_p memory corruption
+libgprofng0	2.40-2	CVE-2025-3198	LOW	binutils: GNU Binutils objdump bucomm.c display_info memory leak
+libgssapi-krb5-2	1.20.1-2+deb12u2	CVE-2024-26462	MEDIUM	krb5: Memory leak at /krb5/src/kdc/ndr.c
+libgssapi-krb5-2	1.20.1-2+deb12u2	CVE-2025-24528	MEDIUM	krb5: overflow when calculating ulog block size
+libgssapi-krb5-2	1.20.1-2+deb12u2	CVE-2025-3576	MEDIUM	krb5: Kerberos RC4-HMAC-MD5 Checksum Vulnerability Enabling Message Spoofing via MD5 Collisions
+libgssapi-krb5-2	1.20.1-2+deb12u2	CVE-2018-5709	LOW	krb5: integer overflow in dbentry->n_key_data in kadmin/dbutil/dump.c
+libgssapi-krb5-2	1.20.1-2+deb12u2	CVE-2024-26458	LOW	krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c
+libgssapi-krb5-2	1.20.1-2+deb12u2	CVE-2024-26461	LOW	krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c
+libitm1	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+libitm1	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libjansson4	2.14-2	CVE-2020-36325	LOW	jansson: out-of-bounds read in json_loads() due to a parsing error
+libk5crypto3	1.20.1-2+deb12u2	CVE-2024-26462	MEDIUM	krb5: Memory leak at /krb5/src/kdc/ndr.c
+libk5crypto3	1.20.1-2+deb12u2	CVE-2025-24528	MEDIUM	krb5: overflow when calculating ulog block size
+libk5crypto3	1.20.1-2+deb12u2	CVE-2025-3576	MEDIUM	krb5: Kerberos RC4-HMAC-MD5 Checksum Vulnerability Enabling Message Spoofing via MD5 Collisions
+libk5crypto3	1.20.1-2+deb12u2	CVE-2018-5709	LOW	krb5: integer overflow in dbentry->n_key_data in kadmin/dbutil/dump.c
+libk5crypto3	1.20.1-2+deb12u2	CVE-2024-26458	LOW	krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c
+libk5crypto3	1.20.1-2+deb12u2	CVE-2024-26461	LOW	krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c
+libkrb5-3	1.20.1-2+deb12u2	CVE-2024-26462	MEDIUM	krb5: Memory leak at /krb5/src/kdc/ndr.c
+libkrb5-3	1.20.1-2+deb12u2	CVE-2025-24528	MEDIUM	krb5: overflow when calculating ulog block size
+libkrb5-3	1.20.1-2+deb12u2	CVE-2025-3576	MEDIUM	krb5: Kerberos RC4-HMAC-MD5 Checksum Vulnerability Enabling Message Spoofing via MD5 Collisions
+libkrb5-3	1.20.1-2+deb12u2	CVE-2018-5709	LOW	krb5: integer overflow in dbentry->n_key_data in kadmin/dbutil/dump.c
+libkrb5-3	1.20.1-2+deb12u2	CVE-2024-26458	LOW	krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c
+libkrb5-3	1.20.1-2+deb12u2	CVE-2024-26461	LOW	krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c
+libkrb5support0	1.20.1-2+deb12u2	CVE-2024-26462	MEDIUM	krb5: Memory leak at /krb5/src/kdc/ndr.c
+libkrb5support0	1.20.1-2+deb12u2	CVE-2025-24528	MEDIUM	krb5: overflow when calculating ulog block size
+libkrb5support0	1.20.1-2+deb12u2	CVE-2025-3576	MEDIUM	krb5: Kerberos RC4-HMAC-MD5 Checksum Vulnerability Enabling Message Spoofing via MD5 Collisions
+libkrb5support0	1.20.1-2+deb12u2	CVE-2018-5709	LOW	krb5: integer overflow in dbentry->n_key_data in kadmin/dbutil/dump.c
+libkrb5support0	1.20.1-2+deb12u2	CVE-2024-26458	LOW	krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c
+libkrb5support0	1.20.1-2+deb12u2	CVE-2024-26461	LOW	krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c
+libldap-2.5-0	2.5.13+dfsg-5	CVE-2023-2953	HIGH	openldap: null pointer dereference in  ber_memalloc_x  function
+libldap-2.5-0	2.5.13+dfsg-5	CVE-2015-3276	LOW	openldap: incorrect multi-keyword mode cipherstring parsing
+libldap-2.5-0	2.5.13+dfsg-5	CVE-2017-14159	LOW	openldap: Privilege escalation via PID file manipulation
+libldap-2.5-0	2.5.13+dfsg-5	CVE-2017-17740	LOW	openldap: contrib/slapd-modules/nops/nops.c attempts to free stack buffer allowing remote attackers to cause a denial of service
+libldap-2.5-0	2.5.13+dfsg-5	CVE-2020-15719	LOW	openldap: Certificate validation incorrectly matches name against CN-ID
+liblsan0	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+liblsan0	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libmount1	2.38.1-5+deb12u3	CVE-2022-0563	LOW	util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline
+libncursesw6	6.4-4	CVE-2023-50495	MEDIUM	ncurses: segmentation fault via _nc_wrap_entry()
+libpam-modules	1.5.2-6+deb12u1	CVE-2024-10041	MEDIUM	pam: libpam: Libpam vulnerable to read hashed password
+libpam-modules	1.5.2-6+deb12u1	CVE-2024-22365	MEDIUM	pam: allowing unprivileged user to block another user namespace
+libpam-modules-bin	1.5.2-6+deb12u1	CVE-2024-10041	MEDIUM	pam: libpam: Libpam vulnerable to read hashed password
+libpam-modules-bin	1.5.2-6+deb12u1	CVE-2024-22365	MEDIUM	pam: allowing unprivileged user to block another user namespace
+libpam-runtime	1.5.2-6+deb12u1	CVE-2024-10041	MEDIUM	pam: libpam: Libpam vulnerable to read hashed password
+libpam-runtime	1.5.2-6+deb12u1	CVE-2024-22365	MEDIUM	pam: allowing unprivileged user to block another user namespace
+libpam0g	1.5.2-6+deb12u1	CVE-2024-10041	MEDIUM	pam: libpam: Libpam vulnerable to read hashed password
+libpam0g	1.5.2-6+deb12u1	CVE-2024-22365	MEDIUM	pam: allowing unprivileged user to block another user namespace
+libperl5.36	5.36.0-7+deb12u1	CVE-2023-31484	HIGH	perl: CPAN.pm does not verify TLS certificates when downloading distributions over HTTPS
+libperl5.36	5.36.0-7+deb12u1	CVE-2024-56406	HIGH	perl: Perl 5.34, 5.36, 5.38 and 5.40 are vulnerable to a heap buffer overflow when transliterating non-ASCII bytes
+libperl5.36	5.36.0-7+deb12u1	CVE-2011-4116	LOW	perl: File:: Temp insecure temporary file handling
+libperl5.36	5.36.0-7+deb12u1	CVE-2023-31486	LOW	http-tiny: insecure TLS cert default
+libproc2-0	2:4.0.2-3	CVE-2023-4016	LOW	procps: ps buffer overflow
+libpython3.11-minimal	3.11.2-6+deb12u5	CVE-2025-0938	MEDIUM	python: cpython: URL parser allowed square brackets in domain names
+libpython3.11-minimal	3.11.2-6+deb12u5	CVE-2025-1795	LOW	python: Mishandling of comma during folding and unicode-encoding of email headers
+libpython3.11-stdlib	3.11.2-6+deb12u5	CVE-2025-0938	MEDIUM	python: cpython: URL parser allowed square brackets in domain names
+libpython3.11-stdlib	3.11.2-6+deb12u5	CVE-2025-1795	LOW	python: Mishandling of comma during folding and unicode-encoding of email headers
+libquadmath0	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+libquadmath0	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libsmartcols1	2.38.1-5+deb12u3	CVE-2022-0563	LOW	util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline
+libsqlite3-0	3.40.1-2+deb12u1	CVE-2025-29088	MEDIUM	sqlite: Denial of Service in SQLite
+libsqlite3-0	3.40.1-2+deb12u1	CVE-2021-45346	LOW	sqlite: crafted SQL query allows a malicious user to obtain sensitive information
+libssl3	3.0.15-1~deb12u1	CVE-2024-13176	MEDIUM	openssl: Timing side-channel in ECDSA signature computation
+libstdc++-12-dev	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+libstdc++-12-dev	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libstdc++6	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+libstdc++6	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libsystemd0	252.36-1~deb12u1	CVE-2013-4392	LOW	systemd: TOCTOU race condition when updating file permissions and SELinux security contexts
+libsystemd0	252.36-1~deb12u1	CVE-2023-31437	LOW	An issue was discovered in systemd 253. An attacker can modify a seale ...
+libsystemd0	252.36-1~deb12u1	CVE-2023-31438	LOW	An issue was discovered in systemd 253. An attacker can truncate a sea ...
+libsystemd0	252.36-1~deb12u1	CVE-2023-31439	LOW	An issue was discovered in systemd 253. An attacker can modify the con ...
+libtinfo6	6.4-4	CVE-2023-50495	MEDIUM	ncurses: segmentation fault via _nc_wrap_entry()
+libtsan2	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+libtsan2	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libubsan1	12.2.0-14	CVE-2022-27943	LOW	binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const
+libubsan1	12.2.0-14	CVE-2023-4039	LOW	gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64
+libudev1	252.36-1~deb12u1	CVE-2013-4392	LOW	systemd: TOCTOU race condition when updating file permissions and SELinux security contexts
+libudev1	252.36-1~deb12u1	CVE-2023-31437	LOW	An issue was discovered in systemd 253. An attacker can modify a seale ...
+libudev1	252.36-1~deb12u1	CVE-2023-31438	LOW	An issue was discovered in systemd 253. An attacker can truncate a sea ...
+libudev1	252.36-1~deb12u1	CVE-2023-31439	LOW	An issue was discovered in systemd 253. An attacker can modify the con ...
+libuuid1	2.38.1-5+deb12u3	CVE-2022-0563	LOW	util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline
+linux-libc-dev	6.1.129-1	CVE-2013-7445	HIGH	kernel: memory exhaustion via crafted Graphics Execution Manager (GEM) objects
+linux-libc-dev	6.1.129-1	CVE-2019-19449	HIGH	kernel: mounting a crafted f2fs filesystem image can lead to slab-out-of-bounds read access in f2fs_build_segment_manager in fs/f2fs/segment.c
+linux-libc-dev	6.1.129-1	CVE-2019-19814	HIGH	kernel: out-of-bounds write in __remove_dirty_segment in fs/f2fs/segment.c
+linux-libc-dev	6.1.129-1	CVE-2021-3847	HIGH	kernel: low-privileged user privileges escalation
+linux-libc-dev	6.1.129-1	CVE-2021-3864	HIGH	kernel: descendant's dumpable setting with certain SUID binaries
+linux-libc-dev	6.1.129-1	CVE-2023-52452	HIGH	kernel: bpf: Fix accesses to uninit stack slots
+linux-libc-dev	6.1.129-1	CVE-2023-52586	HIGH	kernel: drm/msm/dpu: Add mutex lock in control vblank irq
+linux-libc-dev	6.1.129-1	CVE-2023-52624	HIGH	kernel: drm/amd/display: Wake DMCUB before executing GPINT commands
+linux-libc-dev	6.1.129-1	CVE-2023-52751	HIGH	kernel: smb: client: fix use-after-free in smb2_query_info_compound()
+linux-libc-dev	6.1.129-1	CVE-2024-21803	HIGH	kernel: bluetooth: use-after-free vulnerability in af_bluetooth.c
+linux-libc-dev	6.1.129-1	CVE-2024-25742	HIGH	hw: amd: Instruction raise #VC exception at exit
+linux-libc-dev	6.1.129-1	CVE-2024-25743	HIGH	hw: amd: Instruction raise #VC exception at exit
+linux-libc-dev	6.1.129-1	CVE-2024-26669	HIGH	kernel: net/sched: flower: Fix chain template offload
+linux-libc-dev	6.1.129-1	CVE-2024-26739	HIGH	kernel: net/sched: act_mirred: don't override retval if we already lost the skb
+linux-libc-dev	6.1.129-1	CVE-2024-26836	HIGH	kernel: platform/x86: think-lmi: Fix password opcode ordering for workstations
+linux-libc-dev	6.1.129-1	CVE-2024-26913	HIGH	kernel: drm/amd/display: Fix dcn35 8k30 Underflow/Corruption Issue
+linux-libc-dev	6.1.129-1	CVE-2024-26930	HIGH	kernel: scsi: qla2xxx: Fix double free of the ha-&gt;vp_map pointer
+linux-libc-dev	6.1.129-1	CVE-2024-26944	HIGH	kernel: btrfs: zoned: fix use-after-free in do_zone_finish()
+linux-libc-dev	6.1.129-1	CVE-2024-26982	HIGH	kernel: Squashfs: check the inode number is not the invalid value of zero
+linux-libc-dev	6.1.129-1	CVE-2024-27042	HIGH	kernel: drm/amdgpu: Fix potential out-of-bounds access in &#39;amdgpu_discovery_reg_base_init()&#39;
+linux-libc-dev	6.1.129-1	CVE-2024-35866	HIGH	kernel: smb: client: fix potential UAF in cifs_dump_full_key()
+linux-libc-dev	6.1.129-1	CVE-2024-35887	HIGH	kernel: ax25: fix use-after-free bugs caused by ax25_ds_del_timer
+linux-libc-dev	6.1.129-1	CVE-2024-35929	HIGH	kernel: rcu/nocb: Fix WARN_ON_ONCE() in the rcu_nocb_bypass_lock()
+linux-libc-dev	6.1.129-1	CVE-2024-36013	HIGH	kernel: Bluetooth: L2CAP: Fix slab-use-after-free in l2cap_connect()
+linux-libc-dev	6.1.129-1	CVE-2024-36921	HIGH	kernel: wifi: iwlwifi: mvm: guard against invalid STA ID on removal
+linux-libc-dev	6.1.129-1	CVE-2024-38570	HIGH	kernel: gfs2: Fix potential glock use-after-free on unmount
+linux-libc-dev	6.1.129-1	CVE-2024-38630	HIGH	kernel: watchdog: cpu5wdt.c: Fix use-after-free bug caused by cpu5wdt_trigger
+linux-libc-dev	6.1.129-1	CVE-2024-39479	HIGH	kernel: drm/i915/hwmon: Get rid of devm
+linux-libc-dev	6.1.129-1	CVE-2024-39508	HIGH	kernel: io_uring/io-wq: Use set_bit() and test_bit() at worker->flags
+linux-libc-dev	6.1.129-1	CVE-2024-41013	HIGH	kernel: xfs: don&#39;t walk off the end of a directory data block
+linux-libc-dev	6.1.129-1	CVE-2024-42162	HIGH	kernel: gve: Account for stopped queues when reading NIC stats
+linux-libc-dev	6.1.129-1	CVE-2024-44941	HIGH	kernel: f2fs: fix to cover read extent cache access with lock
+linux-libc-dev	6.1.129-1	CVE-2024-44942	HIGH	kernel: f2fs: fix to do sanity check on F2FS_INLINE_DATA flag in inode during GC
+linux-libc-dev	6.1.129-1	CVE-2024-44951	HIGH	kernel: serial: sc16is7xx: fix TX fifo corruption
+linux-libc-dev	6.1.129-1	CVE-2024-46774	HIGH	kernel: powerpc/rtas: Prevent Spectre v1 gadget construction in sys_rtas()
+linux-libc-dev	6.1.129-1	CVE-2024-46786	HIGH	kernel: fscache: delete fscache_cookie_lru_timer when fscache exits to avoid UAF
+linux-libc-dev	6.1.129-1	CVE-2024-46811	HIGH	kernel: drm/amd/display: Fix index may exceed array range within fpu_update_bw_bounding_box
+linux-libc-dev	6.1.129-1	CVE-2024-46813	HIGH	kernel: drm/amd/display: Check link_index before accessing dc-&gt;links[]
+linux-libc-dev	6.1.129-1	CVE-2024-47691	HIGH	kernel: f2fs: fix to avoid use-after-free in f2fs_stop_gc_thread()
+linux-libc-dev	6.1.129-1	CVE-2024-49928	HIGH	kernel: wifi: rtw89: avoid reading out of bounds when loading TX power FW elements
+linux-libc-dev	6.1.129-1	CVE-2024-50029	HIGH	kernel: Bluetooth: hci_conn: Fix UAF in hci_enhanced_setup_sync
+linux-libc-dev	6.1.129-1	CVE-2024-50063	HIGH	kernel: bpf: Prevent tail call between progs attached to different hooks
+linux-libc-dev	6.1.129-1	CVE-2024-50112	HIGH	kernel: x86/lam: Disable ADDRESS_MASKING in most cases
+linux-libc-dev	6.1.129-1	CVE-2024-50217	HIGH	kernel: btrfs: fix use-after-free of block device file in __btrfs_free_extra_devids()
+linux-libc-dev	6.1.129-1	CVE-2024-50226	HIGH	kernel: cxl/port: Fix use-after-free, permit out-of-order decoder shutdown
+linux-libc-dev	6.1.129-1	CVE-2024-50246	HIGH	kernel: fs/ntfs3: Add rough attr alloc_size check
+linux-libc-dev	6.1.129-1	CVE-2024-53068	HIGH	kernel: firmware: arm_scmi: Fix slab-use-after-free in scmi_bus_notifier()
+linux-libc-dev	6.1.129-1	CVE-2024-53108	HIGH	kernel: drm/amd/display: Adjust VSDB parser for replay feature
+linux-libc-dev	6.1.129-1	CVE-2024-53133	HIGH	kernel: drm/amd/display: Handle dml allocation failure to avoid crash
+linux-libc-dev	6.1.129-1	CVE-2024-53166	HIGH	kernel: block, bfq: fix bfqq uaf in bfq_limit_depth()
+linux-libc-dev	6.1.129-1	CVE-2024-53168	HIGH	kernel: sunrpc: fix one UAF issue caused by sunrpc kernel tcp socket
+linux-libc-dev	6.1.129-1	CVE-2024-53179	HIGH	kernel: smb: client: fix use-after-free of signing key
+linux-libc-dev	6.1.129-1	CVE-2024-53203	HIGH	kernel: usb: typec: fix potential array underflow in ucsi_ccg_sync_control()
+linux-libc-dev	6.1.129-1	CVE-2024-53216	HIGH	kernel: nfsd: release svc_expkey/svc_export with rcu_work
+linux-libc-dev	6.1.129-1	CVE-2024-56538	HIGH	kernel: drm: zynqmp_kms: Unplug DRM device before removal
+linux-libc-dev	6.1.129-1	CVE-2024-56775	HIGH	kernel: drm/amd/display: Fix handling of plane refcount
+linux-libc-dev	6.1.129-1	CVE-2024-56784	HIGH	kernel: drm/amd/display: Adding array index check to prevent memory corruption
+linux-libc-dev	6.1.129-1	CVE-2024-57900	HIGH	kernel: ila: serialize calls to nf_register_net_hooks()
+linux-libc-dev	6.1.129-1	CVE-2024-57982	HIGH	kernel: xfrm: state: fix out-of-bounds read during lookup
+linux-libc-dev	6.1.129-1	CVE-2024-57984	HIGH	kernel: i3c: dw: Fix use-after-free in dw_i3c_master driver due to race condition
+linux-libc-dev	6.1.129-1	CVE-2024-58002	HIGH	kernel: media: uvcvideo: Remove dangling pointers
+linux-libc-dev	6.1.129-1	CVE-2025-21702	HIGH	kernel: pfifo_tail_enqueue: Drop new packet when sch->limit == 0
+linux-libc-dev	6.1.129-1	CVE-2025-21855	HIGH	kernel: ibmvnic: Don't reference skb after sending to VIOS
+linux-libc-dev	6.1.129-1	CVE-2025-21858	HIGH	kernel: geneve: Fix use-after-free in geneve_find_dev().
+linux-libc-dev	6.1.129-1	CVE-2025-21863	HIGH	kernel: io_uring: prevent opcode speculation
+linux-libc-dev	6.1.129-1	CVE-2025-21905	HIGH	kernel: wifi: iwlwifi: limit printed string from FW file
+linux-libc-dev	6.1.129-1	CVE-2025-21919	HIGH	kernel: sched/fair: Fix potential memory corruption in child_cfs_rq_on_list
+linux-libc-dev	6.1.129-1	CVE-2025-21920	HIGH	kernel: vlan: enforce underlying device type
+linux-libc-dev	6.1.129-1	CVE-2025-21926	HIGH	kernel: net: gso: fix ownership in __udp_gso_segment
+linux-libc-dev	6.1.129-1	CVE-2025-21927	HIGH	kernel: nvme-tcp: fix potential memory corruption in nvme_tcp_recv_pdu()
+linux-libc-dev	6.1.129-1	CVE-2025-21928	HIGH	kernel: HID: intel-ish-hid: Fix use-after-free issue in ishtp_hid_remove()
+linux-libc-dev	6.1.129-1	CVE-2025-21934	HIGH	kernel: rapidio: fix an API misues when rio_add_net() fails
+linux-libc-dev	6.1.129-1	CVE-2025-21945	HIGH	kernel: ksmbd: fix use-after-free in smb2_lock
+linux-libc-dev	6.1.129-1	CVE-2025-21967	HIGH	kernel: ksmbd: fix use-after-free in ksmbd_free_work_struct
+linux-libc-dev	6.1.129-1	CVE-2025-21968	HIGH	kernel: drm/amd/display: Fix slab-use-after-free on hdcp_work
+linux-libc-dev	6.1.129-1	CVE-2025-21969	HIGH	kernel: Bluetooth: L2CAP: Fix slab-use-after-free Read in l2cap_send_cmd
+linux-libc-dev	6.1.129-1	CVE-2025-21979	HIGH	kernel: wifi: cfg80211: cancel wiphy_work before freeing wiphy
+linux-libc-dev	6.1.129-1	CVE-2025-21991	HIGH	kernel: x86/microcode/AMD: Fix out-of-bounds on systems with CPU-less NUMA nodes
+linux-libc-dev	6.1.129-1	CVE-2025-21993	HIGH	kernel: iscsi_ibft: Fix UBSAN shift-out-of-bounds warning in ibft_attr_show_nic()
+linux-libc-dev	6.1.129-1	CVE-2025-22055	HIGH	kernel: net: fix geneve_opt length integer overflow
+linux-libc-dev	6.1.129-1	CVE-2025-22058	HIGH	kernel: udp: Fix memory accounting leak.
+linux-libc-dev	6.1.129-1	CVE-2025-37785	HIGH	kernel: ext4: fix OOB read when checking dotdot dir
+linux-libc-dev	6.1.129-1	CVE-2025-39735	HIGH	kernel: jfs: fix slab-out-of-bounds read in ea_get()
+linux-libc-dev	6.1.129-1	CVE-2025-40014	HIGH	kernel: objtool, spi: amd: Fix out-of-bounds stack access in amd_set_spi_freq()
+linux-libc-dev	6.1.129-1	CVE-2019-15213	MEDIUM	kernel: use-after-free caused by malicious USB device in drivers/media/usb/dvb-usb/dvb-usb-init.c
+linux-libc-dev	6.1.129-1	CVE-2019-16089	MEDIUM	kernel: Improper return check in nbd_genl_status function in drivers/block/nbd.c
+linux-libc-dev	6.1.129-1	CVE-2019-20794	MEDIUM	kernel: task processes not being properly ended could lead to resource exhaustion
+linux-libc-dev	6.1.129-1	CVE-2020-14304	MEDIUM	kernel: ethtool when reading eeprom of device could lead to memory leak
+linux-libc-dev	6.1.129-1	CVE-2020-36694	MEDIUM	kernel: netfilter: use-after-free in the packet processing context
+linux-libc-dev	6.1.129-1	CVE-2021-47658	MEDIUM	kernel: drm/amd/pm: fix a potential gpu_metrics_table memory leak
+linux-libc-dev	6.1.129-1	CVE-2023-0597	MEDIUM	kernel: x86/mm: Randomize per-cpu entry area
+linux-libc-dev	6.1.129-1	CVE-2023-21264	MEDIUM	In multiple functions of mem_protect.c, there is a possible way to acc ...
+linux-libc-dev	6.1.129-1	CVE-2023-23005	MEDIUM	kernel: incorrect check for error case in the memory_tier_init
+linux-libc-dev	6.1.129-1	CVE-2023-31082	MEDIUM	kernel: sleeping function called from an invalid context in gsmld_write
+linux-libc-dev	6.1.129-1	CVE-2023-3397	MEDIUM	kernel: slab-use-after-free Write in txEnd due to race condition
+linux-libc-dev	6.1.129-1	CVE-2023-37454	MEDIUM	kernel: udf: use-after-free write in udf_close_lvid
+linux-libc-dev	6.1.129-1	CVE-2023-4010	MEDIUM	kernel: usb: hcd: malformed USB descriptor leads to infinite loop in usb_giveback_urb()
+linux-libc-dev	6.1.129-1	CVE-2023-4133	MEDIUM	kernel: cxgb4: use-after-free in ch_flower_stats_cb()
+linux-libc-dev	6.1.129-1	CVE-2023-52485	MEDIUM	kernel: drm/amd/display: Wake DMCUB before sending a command cause deadlock
+linux-libc-dev	6.1.129-1	CVE-2023-52590	MEDIUM	kernel: ocfs2: Avoid touching renamed directory if parent does not change
+linux-libc-dev	6.1.129-1	CVE-2023-52591	MEDIUM	kernel: reiserfs: Avoid touching renamed directory if parent does not change
+linux-libc-dev	6.1.129-1	CVE-2023-52596	MEDIUM	kernel: sysctl: Fix out of bounds access for empty sysctl registers
+linux-libc-dev	6.1.129-1	CVE-2023-52625	MEDIUM	kernel: drm/amd/display: Refactor DMCUB enter/exit idle interface
+linux-libc-dev	6.1.129-1	CVE-2023-52629	MEDIUM	kernel: sh: push-switch: Reorder cleanup operations to avoid use-after-free bug
+linux-libc-dev	6.1.129-1	CVE-2023-52648	MEDIUM	kernel: drm/vmwgfx: Unmap the surface before resetting it on a plane state
+linux-libc-dev	6.1.129-1	CVE-2023-52653	MEDIUM	kernel: SUNRPC: fix a memleak in gss_import_v2_context
+linux-libc-dev	6.1.129-1	CVE-2023-52658	MEDIUM	kernel: Revert &#34;net/mlx5: Block entering switchdev mode with ns inconsistency&#34;
+linux-libc-dev	6.1.129-1	CVE-2023-52671	MEDIUM	kernel: drm/amd/display: Fix hang/underflow when transitioning to ODM4:1
+linux-libc-dev	6.1.129-1	CVE-2023-52673	MEDIUM	kernel: drm/amd/display: Fix a debugfs null pointer error
+linux-libc-dev	6.1.129-1	CVE-2023-52676	MEDIUM	kernel: bpf: Guard stack limits against 32bit overflow
+linux-libc-dev	6.1.129-1	CVE-2023-52761	MEDIUM	kernel: riscv: VMAP_STACK overflow detection thread-safe
+linux-libc-dev	6.1.129-1	CVE-2023-52770	MEDIUM	kernel: f2fs: split initial and dynamic conditions for extent_cache
+linux-libc-dev	6.1.129-1	CVE-2023-52771	MEDIUM	kernel: cxl/port: Fix delete_endpoint() vs parent unregistration race
+linux-libc-dev	6.1.129-1	CVE-2023-52797	MEDIUM	kernel: drivers: perf: Check find_first_bit() return value
+linux-libc-dev	6.1.129-1	CVE-2023-52857	MEDIUM	kernel: drm/mediatek: Fix coverity issue with unintentional integer overflow
+linux-libc-dev	6.1.129-1	CVE-2023-52888	MEDIUM	kernel: media: mediatek: vcodec: Only free buffer VA that is not NULL
+linux-libc-dev	6.1.129-1	CVE-2023-52920	MEDIUM	kernel: bpf: support non-r10 register spill/fill to/from stack in precision tracking
+linux-libc-dev	6.1.129-1	CVE-2023-52927	MEDIUM	kernel: netfilter: allow exp not to be removed in nf_ct_find_expectation
+linux-libc-dev	6.1.129-1	CVE-2023-53034	MEDIUM	kernel: ntb_hw_switchtec: Fix shift-out-of-bounds in switchtec_ntb_mw_set_trans
+linux-libc-dev	6.1.129-1	CVE-2023-6039	MEDIUM	kernel: use-after-free in drivers/net/usb/lan78xx.c in lan78xx_disconnect
+linux-libc-dev	6.1.129-1	CVE-2023-6240	MEDIUM	kernel: Marvin vulnerability side-channel leakage in the RSA decryption operation
+linux-libc-dev	6.1.129-1	CVE-2024-2193	MEDIUM	hw: Spectre-SRC that is Speculative Race Conditions (SRCs) for synchronization primitives similar like Spectre V1 with possibility to bypass software features (e.g., IPIs, high-precision timers, etc)
+linux-libc-dev	6.1.129-1	CVE-2024-24855	MEDIUM	kernel: Race condition in lpfc_unregister_fcf_rescan() in scsi/lpfc/lpfc_hbadisc.c
+linux-libc-dev	6.1.129-1	CVE-2024-24864	MEDIUM	A race condition was found in the Linux kernel's media/dvb-core in dvb ...
+linux-libc-dev	6.1.129-1	CVE-2024-25740	MEDIUM	kernel: memory leak in ubi driver
+linux-libc-dev	6.1.129-1	CVE-2024-26618	MEDIUM	hw: arm64/sme: Always exit sme_alloc() early with existing storage
+linux-libc-dev	6.1.129-1	CVE-2024-26647	MEDIUM	kernel: drm/amd/display: Fix late dereference 'dsc' check in 'link_set_dsc_pps_packet()'
+linux-libc-dev	6.1.129-1	CVE-2024-26648	MEDIUM	kernel: NULL check in edp_setup_replay()
+linux-libc-dev	6.1.129-1	CVE-2024-26656	MEDIUM	kernel: drm/amdgpu: use-after-free vulnerability
+linux-libc-dev	6.1.129-1	CVE-2024-26661	MEDIUM	kernel: drm/amd/display: Add NULL test for 'timing generator' in 'dcn21_set_pipe()'
+linux-libc-dev	6.1.129-1	CVE-2024-26662	MEDIUM	kernel: drm/amd/display: 'panel_cntl' could be null in 'dcn21_set_backlight_level()'
+linux-libc-dev	6.1.129-1	CVE-2024-26670	MEDIUM	kernel: arm64: entry: fix ARM64_WORKAROUND_SPECULATIVE_UNPRIV_LOAD
+linux-libc-dev	6.1.129-1	CVE-2024-26672	MEDIUM	kernel: drm/amdgpu: variable 'mca_funcs' dereferenced before NULL check in 'amdgpu_mca_smu_get_mca_entry()'
+linux-libc-dev	6.1.129-1	CVE-2024-26677	MEDIUM	kernel: rxrpc: Fix delayed ACKs to not set the reference serial number
+linux-libc-dev	6.1.129-1	CVE-2024-26691	MEDIUM	kernel: KVM: arm64: Fix circular locking dependency
+linux-libc-dev	6.1.129-1	CVE-2024-26719	MEDIUM	kernel: nouveau: offload fence uevents work to workqueue
+linux-libc-dev	6.1.129-1	CVE-2024-26740	MEDIUM	kernel: net/sched: act_mirred: use the backlog for mirred ingress
+linux-libc-dev	6.1.129-1	CVE-2024-26756	MEDIUM	kernel: md: Don't register sync_thread for reshape directly
+linux-libc-dev	6.1.129-1	CVE-2024-26757	MEDIUM	kernel: md: Don't ignore read-only array in md_check_recovery()
+linux-libc-dev	6.1.129-1	CVE-2024-26758	MEDIUM	kernel: md: Don't ignore suspended array in md_check_recovery()
+linux-libc-dev	6.1.129-1	CVE-2024-26767	MEDIUM	kernel: drm/amd/display: fixed integer types and null check locations
+linux-libc-dev	6.1.129-1	CVE-2024-26768	MEDIUM	kernel: LoongArch: Change acpi_core_pic[NR_CPUS] to acpi_core_pic[MAX_CORE_PIC]
+linux-libc-dev	6.1.129-1	CVE-2024-26783	MEDIUM	kernel: mm/vmscan: fix a bug calling wakeup_kswapd() with a wrong zone index
+linux-libc-dev	6.1.129-1	CVE-2024-26799	MEDIUM	kernel: ASoC: qcom: Fix uninitialized pointer dmactl
+linux-libc-dev	6.1.129-1	CVE-2024-26807	MEDIUM	kernel: spi: cadence-qspi: fix pointer reference in runtime PM hooks
+linux-libc-dev	6.1.129-1	CVE-2024-26822	MEDIUM	kernel: smb: client: set correct id, uid and cruid for multiuser automounts
+linux-libc-dev	6.1.129-1	CVE-2024-26841	MEDIUM	kernel: LoongArch: Update cpu_sibling_map when disabling nonboot CPUs
+linux-libc-dev	6.1.129-1	CVE-2024-26842	MEDIUM	kernel: scsi: ufs: core: Fix shift issue in ufshcd_clear_cmd()
+linux-libc-dev	6.1.129-1	CVE-2024-26866	MEDIUM	kernel: spi: lpspi: Avoid potential use-after-free in probe()
+linux-libc-dev	6.1.129-1	CVE-2024-26869	MEDIUM	kernel: f2fs: fix to truncate meta inode pages forcely
+linux-libc-dev	6.1.129-1	CVE-2024-26876	MEDIUM	kernel: drm/bridge: adv7511: fix crash on irq during probe
+linux-libc-dev	6.1.129-1	CVE-2024-26902	MEDIUM	kernel: perf: RISCV: Fix panic on pmu overflow handler
+linux-libc-dev	6.1.129-1	CVE-2024-26914	MEDIUM	kernel: drm/amd/display: fix incorrect mpc_combine array size
+linux-libc-dev	6.1.129-1	CVE-2024-26947	MEDIUM	kernel: ARM: 9359/1: flush: check if the folio is reserved for no-mapping addresses
+linux-libc-dev	6.1.129-1	CVE-2024-26948	MEDIUM	kernel: drm/amd/display: Add a dc_state NULL check in dc_state_release
+linux-libc-dev	6.1.129-1	CVE-2024-26953	MEDIUM	kernel: net: esp: fix bad handling of pages from page_pool
+linux-libc-dev	6.1.129-1	CVE-2024-26962	MEDIUM	kernel: dm-raid456, md/raid456: fix a deadlock for dm-raid456 while io concurrent with reshape
+linux-libc-dev	6.1.129-1	CVE-2024-27005	MEDIUM	kernel: interconnect: Don&#39;t access req_list while it&#39;s being manipulated
+linux-libc-dev	6.1.129-1	CVE-2024-27010	MEDIUM	kernel: net/sched: Fix mirred deadlock on device recursion
+linux-libc-dev	6.1.129-1	CVE-2024-27011	MEDIUM	kernel: netfilter: nf_tables: fix memleak in map from abort path
+linux-libc-dev	6.1.129-1	CVE-2024-27012	MEDIUM	kernel: netfilter: nf_tables: restore set elements when delete set fails
+linux-libc-dev	6.1.129-1	CVE-2024-27041	MEDIUM	kernel: drm/amd/display: fix NULL checks for adev-&gt;dm.dc in amdgpu_dm_fini()
+linux-libc-dev	6.1.129-1	CVE-2024-27056	MEDIUM	kernel: wifi: iwlwifi: mvm: ensure offloading TID queue exists
+linux-libc-dev	6.1.129-1	CVE-2024-27057	MEDIUM	kernel: ASoC: SOF: ipc4-pcm: Workaround for crashed firmware on system suspend
+linux-libc-dev	6.1.129-1	CVE-2024-27062	MEDIUM	kernel: nouveau: lock the client object tree.
+linux-libc-dev	6.1.129-1	CVE-2024-27079	MEDIUM	kernel: iommu/vt-d: Fix NULL domain on device release
+linux-libc-dev	6.1.129-1	CVE-2024-27408	MEDIUM	kernel: dmaengine: dw-edma: eDMA: Add sync read before starting the DMA transfer in remote setup
+linux-libc-dev	6.1.129-1	CVE-2024-35784	MEDIUM	kernel: btrfs: fix deadlock with fiemap and extent locking
+linux-libc-dev	6.1.129-1	CVE-2024-35790	MEDIUM	kernel: usb: typec: altmodes/displayport: create sysfs nodes as driver&#39;s default device attribute group
+linux-libc-dev	6.1.129-1	CVE-2024-35794	MEDIUM	kernel: dm-raid: really frozen sync_thread during suspend
+linux-libc-dev	6.1.129-1	CVE-2024-35799	MEDIUM	kernel: drm/amd/display: Prevent crash when disable stream
+linux-libc-dev	6.1.129-1	CVE-2024-35808	MEDIUM	kernel: md/dm-raid: don&#39;t call md_reap_sync_thread() directly
+linux-libc-dev	6.1.129-1	CVE-2024-35843	MEDIUM	kernel: iommu/vt-d: Use device rbtree in iopf reporting path
+linux-libc-dev	6.1.129-1	CVE-2024-35860	MEDIUM	kernel: bpf: support deferring bpf_link dealloc to after RCU grace period
+linux-libc-dev	6.1.129-1	CVE-2024-35869	MEDIUM	kernel: smb: client: guarantee refcounted children from parent session
+linux-libc-dev	6.1.129-1	CVE-2024-35878	MEDIUM	kernel: of: module: prevent NULL pointer dereference in vsnprintf()
+linux-libc-dev	6.1.129-1	CVE-2024-35904	MEDIUM	kernel: selinux: avoid dereference of garbage after mount failure
+linux-libc-dev	6.1.129-1	CVE-2024-35924	MEDIUM	kernel: usb: typec: ucsi: Limit read size on v1.2
+linux-libc-dev	6.1.129-1	CVE-2024-35931	MEDIUM	kernel: drm/amdgpu: Skip do PCI error slot reset during RAS recovery
+linux-libc-dev	6.1.129-1	CVE-2024-35942	MEDIUM	kernel: pmdomain: imx8mp-blk-ctrl: imx8mp_blk: Add fdcc clock to hdmimix domain
+linux-libc-dev	6.1.129-1	CVE-2024-35945	MEDIUM	kernel: net: phy: phy_device: Prevent nullptr exceptions on ISR
+linux-libc-dev	6.1.129-1	CVE-2024-35946	MEDIUM	kernel: wifi: rtw89: fix null pointer access when abort scan
+linux-libc-dev	6.1.129-1	CVE-2024-35949	MEDIUM	kernel: btrfs: make sure that WRITTEN is set on all metadata blocks
+linux-libc-dev	6.1.129-1	CVE-2024-35951	MEDIUM	kernel: drm/panfrost: Fix the error path in panfrost_mmu_map_fault_addr()
+linux-libc-dev	6.1.129-1	CVE-2024-35961	MEDIUM	kernel: net/mlx5: Register devlink first under devlink lock
+linux-libc-dev	6.1.129-1	CVE-2024-35974	MEDIUM	kernel: block: fix q-&gt;blkg_list corruption during disk rebind
+linux-libc-dev	6.1.129-1	CVE-2024-36022	MEDIUM	kernel: drm/amdgpu: Init zone device and drm client after mode-1 reset on reload
+linux-libc-dev	6.1.129-1	CVE-2024-36024	MEDIUM	kernel: drm/amd/display: Disable idle reallow as part of command/gpint execution
+linux-libc-dev	6.1.129-1	CVE-2024-36881	MEDIUM	kernel: mm/userfaultfd: reset ptes when close() for wr-protected ones
+linux-libc-dev	6.1.129-1	CVE-2024-36903	MEDIUM	kernel: ipv6: Fix potential uninit-value access in __ip6_make_skb()
+linux-libc-dev	6.1.129-1	CVE-2024-36907	MEDIUM	kernel: SUNRPC: add a missing rpc_stat for TCP TLS
+linux-libc-dev	6.1.129-1	CVE-2024-36908	MEDIUM	kernel: blk-iocost: do not WARN if iocg was already offlined
+linux-libc-dev	6.1.129-1	CVE-2024-36911	MEDIUM	kernel: hv_netvsc: Don&#39;t free decrypted memory
+linux-libc-dev	6.1.129-1	CVE-2024-36913	MEDIUM	kernel: Drivers: hv: vmbus: Leak pages if set_memory_encrypted() fails
+linux-libc-dev	6.1.129-1	CVE-2024-36922	MEDIUM	kernel: wifi: iwlwifi: read txq-&gt;read_ptr under lock
+linux-libc-dev	6.1.129-1	CVE-2024-36927	MEDIUM	kernel: ipv4: Fix uninit-value access in __ip_make_skb()
+linux-libc-dev	6.1.129-1	CVE-2024-36949	MEDIUM	kernel: amd/amdkfd: sync all devices to wait all processes being evicted
+linux-libc-dev	6.1.129-1	CVE-2024-36951	MEDIUM	kernel: drm/amdkfd: range check cp bad op exception interrupts
+linux-libc-dev	6.1.129-1	CVE-2024-36968	MEDIUM	kernel: Bluetooth: L2CAP: Fix div-by-zero in l2cap_le_flowctl_init()
+linux-libc-dev	6.1.129-1	CVE-2024-38541	MEDIUM	kernel: of: module: add buffer overflow check in of_modalias()
+linux-libc-dev	6.1.129-1	CVE-2024-38557	MEDIUM	kernel: net/mlx5: Reload only IB representors upon lag disable/enable
+linux-libc-dev	6.1.129-1	CVE-2024-38564	MEDIUM	kernel: bpf: Add BPF_PROG_TYPE_CGROUP_SKB attach type enforcement in BPF_LINK_CREATE
+linux-libc-dev	6.1.129-1	CVE-2024-38594	MEDIUM	kernel: net: stmmac: move the EST lock to struct stmmac_priv
+linux-libc-dev	6.1.129-1	CVE-2024-38608	MEDIUM	kernel: net/mlx5e: Fix netif state handling
+linux-libc-dev	6.1.129-1	CVE-2024-38611	MEDIUM	kernel: media: i2c: et8ek8: Don&#39;t strip remove function when driver is builtin
+linux-libc-dev	6.1.129-1	CVE-2024-38620	MEDIUM	kernel: Bluetooth: HCI: Remove HCI_AMP support
+linux-libc-dev	6.1.129-1	CVE-2024-38622	MEDIUM	kernel: drm/msm/dpu: Add callback function pointer check before its call
+linux-libc-dev	6.1.129-1	CVE-2024-38625	MEDIUM	kernel: fs/ntfs3: Check &#39;folio&#39; pointer for NULL
+linux-libc-dev	6.1.129-1	CVE-2024-40965	MEDIUM	kernel: i2c: lpi2c: Avoid calling clk_get_rate during transfer
+linux-libc-dev	6.1.129-1	CVE-2024-40969	MEDIUM	kernel: f2fs: don't set RO when shutting down f2fs
+linux-libc-dev	6.1.129-1	CVE-2024-40973	MEDIUM	kernel: media: mtk-vcodec: potential null pointer deference in SCP
+linux-libc-dev	6.1.129-1	CVE-2024-40975	MEDIUM	kernel: platform/x86: x86-android-tablets: Unregister devices in reverse order
+linux-libc-dev	6.1.129-1	CVE-2024-40998	MEDIUM	kernel: ext4: fix uninitialized ratelimit_state-&gt;lock access in __ext4_fill_super()
+linux-libc-dev	6.1.129-1	CVE-2024-40999	MEDIUM	kernel: net: ena: Add validation for completion descriptors consistency
+linux-libc-dev	6.1.129-1	CVE-2024-41008	MEDIUM	kernel: drm/amdgpu: change vm-&gt;task_info handling
+linux-libc-dev	6.1.129-1	CVE-2024-41023	MEDIUM	kernel: sched/deadline: Fix task_struct reference leak
+linux-libc-dev	6.1.129-1	CVE-2024-41031	MEDIUM	kernel: mm/filemap: skip to create PMD-sized page cache if needed
+linux-libc-dev	6.1.129-1	CVE-2024-41045	MEDIUM	kernel: bpf: Defer work in bpf_timer_cancel_and_free
+linux-libc-dev	6.1.129-1	CVE-2024-41067	MEDIUM	kernel: btrfs: scrub: handle RST lookup error correctly
+linux-libc-dev	6.1.129-1	CVE-2024-41082	MEDIUM	kernel: nvme-fabrics: use reserved tag for reg read/write command
+linux-libc-dev	6.1.129-1	CVE-2024-41935	MEDIUM	kernel: f2fs: fix to shrink read extent node in batches
+linux-libc-dev	6.1.129-1	CVE-2024-42067	MEDIUM	kernel: bpf: Take return from set_memory_rox() into account with bpf_jit_binary_lock_ro()
+linux-libc-dev	6.1.129-1	CVE-2024-42079	MEDIUM	kernel: gfs2: Fix NULL pointer dereference in gfs2_log_flush
+linux-libc-dev	6.1.129-1	CVE-2024-42107	MEDIUM	kernel: ice: Don't process extts if PTP is disabled
+linux-libc-dev	6.1.129-1	CVE-2024-42118	MEDIUM	kernel: drm/amd/display: Do not return negative stream id for array
+linux-libc-dev	6.1.129-1	CVE-2024-42123	MEDIUM	kernel: drm/amdgpu: fix double free err_addr pointer warnings
+linux-libc-dev	6.1.129-1	CVE-2024-42125	MEDIUM	kernel: wifi: rtw89: fw: scan offload prohibit all 6 GHz channel if no 6 GHz sband
+linux-libc-dev	6.1.129-1	CVE-2024-42128	MEDIUM	kernel: leds: an30259a: Use devm_mutex_init() for mutex initialization
+linux-libc-dev	6.1.129-1	CVE-2024-42129	MEDIUM	kernel: leds: mlxreg: Use devm_mutex_init() for mutex initialization
+linux-libc-dev	6.1.129-1	CVE-2024-42135	MEDIUM	kernel: vhost_task: Handle SIGKILL by flushing work and exiting
+linux-libc-dev	6.1.129-1	CVE-2024-42139	MEDIUM	kernel: ice: Fix improper extts handling
+linux-libc-dev	6.1.129-1	CVE-2024-42156	MEDIUM	kernel: s390/pkey: Wipe copies of clear-key structures on failure
+linux-libc-dev	6.1.129-1	CVE-2024-42158	MEDIUM	kernel: s390/pkey: Use kfree_sensitive() to fix Coccinelle warnings
+linux-libc-dev	6.1.129-1	CVE-2024-42239	MEDIUM	kernel: bpf: Fail bpf_timer_cancel when callback is being cancelled
+linux-libc-dev	6.1.129-1	CVE-2024-42241	MEDIUM	kernel: mm/shmem: disable PMD-sized page cache if needed
+linux-libc-dev	6.1.129-1	CVE-2024-42243	MEDIUM	kernel: mm/filemap: make MAX_PAGECACHE_ORDER acceptable to xarray
+linux-libc-dev	6.1.129-1	CVE-2024-42279	MEDIUM	kernel: spi: microchip-core: ensure TX and RX FIFOs are empty at start of a transfer
+linux-libc-dev	6.1.129-1	CVE-2024-42317	MEDIUM	kernel: mm/huge_memory: avoid PMD-size page cache if needed
+linux-libc-dev	6.1.129-1	CVE-2024-43819	MEDIUM	kernel: kvm: s390: Reject memory region operations for ucontrol VMs
+linux-libc-dev	6.1.129-1	CVE-2024-43824	MEDIUM	kernel: PCI: endpoint: pci-epf-test: Make use of cached &#39;epc_features&#39; in pci_epf_test_core_init()
+linux-libc-dev	6.1.129-1	CVE-2024-43831	MEDIUM	kernel: media: mediatek: vcodec: Handle invalid decoder vsi
+linux-libc-dev	6.1.129-1	CVE-2024-43840	MEDIUM	kernel: bpf, arm64: Fix trampoline for BPF_TRAMP_F_CALL_ORIG
+linux-libc-dev	6.1.129-1	CVE-2024-43850	MEDIUM	kernel: soc: qcom: icc-bwmon: Fix refcount imbalance seen during bwmon_remove
+linux-libc-dev	6.1.129-1	CVE-2024-43872	MEDIUM	kernel: RDMA/hns: Fix soft lockup under heavy CEQE load
+linux-libc-dev	6.1.129-1	CVE-2024-43886	MEDIUM	kernel: drm/amd/display: Add null check in resource_log_pipe_topology_update
+linux-libc-dev	6.1.129-1	CVE-2024-43899	MEDIUM	kernel: drm/amd/display: Fix null pointer deref in dcn20_resource.c
+linux-libc-dev	6.1.129-1	CVE-2024-43901	MEDIUM	kernel: drm/amd/display: Fix NULL pointer dereference for DTN log in DCN401
+linux-libc-dev	6.1.129-1	CVE-2024-43913	MEDIUM	kernel: nvme: apple: fix device reference counting
+linux-libc-dev	6.1.129-1	CVE-2024-44955	MEDIUM	kernel: drm/amd/display: Don't refer to dc_sink in is_dsc_need_re_compute
+linux-libc-dev	6.1.129-1	CVE-2024-44957	MEDIUM	kernel: xen: privcmd: Switch from mutex to spinlock for irqfds
+linux-libc-dev	6.1.129-1	CVE-2024-44961	MEDIUM	kernel: drm/amdgpu: Forward soft recovery errors to userspace
+linux-libc-dev	6.1.129-1	CVE-2024-44963	MEDIUM	kernel: btrfs: do not BUG_ON() when freeing tree block after error
+linux-libc-dev	6.1.129-1	CVE-2024-44972	MEDIUM	kernel: btrfs: do not clear page dirty inside extent_write_locked_range()
+linux-libc-dev	6.1.129-1	CVE-2024-45015	MEDIUM	kernel: drm/msm/dpu: move dpu_encoder&#39;s connector assignment to atomic_enable()
+linux-libc-dev	6.1.129-1	CVE-2024-46678	MEDIUM	kernel: bonding: change ipsec_lock from spin lock to mutex
+linux-libc-dev	6.1.129-1	CVE-2024-46681	MEDIUM	kernel: pktgen: use cpus_read_lock() in pg_net_init()
+linux-libc-dev	6.1.129-1	CVE-2024-46698	MEDIUM	kernel: video/aperture: optionally match the device in sysfb_disable()
+linux-libc-dev	6.1.129-1	CVE-2024-46727	MEDIUM	kernel: drm/amd/display: Add otg_master NULL check within resource_log_pipe_topology_update
+linux-libc-dev	6.1.129-1	CVE-2024-46728	MEDIUM	kernel: drm/amd/display: Check index for aux_rd_interval before using
+linux-libc-dev	6.1.129-1	CVE-2024-46729	MEDIUM	kernel: drm/amd/display: Fix incorrect size calculation for loop
+linux-libc-dev	6.1.129-1	CVE-2024-46730	MEDIUM	kernel: drm/amd/display: Ensure array index tg_inst won&#39;t be -1
+linux-libc-dev	6.1.129-1	CVE-2024-46733	MEDIUM	kernel: btrfs: fix qgroup reserve leaks in cow_file_range
+linux-libc-dev	6.1.129-1	CVE-2024-46742	MEDIUM	kernel: smb/server: fix potential null-ptr-deref of lease_ctx_info in smb2_open()
+linux-libc-dev	6.1.129-1	CVE-2024-46748	MEDIUM	kernel: cachefiles: Set the max subreq size for cache writes to MAX_RW_COUNT
+linux-libc-dev	6.1.129-1	CVE-2024-46751	MEDIUM	kernel: btrfs: don&#39;t BUG_ON() when 0 reference count at btrfs_lookup_extent_info()
+linux-libc-dev	6.1.129-1	CVE-2024-46753	MEDIUM	kernel: btrfs: handle errors from btrfs_dec_ref() properly
+linux-libc-dev	6.1.129-1	CVE-2024-46754	MEDIUM	kernel: bpf: Remove tst_run from lwt_seg6local_prog_ops.
+linux-libc-dev	6.1.129-1	CVE-2024-46760	MEDIUM	kernel: wifi: rtw88: usb: schedule rx work after everything is set up
+linux-libc-dev	6.1.129-1	CVE-2024-46762	MEDIUM	kernel: xen: privcmd: Fix possible access to a freed kirqfd instance
+linux-libc-dev	6.1.129-1	CVE-2024-46765	MEDIUM	kernel: ice: protect XDP configuration with a mutex
+linux-libc-dev	6.1.129-1	CVE-2024-46772	MEDIUM	kernel: drm/amd/display: Check denominator crb_pipes before used
+linux-libc-dev	6.1.129-1	CVE-2024-46775	MEDIUM	kernel: drm/amd/display: Validate function returns
+linux-libc-dev	6.1.129-1	CVE-2024-46776	MEDIUM	kernel: drm/amd/display: Run DC_LOG_DC after checking link-&gt;link_enc
+linux-libc-dev	6.1.129-1	CVE-2024-46787	MEDIUM	kernel: userfaultfd: fix checks for huge PMDs
+linux-libc-dev	6.1.129-1	CVE-2024-46803	MEDIUM	kernel: drm/amdkfd: Check debug trap enable before write dbg_ev_file
+linux-libc-dev	6.1.129-1	CVE-2024-46806	MEDIUM	kernel: drm/amdgpu: Fix the warning division or modulo by zero
+linux-libc-dev	6.1.129-1	CVE-2024-46808	MEDIUM	kernel: drm/amd/display: Add missing NULL pointer check within dpcd_extend_address_range
+linux-libc-dev	6.1.129-1	CVE-2024-46816	MEDIUM	kernel: drm/amd/display: Stop amdgpu_dm initialize when link nums greater than max_links
+linux-libc-dev	6.1.129-1	CVE-2024-46823	MEDIUM	kernel: kunit/overflow: Fix UB in overflow_allocation_test
+linux-libc-dev	6.1.129-1	CVE-2024-46825	MEDIUM	kernel: wifi: iwlwifi: mvm: use IWL_FW_CHECK for link ID check
+linux-libc-dev	6.1.129-1	CVE-2024-46834	MEDIUM	kernel: ethtool: fail closed if we can&#39;t get max channel used in indirection tables
+linux-libc-dev	6.1.129-1	CVE-2024-46842	MEDIUM	kernel: scsi: lpfc: Handle mailbox timeouts in lpfc_get_sfp_info
+linux-libc-dev	6.1.129-1	CVE-2024-46843	MEDIUM	kernel: scsi: ufs: core: Remove SCSI host only if added
+linux-libc-dev	6.1.129-1	CVE-2024-46860	MEDIUM	kernel: wifi: mt76: mt7921: fix NULL pointer access in mt7921_ipv6_addr_change
+linux-libc-dev	6.1.129-1	CVE-2024-46870	MEDIUM	kernel: drm/amd/display: Disable DMCUB timeout for DCN35
+linux-libc-dev	6.1.129-1	CVE-2024-47141	MEDIUM	kernel: pinmux: Use sequential access to access desc->pinmux data
+linux-libc-dev	6.1.129-1	CVE-2024-47658	MEDIUM	kernel: crypto: stm32/cryp - call finalize with bh disabled
+linux-libc-dev	6.1.129-1	CVE-2024-47661	MEDIUM	kernel: drm/amd/display: Avoid overflow from uint32_t to uint8_t
+linux-libc-dev	6.1.129-1	CVE-2024-47662	MEDIUM	kernel: drm/amd/display: Remove register from DCN35 DMCUB diagnostic collection
+linux-libc-dev	6.1.129-1	CVE-2024-47664	MEDIUM	kernel: spi: hisi-kunpeng: Add verification for the max_frequency provided by the firmware
+linux-libc-dev	6.1.129-1	CVE-2024-47666	MEDIUM	kernel: scsi: pm80xx: Set phy-&gt;enable_completion only when we wait for it
+linux-libc-dev	6.1.129-1	CVE-2024-47703	MEDIUM	kernel: bpf, lsm: Add check for BPF LSM return value
+linux-libc-dev	6.1.129-1	CVE-2024-47704	MEDIUM	kernel: drm/amd/display: Check link_res-&gt;hpo_dp_link_enc before using it
+linux-libc-dev	6.1.129-1	CVE-2024-47736	MEDIUM	kernel: erofs: handle overlapped pclusters out of crafted images properly
+linux-libc-dev	6.1.129-1	CVE-2024-47752	MEDIUM	kernel: media: mediatek: vcodec: Fix H264 stateless decoder smatch warning
+linux-libc-dev	6.1.129-1	CVE-2024-47753	MEDIUM	kernel: media: mediatek: vcodec: Fix VP8 stateless decoder smatch warning
+linux-libc-dev	6.1.129-1	CVE-2024-47754	MEDIUM	kernel: media: mediatek: vcodec: Fix H264 multi stateless decoder smatch warning
+linux-libc-dev	6.1.129-1	CVE-2024-47794	MEDIUM	kernel: bpf: Prevent tailcall infinite loop caused by freplace
+linux-libc-dev	6.1.129-1	CVE-2024-47809	MEDIUM	kernel: dlm: fix possible lkb_resource null dereference
+linux-libc-dev	6.1.129-1	CVE-2024-48875	MEDIUM	kernel: btrfs: don't take dev_replace rwsem on task already holding it
+linux-libc-dev	6.1.129-1	CVE-2024-49568	MEDIUM	kernel: net/smc: check v2_ext_offset/eid_cnt/ism_gid_cnt when receiving proposal msg
+linux-libc-dev	6.1.129-1	CVE-2024-49569	MEDIUM	kernel: nvme-rdma: unquiesce admin_q before destroy it
+linux-libc-dev	6.1.129-1	CVE-2024-49893	MEDIUM	kernel: drm/amd/display: Check stream_status before it is used
+linux-libc-dev	6.1.129-1	CVE-2024-49901	MEDIUM	kernel: drm/msm/adreno: Assign msm_gpu-&gt;pdev earlier to avoid nullptrs
+linux-libc-dev	6.1.129-1	CVE-2024-49906	MEDIUM	kernel: drm/amd/display: Check null pointer before try to access it
+linux-libc-dev	6.1.129-1	CVE-2024-49908	MEDIUM	kernel: drm/amd/display: Add null check for &#39;afb&#39; in amdgpu_dm_update_cursor (v2)
+linux-libc-dev	6.1.129-1	CVE-2024-49910	MEDIUM	kernel: drm/amd/display: Add NULL check for function pointer in dcn401_set_output_transfer_func
+linux-libc-dev	6.1.129-1	CVE-2024-49914	MEDIUM	kernel: drm/amd/display: Add null check for pipe_ctx-&gt;plane_state in dcn20_program_pipe
+linux-libc-dev	6.1.129-1	CVE-2024-49916	MEDIUM	kernel: drm/amd/display: Add NULL check for clk_mgr and clk_mgr-&gt;funcs in dcn401_init_hw
+linux-libc-dev	6.1.129-1	CVE-2024-49918	MEDIUM	kernel: drm/amd/display: Add null check for head_pipe in dcn32_acquire_idle_pipe_for_head_pipe_in_layer
+linux-libc-dev	6.1.129-1	CVE-2024-49919	MEDIUM	kernel: drm/amd/display: Add null check for head_pipe in dcn201_acquire_free_pipe_for_layer
+linux-libc-dev	6.1.129-1	CVE-2024-49920	MEDIUM	kernel: drm/amd/display: Check null pointers before multiple uses
+linux-libc-dev	6.1.129-1	CVE-2024-49921	MEDIUM	kernel: drm/amd/display: Check null pointers before used
+linux-libc-dev	6.1.129-1	CVE-2024-49922	MEDIUM	kernel: drm/amd/display: Check null pointers before using them
+linux-libc-dev	6.1.129-1	CVE-2024-49923	MEDIUM	kernel: drm/amd/display: Pass non-null to dcn20_validate_apply_pipe_split_flags
+linux-libc-dev	6.1.129-1	CVE-2024-49926	MEDIUM	kernel: rcu-tasks: Fix access non-existent percpu rtpcp variable in rcu_tasks_need_gpcb()
+linux-libc-dev	6.1.129-1	CVE-2024-49932	MEDIUM	kernel: btrfs: don&#39;t readahead the relocation inode on RST
+linux-libc-dev	6.1.129-1	CVE-2024-49940	MEDIUM	kernel: l2tp: prevent possible tunnel refcount underflow
+linux-libc-dev	6.1.129-1	CVE-2024-49945	MEDIUM	kernel: net/ncsi: Disable the ncsi work before freeing the associated structure
+linux-libc-dev	6.1.129-1	CVE-2024-49968	MEDIUM	kernel: ext4: filesystems without casefold feature cannot be mounted with siphash
+linux-libc-dev	6.1.129-1	CVE-2024-49970	MEDIUM	kernel: drm/amd/display: Implement bounds check for stream encoder creation in DCN401
+linux-libc-dev	6.1.129-1	CVE-2024-49972	MEDIUM	kernel: drm/amd/display: Deallocate DML memory if allocation fails
+linux-libc-dev	6.1.129-1	CVE-2024-49987	MEDIUM	kernel: bpftool: Fix undefined behavior in qsort(NULL, 0, ...)
+linux-libc-dev	6.1.129-1	CVE-2024-49988	MEDIUM	kernel: ksmbd: add refcnt to ksmbd_conn struct
+linux-libc-dev	6.1.129-1	CVE-2024-49998	MEDIUM	kernel: net: dsa: improve shutdown sequence
+linux-libc-dev	6.1.129-1	CVE-2024-50009	MEDIUM	kernel: cpufreq: amd-pstate: add check for cpufreq_cpu_get&#39;s return value
+linux-libc-dev	6.1.129-1	CVE-2024-50016	MEDIUM	kernel: drm/amd/display: Avoid overflow assignment in link_dp_cts
+linux-libc-dev	6.1.129-1	CVE-2024-50017	MEDIUM	kernel: x86/mm/ident_map: Use gbpages only where full GB page should be mapped.
+linux-libc-dev	6.1.129-1	CVE-2024-50028	MEDIUM	kernel: thermal: core: Reference count the zone in thermal_zone_get_by_id()
+linux-libc-dev	6.1.129-1	CVE-2024-50032	MEDIUM	kernel: rcu/nocb: Fix rcuog wake-up from offline softirq
+linux-libc-dev	6.1.129-1	CVE-2024-50056	MEDIUM	kernel: usb: gadget: uvc: Fix ERR_PTR dereference in uvc_v4l2.c
+linux-libc-dev	6.1.129-1	CVE-2024-50111	MEDIUM	kernel: LoongArch: Enable IRQ if do_ale() triggered in irq-enabled context
+linux-libc-dev	6.1.129-1	CVE-2024-50135	MEDIUM	kernel: nvme-pci: fix race condition between reset and nvme_dev_disable()
+linux-libc-dev	6.1.129-1	CVE-2024-50166	MEDIUM	kernel: fsl/fman: Fix refcount handling of fman-related devices
+linux-libc-dev	6.1.129-1	CVE-2024-50277	MEDIUM	kernel: dm: fix a crash if blk_alloc_disk fails
+linux-libc-dev	6.1.129-1	CVE-2024-50285	MEDIUM	kernel: ksmbd: check outstanding simultaneous SMB operations
+linux-libc-dev	6.1.129-1	CVE-2024-50289	MEDIUM	kernel: media: av7110: fix a spectre vulnerability
+linux-libc-dev	6.1.129-1	CVE-2024-50298	MEDIUM	kernel: net: enetc: allocate vf_state during PF probes
+linux-libc-dev	6.1.129-1	CVE-2024-52559	MEDIUM	kernel: drm/msm/gem: prevent integer overflow in msm_ioctl_gem_submit()
+linux-libc-dev	6.1.129-1	CVE-2024-52560	MEDIUM	kernel: fs/ntfs3: Mark inode as bad as soon as error detected in mi_enum_attr()
+linux-libc-dev	6.1.129-1	CVE-2024-53050	MEDIUM	kernel: drm/i915/hdcp: Add encoder check in hdcp2_get_capability
+linux-libc-dev	6.1.129-1	CVE-2024-53051	MEDIUM	kernel: drm/i915/hdcp: Add encoder check in intel_hdcp_get_capability
+linux-libc-dev	6.1.129-1	CVE-2024-53056	MEDIUM	kernel: drm/mediatek: Fix potential NULL dereference in mtk_crtc_destroy()
+linux-libc-dev	6.1.129-1	CVE-2024-53079	MEDIUM	kernel: mm/thp: fix deferred split unqueue naming and locking
+linux-libc-dev	6.1.129-1	CVE-2024-53085	MEDIUM	kernel: tpm: Lock TPM chip in tpm_pm_suspend() first
+linux-libc-dev	6.1.129-1	CVE-2024-53089	MEDIUM	kernel: LoongArch: KVM: Mark hrtimer to expire in hard interrupt context
+linux-libc-dev	6.1.129-1	CVE-2024-53090	MEDIUM	kernel: afs: Fix lock recursion
+linux-libc-dev	6.1.129-1	CVE-2024-53091	MEDIUM	kernel: bpf: Add sk_is_inet and IS_ICSK check in tls_sw_has_ctx_tx/rx
+linux-libc-dev	6.1.129-1	CVE-2024-53094	MEDIUM	kernel: RDMA/siw: Add sendpage_ok() check to disable MSG_SPLICE_PAGES
+linux-libc-dev	6.1.129-1	CVE-2024-53095	MEDIUM	kernel: smb: client: Fix use-after-free of network namespace.
+linux-libc-dev	6.1.129-1	CVE-2024-53114	MEDIUM	kernel: x86/CPU/AMD: Clear virtualized VMLOAD/VMSAVE on Zen4 client
+linux-libc-dev	6.1.129-1	CVE-2024-53134	MEDIUM	kernel: pmdomain: imx93-blk-ctrl: correct remove path
+linux-libc-dev	6.1.129-1	CVE-2024-53147	MEDIUM	kernel: exfat: fix out-of-bounds access of directory entries
+linux-libc-dev	6.1.129-1	CVE-2024-53176	MEDIUM	kernel: smb: During unmount, ensure all cached dir instances drop their dentry
+linux-libc-dev	6.1.129-1	CVE-2024-53177	MEDIUM	kernel: smb: prevent use-after-free due to open_cached_dir error paths
+linux-libc-dev	6.1.129-1	CVE-2024-53178	MEDIUM	kernel: smb: Don't leak cfid when reconnect races with open_cached_dir
+linux-libc-dev	6.1.129-1	CVE-2024-53187	MEDIUM	kernel: io_uring: check for overflows in io_pin_pages
+linux-libc-dev	6.1.129-1	CVE-2024-53195	MEDIUM	kernel: KVM: arm64: Get rid of userspace_irqchip_in_use
+linux-libc-dev	6.1.129-1	CVE-2024-53209	MEDIUM	kernel: bnxt_en: Fix receive ring space parameters when XDP is active
+linux-libc-dev	6.1.129-1	CVE-2024-53218	MEDIUM	kernel: f2fs: fix race in concurrent f2fs_stop_gc_thread
+linux-libc-dev	6.1.129-1	CVE-2024-53219	MEDIUM	kernel: virtiofs: use pages instead of pointer for kernel direct IO
+linux-libc-dev	6.1.129-1	CVE-2024-53221	MEDIUM	kernel: f2fs: fix null-ptr-deref in f2fs_submit_page_bio()
+linux-libc-dev	6.1.129-1	CVE-2024-53224	MEDIUM	kernel: RDMA/mlx5: Move events notifier registration to be after device registration
+linux-libc-dev	6.1.129-1	CVE-2024-53687	MEDIUM	kernel: riscv: Fix IPIs usage in kfence_protect_page()
+linux-libc-dev	6.1.129-1	CVE-2024-54456	MEDIUM	kernel: NFS: Fix potential buffer overflowin nfs_sysfs_link_rpc_client()
+linux-libc-dev	6.1.129-1	CVE-2024-54683	MEDIUM	kernel: netfilter: IDLETIMER: Fix for possible ABBA deadlock
+linux-libc-dev	6.1.129-1	CVE-2024-56544	MEDIUM	kernel: udmabuf: change folios array from kmalloc to kvmalloc
+linux-libc-dev	6.1.129-1	CVE-2024-56565	MEDIUM	kernel: f2fs: fix to drop all discards after creating snapshot on lvm device
+linux-libc-dev	6.1.129-1	CVE-2024-56566	MEDIUM	kernel: mm/slub: Avoid list corruption when removing a slab from the full list
+linux-libc-dev	6.1.129-1	CVE-2024-56583	MEDIUM	kernel: sched/deadline: Fix warning in migrate_enable for boosted tasks
+linux-libc-dev	6.1.129-1	CVE-2024-56588	MEDIUM	kernel: scsi: hisi_sas: Create all dump files during debugfs initialization
+linux-libc-dev	6.1.129-1	CVE-2024-56591	MEDIUM	kernel: Bluetooth: hci_conn: Use disable_delayed_work_sync
+linux-libc-dev	6.1.129-1	CVE-2024-56592	MEDIUM	kernel: bpf: Call free_htab_elem() after htab_unlock_bucket()
+linux-libc-dev	6.1.129-1	CVE-2024-56609	MEDIUM	kernel: wifi: rtw88: use ieee80211_purge_tx_queue() to purge TX skb
+linux-libc-dev	6.1.129-1	CVE-2024-56611	MEDIUM	kernel: mm/mempolicy: fix migrate_to_node() assuming there is at least one VMA in a MM
+linux-libc-dev	6.1.129-1	CVE-2024-56647	MEDIUM	kernel: net: Fix icmp host relookup triggering ip_rt_bug
+linux-libc-dev	6.1.129-1	CVE-2024-56657	MEDIUM	kernel: ALSA: control: Avoid WARN() for symlink errors
+linux-libc-dev	6.1.129-1	CVE-2024-56692	MEDIUM	kernel: f2fs: fix to do sanity check on node blkaddr in truncate_node()
+linux-libc-dev	6.1.129-1	CVE-2024-56712	MEDIUM	kernel: udmabuf: fix memory leak on last export_udmabuf() error path
+linux-libc-dev	6.1.129-1	CVE-2024-56719	MEDIUM	kernel: net: stmmac: fix TSO DMA API usage causing oops
+linux-libc-dev	6.1.129-1	CVE-2024-56729	MEDIUM	kernel: smb: Initialize cfid->tcon before performing network ops
+linux-libc-dev	6.1.129-1	CVE-2024-56742	MEDIUM	kernel: vfio/mlx5: Fix an unwind issue in mlx5vf_add_migration_pages()
+linux-libc-dev	6.1.129-1	CVE-2024-56757	MEDIUM	kernel: Bluetooth: btusb: mediatek: add intf release flow when usb disconnect
+linux-libc-dev	6.1.129-1	CVE-2024-56758	MEDIUM	kernel: btrfs: check folio mapping after unlock in relocate_one_folio()
+linux-libc-dev	6.1.129-1	CVE-2024-56782	MEDIUM	kernel: ACPI: x86: Add adev NULL check to acpi_quirk_skip_serdev_enumeration()
+linux-libc-dev	6.1.129-1	CVE-2024-56786	MEDIUM	kernel: bpf: put bpf_link's program when link is safe to be deallocated
+linux-libc-dev	6.1.129-1	CVE-2024-57795	MEDIUM	kernel: RDMA/rxe: Remove the direct link to net_device
+linux-libc-dev	6.1.129-1	CVE-2024-57804	MEDIUM	kernel: scsi: mpi3mr: Fix corrupt config pages PHY state is switched in sysfs
+linux-libc-dev	6.1.129-1	CVE-2024-57809	MEDIUM	kernel: PCI: imx6: Fix suspend/resume support on i.MX6QDL
+linux-libc-dev	6.1.129-1	CVE-2024-57843	MEDIUM	kernel: virtio-net: fix overflow inside virtnet_rq_alloc
+linux-libc-dev	6.1.129-1	CVE-2024-57852	MEDIUM	kernel: firmware: qcom: scm: smc: Handle missing SCM device
+linux-libc-dev	6.1.129-1	CVE-2024-57857	MEDIUM	kernel: RDMA/siw: Remove direct link to net_device
+linux-libc-dev	6.1.129-1	CVE-2024-57872	MEDIUM	kernel: scsi: ufs: pltfrm: Dellocate HBA during ufshcd_pltfrm_remove()
+linux-libc-dev	6.1.129-1	CVE-2024-57875	MEDIUM	kernel: block: RCU protect disk->conv_zones_bitmap
+linux-libc-dev	6.1.129-1	CVE-2024-57883	MEDIUM	kernel: mm: hugetlb: independent PMD page table shared count
+linux-libc-dev	6.1.129-1	CVE-2024-57888	MEDIUM	kernel: workqueue: Do not warn when cancelling WQ_MEM_RECLAIM work from !WQ_MEM_RECLAIM worker
+linux-libc-dev	6.1.129-1	CVE-2024-57895	MEDIUM	kernel: ksmbd: set ATTR_CTIME flags when setting mtime
+linux-libc-dev	6.1.129-1	CVE-2024-57898	MEDIUM	kernel: wifi: cfg80211: clear link ID from bitmap during link delete after clean up
+linux-libc-dev	6.1.129-1	CVE-2024-57899	MEDIUM	kernel: wifi: mac80211: fix mbss changed flags corruption on 32 bit systems
+linux-libc-dev	6.1.129-1	CVE-2024-57924	MEDIUM	kernel: fs: relax assertions on failure to encode file handles
+linux-libc-dev	6.1.129-1	CVE-2024-57945	MEDIUM	kernel: riscv: mm: Fix the out of bound issue of vmemmap address
+linux-libc-dev	6.1.129-1	CVE-2024-57950	MEDIUM	kernel: drm/amd/display: Initialize denominator defaults to 1
+linux-libc-dev	6.1.129-1	CVE-2024-57952	MEDIUM	kernel: Revert "libfs: fix infinite directory reads for offset dir"
+linux-libc-dev	6.1.129-1	CVE-2024-57974	MEDIUM	kernel: udp: Deal with race between UDP socket address change and rehash
+linux-libc-dev	6.1.129-1	CVE-2024-57975	MEDIUM	kernel: btrfs: do proper folio cleanup when run_delalloc_nocow() failed
+linux-libc-dev	6.1.129-1	CVE-2024-57976	MEDIUM	kernel: btrfs: do proper folio cleanup when cow_file_range() failed
+linux-libc-dev	6.1.129-1	CVE-2024-57977	MEDIUM	kernel: memcg: fix soft lockup in the OOM process
+linux-libc-dev	6.1.129-1	CVE-2024-57999	MEDIUM	kernel: powerpc/pseries/iommu: IOMMU incorrectly marks MMIO range in DDW
+linux-libc-dev	6.1.129-1	CVE-2024-58005	MEDIUM	kernel: tpm: Change to kvalloc() in eventlog/acpi.c
+linux-libc-dev	6.1.129-1	CVE-2024-58006	MEDIUM	kernel: PCI: dwc: ep: Prevent changing BAR size/flags in pci_epc_set_bar()
+linux-libc-dev	6.1.129-1	CVE-2024-58012	MEDIUM	kernel: ASoC: SOF: Intel: hda-dai: Ensure DAI widget is valid during params
+linux-libc-dev	6.1.129-1	CVE-2024-58053	MEDIUM	kernel: rxrpc: Fix handling of received connection abort
+linux-libc-dev	6.1.129-1	CVE-2024-58079	MEDIUM	kernel: media: uvcvideo: Fix crash during unbind if gpio unit is in use
+linux-libc-dev	6.1.129-1	CVE-2024-58089	MEDIUM	kernel: btrfs: fix double accounting race when btrfs_run_delalloc_range() failed
+linux-libc-dev	6.1.129-1	CVE-2024-58090	MEDIUM	kernel: sched/core: Prevent rescheduling when interrupts are disabled
+linux-libc-dev	6.1.129-1	CVE-2024-58093	MEDIUM	kernel: PCI/ASPM: Fix link state exit during switch upstream function removal
+linux-libc-dev	6.1.129-1	CVE-2024-58094	MEDIUM	kernel: jfs: add check read-only before truncation in jfs_truncate_nolock()
+linux-libc-dev	6.1.129-1	CVE-2024-58095	MEDIUM	kernel: jfs: add check read-only before txBeginAnon() call
+linux-libc-dev	6.1.129-1	CVE-2024-58096	MEDIUM	kernel: wifi: ath11k: add srng->lock for ath11k_hal_srng_* in monitor mode
+linux-libc-dev	6.1.129-1	CVE-2024-58097	MEDIUM	kernel: wifi: ath11k: fix RCU stall while reaping monitor destination ring
+linux-libc-dev	6.1.129-1	CVE-2025-21634	MEDIUM	kernel: cgroup/cpuset: remove kernfs active break
+linux-libc-dev	6.1.129-1	CVE-2025-21635	MEDIUM	kernel: rds: sysctl: rds_tcp_{rcv,snd}buf: avoid using current->nsproxy
+linux-libc-dev	6.1.129-1	CVE-2025-21645	MEDIUM	kernel: platform/x86/amd/pmc: Only disable IRQ1 wakeup where i8042 actually enabled it
+linux-libc-dev	6.1.129-1	CVE-2025-21649	MEDIUM	kernel: net: hns3: fix kernel crash when 1588 is sent on HIP08 devices
+linux-libc-dev	6.1.129-1	CVE-2025-21651	MEDIUM	kernel: net: hns3: don't auto enable misc vector
+linux-libc-dev	6.1.129-1	CVE-2025-21656	MEDIUM	kernel: hwmon: (drivetemp) Fix driver producing garbage data when SCSI errors occur
+linux-libc-dev	6.1.129-1	CVE-2025-21658	MEDIUM	kernel: btrfs: avoid NULL pointer dereference if no valid extent tree
+linux-libc-dev	6.1.129-1	CVE-2025-21673	MEDIUM	kernel: smb: client: fix double free of TCP_Server_Info::hostname
+linux-libc-dev	6.1.129-1	CVE-2025-21676	MEDIUM	kernel: net: fec: handle page_pool_dev_alloc_pages error
+linux-libc-dev	6.1.129-1	CVE-2025-21682	MEDIUM	kernel: eth: bnxt: always recalculate features after XDP clearing, fix null-deref
+linux-libc-dev	6.1.129-1	CVE-2025-21693	MEDIUM	kernel: mm: zswap: properly synchronize freeing resources during CPU hotunplug
+linux-libc-dev	6.1.129-1	CVE-2025-21696	MEDIUM	kernel: mm: clear uffd-wp PTE/PMD state on mremap()
+linux-libc-dev	6.1.129-1	CVE-2025-21712	MEDIUM	kernel: md/md-bitmap: Synchronize bitmap_get_stats() with bitmap lifetime
+linux-libc-dev	6.1.129-1	CVE-2025-21714	MEDIUM	kernel: RDMA/mlx5: Fix implicit ODP use after free
+linux-libc-dev	6.1.129-1	CVE-2025-21721	MEDIUM	kernel: nilfs2: handle errors that nilfs_prepare_chunk() may return
+linux-libc-dev	6.1.129-1	CVE-2025-21723	MEDIUM	kernel: scsi: mpi3mr: Fix possible crash when setting up bsg fails
+linux-libc-dev	6.1.129-1	CVE-2025-21729	MEDIUM	kernel: wifi: rtw89: fix race between cancel_hw_scan and hw_scan completion
+linux-libc-dev	6.1.129-1	CVE-2025-21732	MEDIUM	kernel: RDMA/mlx5: Fix a race for an ODP MR which leads to CQE with error
+linux-libc-dev	6.1.129-1	CVE-2025-21739	MEDIUM	kernel: scsi: ufs: core: Fix use-after free in init error and remove paths
+linux-libc-dev	6.1.129-1	CVE-2025-21751	MEDIUM	kernel: net/mlx5: HWS, change error flow on matcher disconnect
+linux-libc-dev	6.1.129-1	CVE-2025-21756	MEDIUM	kernel: vsock: Keep the binding until socket destruction
+linux-libc-dev	6.1.129-1	CVE-2025-21759	MEDIUM	kernel: ipv6: mcast: extend RCU protection in igmp6_send()
+linux-libc-dev	6.1.129-1	CVE-2025-21768	MEDIUM	kernel: net: ipv6: fix dst ref loops in rpl, seg6 and ioam6 lwtunnels
+linux-libc-dev	6.1.129-1	CVE-2025-21801	MEDIUM	kernel: net: ravb: Fix missing rtnl lock in suspend/resume path
+linux-libc-dev	6.1.129-1	CVE-2025-21816	MEDIUM	kernel: hrtimers: Force migrate away hrtimers queued after CPUHP_AP_HRTIMERS_DYING
+linux-libc-dev	6.1.129-1	CVE-2025-21817	MEDIUM	kernel: block: mark GFP_NOIO around sysfs ->store()
+linux-libc-dev	6.1.129-1	CVE-2025-21831	MEDIUM	kernel: PCI: Avoid putting some root ports into D3 on TUXEDO Sirius Gen1
+linux-libc-dev	6.1.129-1	CVE-2025-21833	MEDIUM	kernel: iommu/vt-d: Avoid use of NULL after WARN_ON_ONCE
+linux-libc-dev	6.1.129-1	CVE-2025-21836	MEDIUM	kernel: io_uring/kbuf: re-using old struct io_buffer_list may lead to a use-after-free situation
+linux-libc-dev	6.1.129-1	CVE-2025-21838	MEDIUM	kernel: usb: gadget: core: flush gadget workqueue after device removal
+linux-libc-dev	6.1.129-1	CVE-2025-21839	MEDIUM	kernel: KVM: x86: Load DR6 with guest value only before entering .vcpu_run() loop
+linux-libc-dev	6.1.129-1	CVE-2025-21844	MEDIUM	kernel: smb: client: Add check for next_buffer in receive_encrypted_standard()
+linux-libc-dev	6.1.129-1	CVE-2025-21846	MEDIUM	kernel: acct: perform last write from workqueue
+linux-libc-dev	6.1.129-1	CVE-2025-21848	MEDIUM	kernel: nfp: bpf: Add check for nfp_app_ctrl_msg_alloc()
+linux-libc-dev	6.1.129-1	CVE-2025-21853	MEDIUM	kernel: bpf: avoid holding freeze_mutex during mmap operation
+linux-libc-dev	6.1.129-1	CVE-2025-21859	MEDIUM	kernel: USB: gadget: f_midi: f_midi_complete to call queue_work
+linux-libc-dev	6.1.129-1	CVE-2025-21861	MEDIUM	kernel: mm/migrate_device: don't add folio to be freed to LRU in migrate_device_finalize()
+linux-libc-dev	6.1.129-1	CVE-2025-21862	MEDIUM	kernel: drop_monitor: fix incorrect initialization order
+linux-libc-dev	6.1.129-1	CVE-2025-21864	MEDIUM	kernel: tcp: drop secpath at the same time as we currently drop dst
+linux-libc-dev	6.1.129-1	CVE-2025-21865	MEDIUM	kernel: gtp: Suppress list corruption splat in gtp_net_exit_batch_rtnl().
+linux-libc-dev	6.1.129-1	CVE-2025-21866	MEDIUM	kernel: powerpc/code-patching: Fix KASAN hit by not flagging text patching area as VM_ALLOC
+linux-libc-dev	6.1.129-1	CVE-2025-21867	MEDIUM	kernel: bpf, test_run: Fix use-after-free issue in eth_skb_pkt_type()
+linux-libc-dev	6.1.129-1	CVE-2025-21870	MEDIUM	kernel: ASoC: SOF: ipc4-topology: Harden loops for looking up ALH copiers
+linux-libc-dev	6.1.129-1	CVE-2025-21871	MEDIUM	kernel: tee: optee: Fix supplicant wait loop
+linux-libc-dev	6.1.129-1	CVE-2025-21872	MEDIUM	kernel: efi: Don't map the entire mokvar table to determine its size
+linux-libc-dev	6.1.129-1	CVE-2025-21875	MEDIUM	kernel: mptcp: always handle address removal under msk socket lock
+linux-libc-dev	6.1.129-1	CVE-2025-21877	MEDIUM	kernel: usbnet: gl620a: fix endpoint checking in genelink_bind()
+linux-libc-dev	6.1.129-1	CVE-2025-21878	MEDIUM	kernel: i2c: npcm: disable interrupt enable bit before devm_request_irq
+linux-libc-dev	6.1.129-1	CVE-2025-21881	MEDIUM	kernel: uprobes: Reject the shared zeropage in uprobe_write_opcode()
+linux-libc-dev	6.1.129-1	CVE-2025-21885	MEDIUM	kernel: RDMA/bnxt_re: Fix the page details for the srq created by kernel consumers
+linux-libc-dev	6.1.129-1	CVE-2025-21887	MEDIUM	kernel: ovl: fix UAF in ovl_dentry_update_reval by moving dput() in ovl_link_up
+linux-libc-dev	6.1.129-1	CVE-2025-21888	MEDIUM	kernel: RDMA/mlx5: Fix a WARN during dereg_mr for DM type
+linux-libc-dev	6.1.129-1	CVE-2025-21891	MEDIUM	kernel: ipvlan: ensure network headers are in skb linear part
+linux-libc-dev	6.1.129-1	CVE-2025-21892	MEDIUM	kernel: RDMA/mlx5: Fix the recovery flow of the UMR QP
+linux-libc-dev	6.1.129-1	CVE-2025-21894	MEDIUM	kernel: net: enetc: VFs do not support HWTSTAMP_TX_ONESTEP_SYNC
+linux-libc-dev	6.1.129-1	CVE-2025-21898	MEDIUM	kernel: ftrace: Avoid potential division by zero in function_stat_show()
+linux-libc-dev	6.1.129-1	CVE-2025-21899	MEDIUM	kernel: tracing: Fix bad hist from corrupting named_triggers list
+linux-libc-dev	6.1.129-1	CVE-2025-21904	MEDIUM	kernel: caif_virtio: fix wrong pointer check in cfv_probe()
+linux-libc-dev	6.1.129-1	CVE-2025-21907	MEDIUM	kernel: mm: memory-failure: update ttu flag inside unmap_poisoned_folio
+linux-libc-dev	6.1.129-1	CVE-2025-21909	MEDIUM	kernel: wifi: nl80211: reject cooked mode if it is set along with other flags
+linux-libc-dev	6.1.129-1	CVE-2025-21910	MEDIUM	kernel: wifi: cfg80211: regulatory: improve invalid hints checking
+linux-libc-dev	6.1.129-1	CVE-2025-21912	MEDIUM	kernel: gpio: rcar: Use raw_spinlock to protect register access
+linux-libc-dev	6.1.129-1	CVE-2025-21913	MEDIUM	kernel: x86/amd_nb: Use rdmsr_safe() in amd_get_mmconfig_range()
+linux-libc-dev	6.1.129-1	CVE-2025-21914	MEDIUM	kernel: slimbus: messaging: Free transaction ID in delayed interrupt scenario
+linux-libc-dev	6.1.129-1	CVE-2025-21916	MEDIUM	kernel: usb: atm: cxacru: fix a flaw in existing endpoint checks
+linux-libc-dev	6.1.129-1	CVE-2025-21917	MEDIUM	kernel: usb: renesas_usbhs: Flush the notify_hotplug_work
+linux-libc-dev	6.1.129-1	CVE-2025-21918	MEDIUM	kernel: usb: typec: ucsi: Fix NULL pointer access
+linux-libc-dev	6.1.129-1	CVE-2025-21922	MEDIUM	kernel: ppp: Fix KMSAN uninit-value warning with bpf
+linux-libc-dev	6.1.129-1	CVE-2025-21924	MEDIUM	kernel: net: hns3: make sure ptp clock is unregister and freed if hclge_ptp_get_cycle returns an error
+linux-libc-dev	6.1.129-1	CVE-2025-21925	MEDIUM	kernel: llc: do not use skb_get() before dev_queue_xmit()
+linux-libc-dev	6.1.129-1	CVE-2025-21931	MEDIUM	kernel: hwpoison, memory_hotplug: lock folio before unmap hwpoisoned folio
+linux-libc-dev	6.1.129-1	CVE-2025-21935	MEDIUM	kernel: rapidio: add check for rio_add_net() in rio_scan_alloc_net()
+linux-libc-dev	6.1.129-1	CVE-2025-21936	MEDIUM	kernel: Bluetooth: Add check for mgmt_alloc_skb() in mgmt_device_connected()
+linux-libc-dev	6.1.129-1	CVE-2025-21937	MEDIUM	kernel: Bluetooth: Add check for mgmt_alloc_skb() in mgmt_remote_name()
+linux-libc-dev	6.1.129-1	CVE-2025-21938	MEDIUM	kernel: mptcp: fix 'scheduling while atomic' in mptcp_pm_nl_append_new_local_addr
+linux-libc-dev	6.1.129-1	CVE-2025-21941	MEDIUM	kernel: drm/amd/display: Fix null check for pipe_ctx->plane_state in resource_build_scaling_params
+linux-libc-dev	6.1.129-1	CVE-2025-21943	MEDIUM	kernel: gpio: aggregator: protect driver attr handlers against module unload
+linux-libc-dev	6.1.129-1	CVE-2025-21944	MEDIUM	kernel: ksmbd: fix bug on trap in smb2_lock
+linux-libc-dev	6.1.129-1	CVE-2025-21946	MEDIUM	kernel: ksmbd: fix out-of-bounds in parse_sec_desc()
+linux-libc-dev	6.1.129-1	CVE-2025-21947	MEDIUM	kernel: ksmbd: fix type confusion via race condition when using ipc_msg_send_request
+linux-libc-dev	6.1.129-1	CVE-2025-21948	MEDIUM	kernel: HID: appleir: Fix potential NULL dereference at raw event handle
+linux-libc-dev	6.1.129-1	CVE-2025-21949	MEDIUM	kernel: LoongArch: Set hugetlb mmap base address aligned with pmd size
+linux-libc-dev	6.1.129-1	CVE-2025-21950	MEDIUM	kernel: drivers: virt: acrn: hsm: Use kzalloc to avoid info leak in pmcmd_ioctl
+linux-libc-dev	6.1.129-1	CVE-2025-21951	MEDIUM	kernel: bus: mhi: host: pci_generic: Use pci_try_reset_function() to avoid deadlock
+linux-libc-dev	6.1.129-1	CVE-2025-21955	MEDIUM	kernel: ksmbd: prevent connection release during oplock break notification
+linux-libc-dev	6.1.129-1	CVE-2025-21956	MEDIUM	kernel: drm/amd/display: Assign normalized_pix_clk when color depth = 14
+linux-libc-dev	6.1.129-1	CVE-2025-21957	MEDIUM	kernel: scsi: qla1280: Fix kernel oops when debug level > 2
+linux-libc-dev	6.1.129-1	CVE-2025-21959	MEDIUM	kernel: netfilter: nf_conncount: Fully initialize struct nf_conncount_tuple in insert_tree()
+linux-libc-dev	6.1.129-1	CVE-2025-21960	MEDIUM	kernel: eth: bnxt: do not update checksum in bnxt_xdp_build_skb()
+linux-libc-dev	6.1.129-1	CVE-2025-21961	MEDIUM	kernel: eth: bnxt: fix truesize for mb-xdp-pass case
+linux-libc-dev	6.1.129-1	CVE-2025-21962	MEDIUM	kernel: cifs: Fix integer overflow while processing closetimeo mount option
+linux-libc-dev	6.1.129-1	CVE-2025-21963	MEDIUM	kernel: cifs: Fix integer overflow while processing acdirmax mount option
+linux-libc-dev	6.1.129-1	CVE-2025-21964	MEDIUM	kernel: cifs: Fix integer overflow while processing acregmax mount option
+linux-libc-dev	6.1.129-1	CVE-2025-21970	MEDIUM	kernel: net/mlx5: Bridge, fix the crash caused by LAG state check
+linux-libc-dev	6.1.129-1	CVE-2025-21971	MEDIUM	kernel: net_sched: Prevent creation of classes with TC_H_ROOT
+linux-libc-dev	6.1.129-1	CVE-2025-21972	MEDIUM	kernel: net: mctp: unshare packets when reassembling
+linux-libc-dev	6.1.129-1	CVE-2025-21975	MEDIUM	kernel: net/mlx5: handle errors in mlx5_chains_create_table()
+linux-libc-dev	6.1.129-1	CVE-2025-21976	MEDIUM	kernel: fbdev: hyperv_fb: Allow graceful removal of framebuffer
+linux-libc-dev	6.1.129-1	CVE-2025-21978	MEDIUM	kernel: drm/hyperv: Fix address space leak when Hyper-V DRM device is removed
+linux-libc-dev	6.1.129-1	CVE-2025-21980	MEDIUM	kernel: sched: address a potential NULL pointer dereference in the GRED scheduler.
+linux-libc-dev	6.1.129-1	CVE-2025-21981	MEDIUM	kernel: ice: fix memory leak in aRFS after reset
+linux-libc-dev	6.1.129-1	CVE-2025-21985	MEDIUM	kernel: drm/amd/display: Fix out-of-bound accesses
+linux-libc-dev	6.1.129-1	CVE-2025-21986	MEDIUM	kernel: net: switchdev: Convert blocking notification chain to a raw one
+linux-libc-dev	6.1.129-1	CVE-2025-21992	MEDIUM	kernel: HID: ignore non-functional sensor in HP 5MP Camera
+linux-libc-dev	6.1.129-1	CVE-2025-21994	MEDIUM	kernel: ksmbd: fix incorrect validation for num_aces field of smb_acl
+linux-libc-dev	6.1.129-1	CVE-2025-21996	MEDIUM	kernel: drm/radeon: fix uninitialized size issue in radeon_vce_cs_parse()
+linux-libc-dev	6.1.129-1	CVE-2025-21997	MEDIUM	kernel: xsk: fix an integer overflow in xp_create_and_assign_umem()
+linux-libc-dev	6.1.129-1	CVE-2025-21999	MEDIUM	kernel: proc: fix UAF in proc_get_inode()
+linux-libc-dev	6.1.129-1	CVE-2025-22004	MEDIUM	kernel: net: atm: fix use after free in lec_send()
+linux-libc-dev	6.1.129-1	CVE-2025-22005	MEDIUM	kernel: ipv6: Fix memleak of nhc_pcpu_rth_output in fib_check_nh_v6_gw().
+linux-libc-dev	6.1.129-1	CVE-2025-22007	MEDIUM	kernel: Bluetooth: Fix error code in chan_alloc_skb_cb()
+linux-libc-dev	6.1.129-1	CVE-2025-22008	MEDIUM	kernel: regulator: check that dummy regulator has been probed before using it
+linux-libc-dev	6.1.129-1	CVE-2025-22010	MEDIUM	kernel: RDMA/hns: Fix soft lockup during bt pages loop
+linux-libc-dev	6.1.129-1	CVE-2025-22014	MEDIUM	kernel: soc: qcom: pdr: Fix the potential deadlock
+linux-libc-dev	6.1.129-1	CVE-2025-22015	MEDIUM	kernel: mm/migrate: fix shmem xarray update during migration
+linux-libc-dev	6.1.129-1	CVE-2025-22018	MEDIUM	kernel: atm: Fix NULL pointer dereference
+linux-libc-dev	6.1.129-1	CVE-2025-22019	MEDIUM	kernel: bcachefs: bch2_ioctl_subvolume_destroy() fixes
+linux-libc-dev	6.1.129-1	CVE-2025-22020	MEDIUM	kernel: memstick: rtsx_usb_ms: Fix slab-use-after-free in rtsx_usb_ms_drv_remove
+linux-libc-dev	6.1.129-1	CVE-2025-22021	MEDIUM	kernel: netfilter: socket: Lookup orig tuple for IPv6 SNAT
+linux-libc-dev	6.1.129-1	CVE-2025-22022	MEDIUM	kernel: usb: xhci: Apply the link chain quirk on NEC isoc endpoints
+linux-libc-dev	6.1.129-1	CVE-2025-22025	MEDIUM	kernel: nfsd: put dl_stid if fail to queue dl_recall
+linux-libc-dev	6.1.129-1	CVE-2025-22026	MEDIUM	kernel: nfsd: don't ignore the return code of svc_proc_register()
+linux-libc-dev	6.1.129-1	CVE-2025-22027	MEDIUM	kernel: media: streamzap: fix race between device disconnection and urb callback
+linux-libc-dev	6.1.129-1	CVE-2025-22028	MEDIUM	kernel: media: vimc: skip .s_stream() for stopped entities
+linux-libc-dev	6.1.129-1	CVE-2025-22029	MEDIUM	kernel: exec: fix the racy usage of fs_struct->in_exec
+linux-libc-dev	6.1.129-1	CVE-2025-22033	MEDIUM	kernel: arm64: Don't call NULL in do_compat_alignment_fixup()
+linux-libc-dev	6.1.129-1	CVE-2025-22035	MEDIUM	kernel: tracing: Fix use-after-free in print_graph_function_flags during tracer switching
+linux-libc-dev	6.1.129-1	CVE-2025-22037	MEDIUM	kernel: ksmbd: fix null pointer dereference in alloc_preauth_hash()
+linux-libc-dev	6.1.129-1	CVE-2025-22038	MEDIUM	kernel: ksmbd: validate zero num_subauth before sub_auth is accessed
+linux-libc-dev	6.1.129-1	CVE-2025-22039	MEDIUM	kernel: ksmbd: fix overflow in dacloffset bounds check
+linux-libc-dev	6.1.129-1	CVE-2025-22040	MEDIUM	kernel: ksmbd: fix session use-after-free in multichannel connection
+linux-libc-dev	6.1.129-1	CVE-2025-22041	MEDIUM	kernel: ksmbd: fix use-after-free in ksmbd_sessions_deregister()
+linux-libc-dev	6.1.129-1	CVE-2025-22042	MEDIUM	kernel: ksmbd: add bounds check for create lease context
+linux-libc-dev	6.1.129-1	CVE-2025-22043	MEDIUM	kernel: ksmbd: add bounds check for durable handle context
+linux-libc-dev	6.1.129-1	CVE-2025-22044	MEDIUM	kernel: acpi: nfit: fix narrowing conversion in acpi_nfit_ctl
+linux-libc-dev	6.1.129-1	CVE-2025-22045	MEDIUM	kernel: x86/mm: Fix flush_tlb_range() when used for zapping normal PMDs
+linux-libc-dev	6.1.129-1	CVE-2025-22048	MEDIUM	kernel: LoongArch: BPF: Don't override subprog's return value
+linux-libc-dev	6.1.129-1	CVE-2025-22049	MEDIUM	kernel: LoongArch: Increase ARCH_DMA_MINALIGN up to 16
+linux-libc-dev	6.1.129-1	CVE-2025-22050	MEDIUM	kernel: usbnet:fix NPE during rx_complete
+linux-libc-dev	6.1.129-1	CVE-2025-22053	MEDIUM	kernel: net: ibmveth: make veth_pool_store stop hanging
+linux-libc-dev	6.1.129-1	CVE-2025-22054	MEDIUM	kernel: arcnet: Add NULL check in com20020pci_probe()
+linux-libc-dev	6.1.129-1	CVE-2025-22056	MEDIUM	kernel: netfilter: nft_tunnel: fix geneve_opt type confusion addition
+linux-libc-dev	6.1.129-1	CVE-2025-22057	MEDIUM	kernel: net: decrease cached dst counters in dst_release
+linux-libc-dev	6.1.129-1	CVE-2025-22060	MEDIUM	kernel: net: mvpp2: Prevent parser TCAM memory corruption
+linux-libc-dev	6.1.129-1	CVE-2025-22062	MEDIUM	kernel: sctp: add mutual exclusion in proc_sctp_do_udp_port()
+linux-libc-dev	6.1.129-1	CVE-2025-22063	MEDIUM	kernel: netlabel: Fix NULL pointer exception caused by CALIPSO on IPv4 sockets
+linux-libc-dev	6.1.129-1	CVE-2025-22066	MEDIUM	kernel: ASoC: imx-card: Add NULL check in imx_card_probe()
+linux-libc-dev	6.1.129-1	CVE-2025-22070	MEDIUM	kernel: fs/9p: fix NULL pointer dereference on mkdir
+linux-libc-dev	6.1.129-1	CVE-2025-22071	MEDIUM	kernel: spufs: fix a leak in spufs_create_context()
+linux-libc-dev	6.1.129-1	CVE-2025-22072	MEDIUM	kernel: spufs: fix gang directory lifetimes
+linux-libc-dev	6.1.129-1	CVE-2025-22073	MEDIUM	kernel: spufs: fix a leak on spufs_new_file() failure
+linux-libc-dev	6.1.129-1	CVE-2025-22075	MEDIUM	kernel: rtnetlink: Allocate vfinfo size for VF GUIDs when supported
+linux-libc-dev	6.1.129-1	CVE-2025-22079	MEDIUM	kernel: ocfs2: validate l_tree_depth to avoid out-of-bounds access
+linux-libc-dev	6.1.129-1	CVE-2025-22081	MEDIUM	kernel: fs/ntfs3: Fix a couple integer overflows on 32bit systems
+linux-libc-dev	6.1.129-1	CVE-2025-22083	MEDIUM	kernel: vhost-scsi: Fix handling of multiple calls to vhost_scsi_set_endpoint
+linux-libc-dev	6.1.129-1	CVE-2025-22086	MEDIUM	kernel: RDMA/mlx5: Fix mlx5_poll_one() cur_qp update flow
+linux-libc-dev	6.1.129-1	CVE-2025-22088	MEDIUM	kernel: RDMA/erdma: Prevent use-after-free in erdma_accept_newconn()
+linux-libc-dev	6.1.129-1	CVE-2025-22089	MEDIUM	kernel: RDMA/core: Don't expose hw_counters outside of init net namespace
+linux-libc-dev	6.1.129-1	CVE-2025-22090	MEDIUM	kernel: x86/mm/pat: Fix VM_PAT handling when fork() fails in copy_page_range()
+linux-libc-dev	6.1.129-1	CVE-2025-22093	MEDIUM	kernel: drm/amd/display: avoid NPD when ASIC does not support DMUB
+linux-libc-dev	6.1.129-1	CVE-2025-22095	MEDIUM	kernel: PCI: brcmstb: Fix error path after a call to regulator_bulk_get()
+linux-libc-dev	6.1.129-1	CVE-2025-22097	MEDIUM	kernel: drm/vkms: Fix use after free and double free on init error
+linux-libc-dev	6.1.129-1	CVE-2025-22103	MEDIUM	kernel: net: fix NULL pointer dereference in l3mdev_l3_rcv
+linux-libc-dev	6.1.129-1	CVE-2025-22104	MEDIUM	kernel: ibmvnic: Use kernel helpers for hex dumps
+linux-libc-dev	6.1.129-1	CVE-2025-22105	MEDIUM	kernel: bonding: check xdp prog when set bond mode
+linux-libc-dev	6.1.129-1	CVE-2025-22107	MEDIUM	kernel: net: dsa: sja1105: fix kasan out-of-bounds warning in sja1105_table_delete_entry()
+linux-libc-dev	6.1.129-1	CVE-2025-22109	MEDIUM	kernel: ax25: Remove broken autobind
+linux-libc-dev	6.1.129-1	CVE-2025-22111	MEDIUM	kernel: net: Remove RTNL dance for SIOCBRADDIF and SIOCBRDELIF.
+linux-libc-dev	6.1.129-1	CVE-2025-22113	MEDIUM	kernel: ext4: avoid journaling sb update on error if journal is destroying
+linux-libc-dev	6.1.129-1	CVE-2025-22115	MEDIUM	kernel: btrfs: fix block group refcount race in btrfs_create_pending_block_groups()
+linux-libc-dev	6.1.129-1	CVE-2025-22119	MEDIUM	kernel: wifi: cfg80211: init wiphy_work before allocating rfkill fails
+linux-libc-dev	6.1.129-1	CVE-2025-22121	MEDIUM	kernel: ext4: fix out-of-bound read in ext4_xattr_inode_dec_ref_all()
+linux-libc-dev	6.1.129-1	CVE-2025-22125	MEDIUM	kernel: md/raid1,raid10: don't ignore IO flags
+linux-libc-dev	6.1.129-1	CVE-2025-22126	MEDIUM	kernel: md: fix mddev uaf while iterating all_mddevs list
+linux-libc-dev	6.1.129-1	CVE-2025-22127	MEDIUM	kernel: f2fs: fix potential deadloop in prepare_compress_overwrite()
+linux-libc-dev	6.1.129-1	CVE-2025-23129	MEDIUM	kernel: wifi: ath11k: Clear affinity hint before calling ath11k_pcic_free_irq() in error path
+linux-libc-dev	6.1.129-1	CVE-2025-23130	MEDIUM	kernel: f2fs: fix to avoid panic once fallocation fails for pinfile
+linux-libc-dev	6.1.129-1	CVE-2025-23131	MEDIUM	kernel: dlm: prevent NPD when writing a positive value to event_done
+linux-libc-dev	6.1.129-1	CVE-2025-23132	MEDIUM	kernel: f2fs: quota: fix to avoid warning in dquot_writeback_dquots()
+linux-libc-dev	6.1.129-1	CVE-2025-23133	MEDIUM	kernel: wifi: ath11k: update channel list in reg notifier instead reg worker
+linux-libc-dev	6.1.129-1	CVE-2025-23136	MEDIUM	kernel: thermal: int340x: Add NULL check for adev
+linux-libc-dev	6.1.129-1	CVE-2025-23138	MEDIUM	kernel: watch_queue: fix pipe accounting mismatch
+linux-libc-dev	6.1.129-1	CVE-2025-37838	MEDIUM	kernel: HSI: ssi_protocol: Fix use after free vulnerability in ssi_protocol Driver Due to Race Condition
+linux-libc-dev	6.1.129-1	CVE-2025-37860	MEDIUM	kernel: sfc: fix NULL dereferences in ef100_process_design_param()
+linux-libc-dev	6.1.129-1	CVE-2025-37893	MEDIUM	kernel: LoongArch: BPF: Fix off-by-one error in build_prologue()
+linux-libc-dev	6.1.129-1	CVE-2025-37925	MEDIUM	kernel: jfs: reject on-disk inodes of an unsupported type
+linux-libc-dev	6.1.129-1	CVE-2025-38104	MEDIUM	kernel: drm/amdgpu: Replace Mutex with Spinlock for RLCG register access to avoid Priority Inversion in SRIOV
+linux-libc-dev	6.1.129-1	CVE-2025-38152	MEDIUM	kernel: remoteproc: core: Clear table_sz when rproc_shutdown
+linux-libc-dev	6.1.129-1	CVE-2025-38575	MEDIUM	kernel: ksmbd: use aead_request_free to match aead_request_alloc
+linux-libc-dev	6.1.129-1	CVE-2025-38637	MEDIUM	kernel: net_sched: skbprio: Remove overly strict queue assertions
+linux-libc-dev	6.1.129-1	CVE-2025-39728	MEDIUM	kernel: clk: samsung: Fix UBSAN panic in samsung_clk_init()
+linux-libc-dev	6.1.129-1	CVE-2025-39989	MEDIUM	kernel: x86/mce: use is_copy_from_user() to determine copy-from-user context
+linux-libc-dev	6.1.129-1	CVE-2004-0230	LOW	TCP, when using a large Window Size, makes it easier for remote attack ...
+linux-libc-dev	6.1.129-1	CVE-2005-3660	LOW	Linux kernel 2.4 and 2.6 allows attackers to cause a denial of service ...
+linux-libc-dev	6.1.129-1	CVE-2007-3719	LOW	kernel: secretly Monopolizing the CPU Without Superuser Privileges
+linux-libc-dev	6.1.129-1	CVE-2008-2544	LOW	kernel: mounting proc readonly on a different mount point silently mounts it rw if the /proc mount is rw
+linux-libc-dev	6.1.129-1	CVE-2008-4609	LOW	kernel: TCP protocol vulnerabilities from Outpost24
+linux-libc-dev	6.1.129-1	CVE-2010-4563	LOW	kernel: ipv6: sniffer detection
+linux-libc-dev	6.1.129-1	CVE-2010-5321	LOW	kernel: v4l: videobuf: hotfix a bug on multiple calls to mmap()
+linux-libc-dev	6.1.129-1	CVE-2011-4915	LOW	fs/proc/base.c in the Linux kernel through 3.1 allows local users to o ...
+linux-libc-dev	6.1.129-1	CVE-2011-4916	LOW	Linux kernel through 3.1 allows local users to obtain sensitive keystr ...
+linux-libc-dev	6.1.129-1	CVE-2011-4917	LOW	In the Linux kernel through 3.1 there is an information disclosure iss ...
+linux-libc-dev	6.1.129-1	CVE-2012-4542	LOW	kernel: block: default SCSI command filter does not accomodate commands overlap across device classes
+linux-libc-dev	6.1.129-1	CVE-2014-9892	LOW	The snd_compr_tstamp function in sound/core/compress_offload.c in the  ...
+linux-libc-dev	6.1.129-1	CVE-2014-9900	LOW	kernel: Info leak in uninitialized structure ethtool_wolinfo in ethtool_get_wol()
+linux-libc-dev	6.1.129-1	CVE-2015-2877	LOW	Kernel: Cross-VM ASL INtrospection (CAIN)
+linux-libc-dev	6.1.129-1	CVE-2016-10723	LOW	An issue was discovered in the Linux kernel through 4.17.2. Since the  ...
+linux-libc-dev	6.1.129-1	CVE-2016-8660	LOW	kernel: xfs: local DoS due to a page lock order bug in the XFS seek hole/data implementation
+linux-libc-dev	6.1.129-1	CVE-2017-0630	LOW	kernel: Information disclosure vulnerability in kernel trace subsystem
+linux-libc-dev	6.1.129-1	CVE-2017-13693	LOW	kernel: ACPI operand cache leak in dsutils.c
+linux-libc-dev	6.1.129-1	CVE-2017-13694	LOW	kernel: ACPI node and node_ext cache leak
+linux-libc-dev	6.1.129-1	CVE-2018-1121	LOW	procps: process hiding through race condition enumerating /proc
+linux-libc-dev	6.1.129-1	CVE-2018-12928	LOW	kernel: NULL pointer dereference in hfs_ext_read_extent in hfs.ko
+linux-libc-dev	6.1.129-1	CVE-2018-17977	LOW	kernel: Mishandled interactions among XFRM Netlink messages, IPPROTO_AH packets, and IPPROTO_IP packets resulting in a denial of service
+linux-libc-dev	6.1.129-1	CVE-2019-11191	LOW	kernel: race condition in load_aout_binary() allows local users to bypass ASLR on setuid a.out programs
+linux-libc-dev	6.1.129-1	CVE-2019-12378	LOW	kernel: unchecked kmalloc of new_ra in ip6_ra_control leads to denial of service
+linux-libc-dev	6.1.129-1	CVE-2019-12379	LOW	kernel: memory leak in con_insert_unipair in drivers/tty/vt/consolemap.c
+linux-libc-dev	6.1.129-1	CVE-2019-12380	LOW	kernel: memory allocation failure in the efi subsystem leads to denial of service
+linux-libc-dev	6.1.129-1	CVE-2019-12381	LOW	kernel: unchecked kmalloc of new_ra in ip_ra_control leads to denial of service
+linux-libc-dev	6.1.129-1	CVE-2019-12382	LOW	kernel: unchecked kstrdup of fwstr in drm_load_edid_firmware leads to denial of service
+linux-libc-dev	6.1.129-1	CVE-2019-12455	LOW	kernel: null pointer dereference in sunxi_divs_clk_setup in drivers/clk/sunxi/clk-sunxi.c causing denial of service
+linux-libc-dev	6.1.129-1	CVE-2019-12456	LOW	kernel: double fetch in the MPT3COMMAND case in _ctl_ioctl_main in drivers/scsi/mpt3sas/mpt3sas_ctl.c
+linux-libc-dev	6.1.129-1	CVE-2019-16229	LOW	kernel: null pointer dereference in drivers/gpu/drm/amd/amdkfd/kfd_interrupt.c
+linux-libc-dev	6.1.129-1	CVE-2019-16230	LOW	kernel: null pointer dereference in drivers/gpu/drm/radeon/radeon_display.c
+linux-libc-dev	6.1.129-1	CVE-2019-16231	LOW	kernel: null-pointer dereference in drivers/net/fjes/fjes_main.c
+linux-libc-dev	6.1.129-1	CVE-2019-16232	LOW	kernel: null-pointer dereference in drivers/net/wireless/marvell/libertas/if_sdio.c
+linux-libc-dev	6.1.129-1	CVE-2019-16233	LOW	kernel: null pointer dereference in drivers/scsi/qla2xxx/qla_os.c
+linux-libc-dev	6.1.129-1	CVE-2019-16234	LOW	kernel: null pointer dereference in drivers/net/wireless/intel/iwlwifi/pcie/trans.c
+linux-libc-dev	6.1.129-1	CVE-2019-19070	LOW	kernel: A memory leak in the spi_gpio_probe() function in drivers/spi/spi-gpio.c allows for a DoS
+linux-libc-dev	6.1.129-1	CVE-2019-19378	LOW	kernel: out-of-bounds write in index_rbio_pages in fs/btrfs/raid56.c
+linux-libc-dev	6.1.129-1	CVE-2020-11725	LOW	kernel: improper handling of private_size*count multiplication due to count=info->owner typo
+linux-libc-dev	6.1.129-1	CVE-2020-35501	LOW	kernel: audit not logging access to syscall open_by_handle_at for users with CAP_DAC_READ_SEARCH capability
+linux-libc-dev	6.1.129-1	CVE-2021-26934	LOW	An issue was discovered in the Linux kernel 4.18 through 5.10.16, as u ...
+linux-libc-dev	6.1.129-1	CVE-2021-3714	LOW	kernel: Remote Page Deduplication Attacks
+linux-libc-dev	6.1.129-1	CVE-2022-0400	LOW	kernel: Out of bounds read in the smc protocol stack
+linux-libc-dev	6.1.129-1	CVE-2022-1247	LOW	kernel: A race condition bug in rose_connect()
+linux-libc-dev	6.1.129-1	CVE-2022-25265	LOW	kernel: Executable Space Protection Bypass
+linux-libc-dev	6.1.129-1	CVE-2022-2961	LOW	kernel: race condition in rose_bind()
+linux-libc-dev	6.1.129-1	CVE-2022-3238	LOW	kernel: ntfs3 local privledge escalation if NTFS character set and remount and umount called simultaneously
+linux-libc-dev	6.1.129-1	CVE-2022-41848	LOW	kernel: Race condition between mgslpc_ioctl and mgslpc_detach
+linux-libc-dev	6.1.129-1	CVE-2022-44032	LOW	Kernel: Race between cmm_open() and cm4000_detach() result in UAF
+linux-libc-dev	6.1.129-1	CVE-2022-44033	LOW	Kernel: A race condition between cm4040_open() and reader_detach() may result in UAF
+linux-libc-dev	6.1.129-1	CVE-2022-44034	LOW	Kernel: A use-after-free due to race between scr24x_open()  and scr24x_remove()
+linux-libc-dev	6.1.129-1	CVE-2022-4543	LOW	kernel: KASLR Prefetch Bypass Breaks KPTI
+linux-libc-dev	6.1.129-1	CVE-2022-45884	LOW	kernel: use-after-free due to race condition occurring in dvb_register_device()
+linux-libc-dev	6.1.129-1	CVE-2022-45885	LOW	kernel: use-after-free due to race condition occurring in dvb_frontend.c
+linux-libc-dev	6.1.129-1	CVE-2023-23039	LOW	kernel: tty: vcc: race condition leading to use-after-free in vcc_open()
+linux-libc-dev	6.1.129-1	CVE-2023-26242	LOW	afu_mmio_region_get_by_offset in drivers/fpga/dfl-afu-region.c in the  ...
+linux-libc-dev	6.1.129-1	CVE-2023-31081	LOW	An issue was discovered in drivers/media/test-drivers/vidtv/vidtv_brid ...
+linux-libc-dev	6.1.129-1	CVE-2023-31085	LOW	kernel: divide-by-zero error in ctrl_cdev_ioctl when do_div happens and erasesize is 0
+linux-libc-dev	6.1.129-1	CVE-2023-3640	LOW	Kernel: x86/mm: a per-cpu entry area leak was identified through the init_cea_offsets function when prefetchnta and prefetcht2 instructions being used for the per-cpu entry area mapping to the user space
+linux-libc-dev	6.1.129-1	CVE-2023-39191	LOW	kernel: eBPF: insufficient stack type checks in dynptr
+linux-libc-dev	6.1.129-1	CVE-2023-4134	LOW	kernel: cyttsp4_core: use-after-free in cyttsp4_watchdog_work()
+linux-libc-dev	6.1.129-1	CVE-2024-0564	LOW	kernel: max page sharing of Kernel Samepage Merging (KSM) may cause memory deduplication
+linux-libc-dev	6.1.129-1	CVE-2024-40918	LOW	kernel: parisc: Try to fix random segmentation faults in package builds
+linux-libc-dev	6.1.129-1	CVE-2024-42155	LOW	kernel: s390/pkey: Wipe copies of protected- and secure-keys
+linux-libc-dev	6.1.129-1	CVE-2024-50057	LOW	kernel: usb: typec: tipd: Free IRQ only if it was requested before
+linux-libc-dev	6.1.129-1	CVE-2024-50211	LOW	kernel: udf: refactor inode_bmap() to handle error
+linux-libc-dev	6.1.129-1	CVE-2024-56641	LOW	kernel: net/smc: initialize close_work early to avoid warning
+linux-libc-dev	6.1.129-1	CVE-2025-21825	LOW	kernel: bpf: Cancel the running bpf_timer through kworker for PREEMPT_RT
+linux-libc-dev	6.1.129-1	CVE-2025-40325	LOW	kernel: md/raid10: wait barrier before returning discard request with REQ_NOWAIT
+linux-libc-dev	6.1.129-1	TEMP-0000000-F7A20F	LOW	[Kernel: Unprivileged user can freeze journald]
+login	1:4.13+dfsg1-1+b1	CVE-2023-4641	MEDIUM	shadow-utils: possible password leak during passwd(1) change
+login	1:4.13+dfsg1-1+b1	CVE-2007-5686	LOW	initscripts in rPath Linux 1 sets insecure permissions for the /var/lo ...
+login	1:4.13+dfsg1-1+b1	CVE-2023-29383	LOW	shadow: Improper input validation in shadow-utils package utility chfn
+login	1:4.13+dfsg1-1+b1	CVE-2024-56433	LOW	shadow-utils: Default subordinate ID configuration in /etc/login.defs could lead to compromise
+login	1:4.13+dfsg1-1+b1	TEMP-0628843-DBAD28	LOW	[more related to CVE-2005-4890]
+mount	2.38.1-5+deb12u3	CVE-2022-0563	LOW	util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline
+ncurses-base	6.4-4	CVE-2023-50495	MEDIUM	ncurses: segmentation fault via _nc_wrap_entry()
+ncurses-bin	6.4-4	CVE-2023-50495	MEDIUM	ncurses: segmentation fault via _nc_wrap_entry()
+openssh-client	1:9.2p1-2+deb12u5	CVE-2025-32728	MEDIUM	openssh: OpenSSH SSHD Agent Forwarding and X11 Forwarding
+openssh-client	1:9.2p1-2+deb12u5	CVE-2007-2243	LOW	OpenSSH 4.6 and earlier, when ChallengeResponseAuthentication is enabl ...
+openssh-client	1:9.2p1-2+deb12u5	CVE-2007-2768	LOW	OpenSSH, when using OPIE (One-Time Passwords in Everything) for PAM, a ...
+openssh-client	1:9.2p1-2+deb12u5	CVE-2008-3234	LOW	sshd in OpenSSH 4 on Debian GNU/Linux, and the 20070303 OpenSSH snapsh ...
+openssh-client	1:9.2p1-2+deb12u5	CVE-2016-20012	LOW	openssh: Public key information leak
+openssh-client	1:9.2p1-2+deb12u5	CVE-2018-15919	LOW	openssh: User enumeration via malformed packets in authentication requests
+openssh-client	1:9.2p1-2+deb12u5	CVE-2019-6110	LOW	openssh: Acceptance and display of arbitrary stderr allows for spoofing of scp client output
+openssh-client	1:9.2p1-2+deb12u5	CVE-2020-14145	LOW	openssh: Observable discrepancy leading to an information leak in the algorithm negotiation
+openssh-client	1:9.2p1-2+deb12u5	CVE-2020-15778	LOW	openssh: scp allows command injection when using backtick characters in the destination argument
+openssh-client	1:9.2p1-2+deb12u5	CVE-2023-51767	LOW	openssh: authentication bypass via row hammer attack
+openssl	3.0.15-1~deb12u1	CVE-2024-13176	MEDIUM	openssl: Timing side-channel in ECDSA signature computation
+passwd	1:4.13+dfsg1-1+b1	CVE-2023-4641	MEDIUM	shadow-utils: possible password leak during passwd(1) change
+passwd	1:4.13+dfsg1-1+b1	CVE-2007-5686	LOW	initscripts in rPath Linux 1 sets insecure permissions for the /var/lo ...
+passwd	1:4.13+dfsg1-1+b1	CVE-2023-29383	LOW	shadow: Improper input validation in shadow-utils package utility chfn
+passwd	1:4.13+dfsg1-1+b1	CVE-2024-56433	LOW	shadow-utils: Default subordinate ID configuration in /etc/login.defs could lead to compromise
+passwd	1:4.13+dfsg1-1+b1	TEMP-0628843-DBAD28	LOW	[more related to CVE-2005-4890]
+perl	5.36.0-7+deb12u1	CVE-2023-31484	HIGH	perl: CPAN.pm does not verify TLS certificates when downloading distributions over HTTPS
+perl	5.36.0-7+deb12u1	CVE-2024-56406	HIGH	perl: Perl 5.34, 5.36, 5.38 and 5.40 are vulnerable to a heap buffer overflow when transliterating non-ASCII bytes
+perl	5.36.0-7+deb12u1	CVE-2011-4116	LOW	perl: File:: Temp insecure temporary file handling
+perl	5.36.0-7+deb12u1	CVE-2023-31486	LOW	http-tiny: insecure TLS cert default
+perl-base	5.36.0-7+deb12u1	CVE-2023-31484	HIGH	perl: CPAN.pm does not verify TLS certificates when downloading distributions over HTTPS
+perl-base	5.36.0-7+deb12u1	CVE-2024-56406	HIGH	perl: Perl 5.34, 5.36, 5.38 and 5.40 are vulnerable to a heap buffer overflow when transliterating non-ASCII bytes
+perl-base	5.36.0-7+deb12u1	CVE-2011-4116	LOW	perl: File:: Temp insecure temporary file handling
+perl-base	5.36.0-7+deb12u1	CVE-2023-31486	LOW	http-tiny: insecure TLS cert default
+perl-modules-5.36	5.36.0-7+deb12u1	CVE-2023-31484	HIGH	perl: CPAN.pm does not verify TLS certificates when downloading distributions over HTTPS
+perl-modules-5.36	5.36.0-7+deb12u1	CVE-2024-56406	HIGH	perl: Perl 5.34, 5.36, 5.38 and 5.40 are vulnerable to a heap buffer overflow when transliterating non-ASCII bytes
+perl-modules-5.36	5.36.0-7+deb12u1	CVE-2011-4116	LOW	perl: File:: Temp insecure temporary file handling
+perl-modules-5.36	5.36.0-7+deb12u1	CVE-2023-31486	LOW	http-tiny: insecure TLS cert default
+procps	2:4.0.2-3	CVE-2023-4016	LOW	procps: ps buffer overflow
+python3.11	3.11.2-6+deb12u5	CVE-2025-0938	MEDIUM	python: cpython: URL parser allowed square brackets in domain names
+python3.11	3.11.2-6+deb12u5	CVE-2025-1795	LOW	python: Mishandling of comma during folding and unicode-encoding of email headers
+python3.11-minimal	3.11.2-6+deb12u5	CVE-2025-0938	MEDIUM	python: cpython: URL parser allowed square brackets in domain names
+python3.11-minimal	3.11.2-6+deb12u5	CVE-2025-1795	LOW	python: Mishandling of comma during folding and unicode-encoding of email headers
+sysvinit-utils	3.06-4	TEMP-0517018-A83CE6	LOW	[sysvinit: no-root option in expert installer exposes locally exploitable security flaw]
+tar	1.34+dfsg-1.2+deb12u1	CVE-2005-2541	LOW	tar: does not properly warn the user when extracting setuid or setgid files
+tar	1.34+dfsg-1.2+deb12u1	TEMP-0290435-0B57B5	LOW	[tar's rmt command may have undesired side effects]
+util-linux	2.38.1-5+deb12u3	CVE-2022-0563	LOW	util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline
+util-linux-extra	2.38.1-5+deb12u3	CVE-2022-0563	LOW	util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline
+wget	1.21.3-1+deb12u1	CVE-2021-31879	MEDIUM	wget: authorization header disclosure on redirect
+wget	1.21.3-1+deb12u1	CVE-2024-10524	MEDIUM	wget: GNU Wget is vulnerable to an SSRF attack when accessing partially-user-controlled shorthand URLs
+zlib1g	1:1.2.13.dfsg-1	CVE-2023-45853	CRITICAL	zlib: integer overflow and resultant heap-based buffer overflow in zipOpenNewFileInZip4_6
