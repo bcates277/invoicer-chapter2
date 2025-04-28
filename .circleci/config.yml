@@ -65,26 +65,28 @@ jobs:
               docker push ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
             fi
 
-      # Install ZAP Docker Image
+      # Install ZAP (OWASP Zed Attack Proxy)
       - run:
-          name: Pull OWASP ZAP Docker image
+          name: Install ZAP
           command: |
-            docker pull owasp/zap2docker-stable
+            docker pull zaproxy/zap-stable
 
-      # Run ZAP Scan on the Docker image
+      # Run ZAP against the application in the Docker container
       - run:
-          name: Run OWASP ZAP Scan on Docker Image
+          name: Run ZAP scan
           command: |
             docker run --rm \
-              -v /var/run/docker.sock:/var/run/docker.sock \
-              -v $(pwd):/zap/wrk/:rw \
-              owasp/zap2docker-stable \
-              zap-full-scan.py -t "http://host.docker.internal:8080" -g gen.conf -r zap-report.html
+              -v /home/circleci/project:/zap/wrk:rw \
+              -p 8080:8080 \
+              zaproxy/zap-stable zap-webswing.sh &
 
-      # Store ZAP report as artifact
-      - store_artifacts:
-          path: zap-report.html
-          destination: zap-report
+            # Run the Go application
+            ./bin/invoicer
+
+      - run:
+          name: Check if ZAP is accessible
+          command: |
+            curl http://localhost:8080
 
 workflows:
   version: 2
