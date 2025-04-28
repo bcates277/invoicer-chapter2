@@ -5,6 +5,7 @@ WORKDIR /app
 
 # Copy Go module files and download dependencies
 COPY go.mod ./
+COPY go.sum ./
 RUN go mod download
 
 # If you are using a vendor directory, copy it too
