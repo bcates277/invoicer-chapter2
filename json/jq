@@ -4,4 +4,4 @@ jq -r '
   .Results[]?.Vulnerabilities[]? |
   [.PkgName, .InstalledVersion, .VulnerabilityID, .Severity, .Title] |
   @tsv
-' trivy-report.json > vulns.tsv
+' trivy-report.json > vulns1.tsv

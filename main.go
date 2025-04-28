@@ -202,8 +202,18 @@ func (iv *invoicer) deleteInvoice(w http.ResponseWriter, r *http.Request) {
 }
 
 func (iv *invoicer) getIndex(w http.ResponseWriter, r *http.Request) {
-	w.Header() .Add("content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; frame-ancestors 'none';")
-	log.Println("serving index page")
+    w.Header().Add("Content-Security-Policy", 
+        "default-src 'self'; " +
+        "script-src 'self'; " +              // Removed 'unsafe-inline' and 'unsafe-eval'
+        "img-src 'self' data:; " +           // Allows only images from same-origin and inline data URIs
+        "style-src 'self' 'unsafe-inline'; " + // Allows inline styles, but can be further restricted
+        "font-src 'self'; " +                // Font loading should also be restricted to same-origin
+        "connect-src 'self'; " +             // Restrict AJAX/fetch requests to the same origin
+        "frame-ancestors 'none'; " +         // Prevent embedding in frames
+        "object-src 'none';"                 // Prevent embedding Java applets, Flash, etc.
+    )
+    log.Println("serving index page")
+}
 	w.Write([]byte(`
 <!DOCTYPE html>
 <html>
