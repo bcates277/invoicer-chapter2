@@ -83,6 +83,11 @@ jobs:
             done
 
       - run:
+          name: Fix permissions for ZAP directory
+          command: |
+            sudo chown -R circleci:circleci /home/circleci/project
+
+      - run:
           name: Install ZAP
           command: |
             docker pull zaproxy/zap-stable
