@@ -29,6 +29,10 @@ COPY --chown=nonroot:nonroot --from=builder /app/invoicer /tmp/invoicer
 # Expose the port the app will listen on (e.g., 8080)
 EXPOSE 8080
 
+# Health check to ensure the app is running
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
+  CMD curl --fail http://localhost:8080/health || exit 1
+
 # Set the user to nonroot (optional, because static:nonroot expects it)
 USER nonroot
 
