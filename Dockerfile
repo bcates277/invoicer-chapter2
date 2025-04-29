@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Step 1: Build the Go binary
-FROM golang:1.22 as builder
+FROM golang:1.22 AS builder
 
 # Set working directory inside builder container
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 
 # Build the Go app
-RUN go build -o invoicer
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o invoicer
 
 # Step 2: Create a minimal final image
 FROM gcr.io/distroless/static:nonroot
