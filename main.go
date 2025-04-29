@@ -39,6 +39,15 @@ type invoicer struct {
 }
 
 func main() {
+	    // Check if the database file exists
+		if _, err := os.Stat("invoicer.db"); os.IsNotExist(err) {
+			log.Println("Database file does not exist.")
+			// Optionally, create the file if needed (or handle the error)
+			// In most cases, SQLite will create the database automatically if it doesn't exist, 
+			// so you might not need to manually create the file.
+		} else {
+			log.Println("Database file found.")
+		}
 	var (
 		iv  invoicer
 		err error
