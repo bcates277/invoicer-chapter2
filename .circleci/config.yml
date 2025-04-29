@@ -68,7 +68,7 @@ jobs:
       - run:
           name: Start Invoicer App (Docker)
           command: |
-            docker run -d --name invoicer-app -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
+            docker run -d --name invoicer-app --network bridge -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
 
       - run:
           name: Wait for App to Start
@@ -83,9 +83,10 @@ jobs:
             done
 
       - run:
-          name: Fix permissions for ZAP directory
+          name: Fix permissions for ZAP working directory
           command: |
-            sudo chown -R circleci:circleci /home/circleci/project
+            sudo mkdir -p /zap/wrk
+            sudo chown -R circleci:circleci /zap
 
       - run:
           name: Install ZAP
@@ -96,9 +97,9 @@ jobs:
           name: Run ZAP scan
           command: |
             docker run --rm \
-              --network host \
+              --network bridge \
               -v /home/circleci/project:/zap/wrk:rw \
-              zaproxy/zap-stable zap-baseline.py -t http://localhost:8080
+              zaproxy/zap-stable zap-baseline.py -t http://invoicer-app:8080
 
 workflows:
   version: 2
