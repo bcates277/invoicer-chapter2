@@ -16,7 +16,7 @@ jobs:
             sudo chown -R circleci:circleci /go
 
       - setup_remote_docker:
-          docker_layer_caching: true  # This will enable caching without specifying Docker version
+          docker_layer_caching: true
 
       - run:
           name: Setup environment
