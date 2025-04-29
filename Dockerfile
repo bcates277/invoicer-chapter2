@@ -20,11 +20,11 @@ RUN go build -o invoicer
 FROM gcr.io/distroless/static:nonroot
 
 # Set working directory inside final image
-WORKDIR /app
+WORKDIR /tmp
 
 # Copy the binary from the builder stage
 # --chown makes sure the file is owned by nonroot user
-COPY --chown=nonroot:nonroot --from=builder /app/invoicer /app/invoicer
+COPY --chown=nonroot:nonroot --from=builder /app/invoicer /tmp/invoicer
 
 # Expose the port the app will listen on (e.g., 8080)
 EXPOSE 8080
@@ -33,4 +33,4 @@ EXPOSE 8080
 USER nonroot
 
 # Run the binary
-ENTRYPOINT ["/app/invoicer"]
+ENTRYPOINT ["/tmp/invoicer"]
