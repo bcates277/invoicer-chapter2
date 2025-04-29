@@ -15,7 +15,9 @@ jobs:
             sudo mkdir -p /go/src/github.com/bcates277/invoicer-chapter2
             sudo chown -R circleci:circleci /go
 
-      - setup_remote_docker
+      - setup_remote_docker:
+          version: 20.10.7
+          docker_layer_caching: true
 
       - run:
           name: Setup environment
@@ -26,12 +28,11 @@ jobs:
             else
               dr=$DOCKER_USER
             fi
-            cat >> $BASH_ENV <<EOF
+            cat >> $BASH_ENV \<<EOF
             export GOPATH_HEAD="$(echo ${GOPATH} | cut -d ':' -f 1)"
             export GOPATH_BASE="$(echo ${GOPATH} | cut -d ':' -f 1)${gb}"
             export DOCKER_REPO="$dr"
             EOF
-
 
       - run:
           name: Make directories
