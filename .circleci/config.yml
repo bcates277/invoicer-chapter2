@@ -4,12 +4,11 @@ jobs:
   build:
     docker:
       - image: cimg/go:1.18
-    working_directory: /home/circleci/project  # Use a more standard path for CircleCI
+    working_directory: /home/circleci/project
 
     steps:
       - checkout
 
-      # Ensure /go directory exists and has correct permissions
       - run:
           name: Create directories with proper permissions
           command: |
@@ -21,16 +20,16 @@ jobs:
       - run:
           name: Setup environment
           command: |
-            gb="/src/github.com/${THE_CIRCLE_PROJECT_USERNAME}";
-            if [ ${THE_CIRCLE_PROJECT_USERNAME} == 'Securing-DevOps' ]; then
+            gb="/src/github.com/${THE_CIRCLE_PROJECT_USERNAME}"
+            if [ "${THE_CIRCLE_PROJECT_USERNAME}" == "Securing-DevOps" ]; then
               dr="securingdevops"
             else
-              dr=$DOCKER_USER
+              dr="${DOCKER_USER}"
             fi
-            cat >> $BASH_ENV \<<EOF
-            export GOPATH_HEAD="$(echo ${GOPATH}|cut -d ':' -f 1)"
-            export GOPATH_BASE="$(echo ${GOPATH}|cut -d ':' -f 1)${gb}"
-            export DOCKER_REPO="$dr"
+            cat >> $BASH_ENV <<EOF
+            export GOPATH_HEAD="$(echo ${GOPATH} | cut -d ':' -f 1)"
+            export GOPATH_BASE="$(echo ${GOPATH} | cut -d ':' -f 1)${gb}"
+            export DOCKER_REPO="${dr}"
             EOF
 
       - run:
@@ -48,7 +47,7 @@ jobs:
           name: Build Go binary
           command: |
             go install --ldflags '-extldflags "-static"' \
-            github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
+              github.com/${THE_CIRCLE_PROJECT_USERNAME}/${THE_CIRCLE_PROJECT_REPONAME}
             mkdir -p bin
             cp "$GOPATH_HEAD/bin/${THE_CIRCLE_PROJECT_REPONAME}" bin/invoicer
 
@@ -65,28 +64,35 @@ jobs:
               docker push ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
             fi
 
-      # Install ZAP (OWASP Zed Attack Proxy)
+      - run:
+          name: Start Invoicer App (Docker)
+          command: |
+            docker run -d --name invoicer-app -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
+
+      - run:
+          name: Wait for App to Start
+          command: |
+            for i in {1..10}; do
+              if curl -s http://localhost:8080/health || curl -s http://localhost:8080; then
+                echo "App is up!"
+                break
+              fi
+              echo "Waiting for app..."
+              sleep 5
+            done
+
       - run:
           name: Install ZAP
           command: |
             docker pull zaproxy/zap-stable
 
-      # Run ZAP against the application in the Docker container
       - run:
           name: Run ZAP scan
           command: |
             docker run --rm \
+              --network host \
               -v /home/circleci/project:/zap/wrk:rw \
-              -p 8080:8080 \
-              zaproxy/zap-stable zap-webswing.sh &
-
-            # Run the Go application
-            ./bin/invoicer
-
-      - run:
-          name: Check if ZAP is accessible
-          command: |
-            curl http://localhost:8080
+              zaproxy/zap-stable zap-baseline.py -t http://localhost:8080
 
 workflows:
   version: 2
