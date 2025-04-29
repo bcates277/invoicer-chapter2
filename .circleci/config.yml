@@ -66,9 +66,14 @@ jobs:
             fi
 
       - run:
+          name: Create Docker network
+          command: |
+            docker network create invoicer-net
+
+      - run:
           name: Start Invoicer App (Docker)
           command: |
-            docker run -d --name invoicer-app --network bridge -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
+            docker run -d --name invoicer-app --network invoicer-net -p 8080:8080 ${DOCKER_REPO}/${THE_CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
 
       - run:
           name: Wait for App to Start
@@ -97,7 +102,7 @@ jobs:
           name: Run ZAP scan
           command: |
             docker run --rm \
-              --network bridge \
+              --network invoicer-net \
               -v /home/circleci/project:/zap/wrk:rw \
               zaproxy/zap-stable zap-baseline.py -t http://invoicer-app:8080
 
